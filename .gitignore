@@ -2,15 +2,15 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
-/[Aa]ssets/[Pp]olygonOffice/*
-/[Aa]ssets/[Pp]olygonSpy/*
+/[Ss]tealthGame/[Ll]ibrary/
+/[Ss]tealthGame/[Tt]emp/
+/[Ss]tealthGame/[Oo]bj/
+/[Ss]tealthGame/[Bb]uild/
+/[Ss]tealthGame/[Bb]uilds/
+/[Ss]tealthGame/[Ll]ogs/
+/[Ss]tealthGame/[Uu]ser[Ss]ettings/
+/[Ss]tealthGame/[Aa]ssets/[Pp]olygonOffice/
+/[Ss]tealthGame/[Aa]ssets/[Pp]olygonSpy/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
