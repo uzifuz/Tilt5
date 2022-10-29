@@ -6,8 +6,7 @@ public class DetectionTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        var thief = other.GetComponent<Thief>();
-        if (thief != null)
+        if (other.GetComponent<Thief>())
         {
             DetectionHandler.ThiefDetected = true;
         }
