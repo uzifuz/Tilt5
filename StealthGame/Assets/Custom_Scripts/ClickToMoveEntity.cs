@@ -33,11 +33,11 @@ public class ClickToMoveEntity : MonoBehaviour
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, clickableObjects))
                 {
                     targetLocation = hit.point;
-                    Debug.Log($"Hit {hit.collider.name}");
+                    //Debug.Log($"Hit {hit.collider.name}");
                 }
                 else
                 {
-                    Debug.Log($"Nothing hit");
+                    //Debug.Log($"Nothing hit");
                 }
                 currentPlayer.SetAgentDestination(targetLocation);
             }
