@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Lightswitch : InteractableObject
 {
-    [SerializeField]
-    FlickeringLight lit;
+    //[SerializeField]
+    //FlickeringLight lit;
 
     public override void Interact()
     {
-        lit.ToggleLight();
+        //lit.ToggleLight();
     }
 }
