@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityName: 
+  CanMove: 1
   agent: {fileID: 0}
   walkableSurfaces:
     serializedVersion: 2
