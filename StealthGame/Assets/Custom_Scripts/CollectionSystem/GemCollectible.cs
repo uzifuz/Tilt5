@@ -18,7 +18,7 @@ public class GemCollectible : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Thief"))
         {
             Debug.Log("Collision");
             OnCollected?.Invoke();
