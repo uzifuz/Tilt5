@@ -31,7 +31,8 @@ public class WinCondition : InteractableObject
         if(CollectibleCount.winCondition)
         {
             WinMenu.SetActive(true);
-            GameObject.Find("Thief").GetComponent<ControllableEntity>().CanMove = false;
+            DetectionHandler.ThiefDetected = false;
+            Thief.CanMove = false;
         }
 
     }
