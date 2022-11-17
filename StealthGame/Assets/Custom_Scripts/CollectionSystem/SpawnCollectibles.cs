@@ -5,8 +5,8 @@ using UnityEngine;
 public class SpawnCollectibles : MonoBehaviour
 {
     public GameObject collectibleToSpawn;
-    public GameObject[] collectibleSpawnLocation;
-    public int spawnLocationCount = 0; // wieviele SpawnLocations es für die Collectibles gibt
+    private GameObject[] collectibleSpawnLocation;
+    private int spawnLocationCount = 0; // wieviele SpawnLocations es für die Collectibles gibt
     public int collectibleAmount = 0; // wieviel Collectibles man spawnen möchte 
 
     private int randomPosition;

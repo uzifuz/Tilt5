@@ -11,5 +11,6 @@ public class HidingObject : InteractableObject
         base.Interact();
         //base.ToggleObjectHighlight(true);
         Thief.IsHidden = !Thief.IsHidden;
+        Thief.CanMove = !Thief.IsHidden;
     }
 }
