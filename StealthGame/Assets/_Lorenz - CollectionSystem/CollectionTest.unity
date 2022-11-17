@@ -569,6 +569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityName: 
+  CanMove: 1
   agent: {fileID: 0}
   walkableSurfaces:
     serializedVersion: 2
@@ -8248,7 +8249,7 @@ GameObject:
   - component: {fileID: 1751985837}
   - component: {fileID: 1751985836}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CollectionCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8632,6 +8633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1afa0655c3938f14fa635703fcd351bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  count: 0
 --- !u!114 &1798919909
 MonoBehaviour:
   m_ObjectHideFlags: 0

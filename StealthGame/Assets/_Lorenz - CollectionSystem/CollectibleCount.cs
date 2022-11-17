@@ -5,7 +5,9 @@ using UnityEngine;
 public class CollectibleCount : MonoBehaviour
 {
     TMPro.TMP_Text text;
-    int count;
+    public int count;
+    public static CollectibleCount Instance { get; private set; }
+    public static bool winCondition = false;
 
     void Awake()
     {
@@ -29,6 +31,7 @@ public class CollectibleCount : MonoBehaviour
         if(count == GemCollectible.totalCount)
         {
             text.text = "You collected all Gems :)";
+            winCondition = true;
         }
     }
 }
