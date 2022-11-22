@@ -19,15 +19,7 @@ public class ClickToMoveEntity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Thief.IsHidden)
-        {
             SendPlayerToLocation();
-        }
-        else
-        {
-            currentPlayer.agent.ResetPath();
-        }
-
     }
 
     void SendPlayerToLocation()

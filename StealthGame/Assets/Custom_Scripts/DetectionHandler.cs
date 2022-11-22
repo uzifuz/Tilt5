@@ -28,7 +28,7 @@ public class DetectionHandler : MonoBehaviour
         { 
             Instance._gameOver = value;
             Instance.GameOverMenu.SetActive(value);
-            GameObject.Find("Thief").GetComponent<ControllableEntity>().CanMove = !value;
+            Thief.CanMove = !value;
         }
     }
     [SerializeField]
