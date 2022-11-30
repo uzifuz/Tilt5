@@ -15,10 +15,20 @@ public class ControllableEntity : Entity
         agent = GetComponent<NavMeshAgent>();
     }
 
-    public void SetAgentDestination(Vector3 target)
+    public void SetAgentDestination(Vector3 target, bool run = false, float radiusMod = 1f)
     {
-
-        Vector3 proxyTarget = NavMeshInfo.RandomNavSphere(target, 0, 1, walkableSurfaces);
+        if(run)
+        {
+            agent.speed = 6f;
+            GetComponent<Animator>().SetFloat("animSpeed", 20);
+        }
+        else
+        {
+            agent.speed = 1.5f;
+            GetComponent<Animator>().SetFloat("animSpeed", 5);
+        }
+        Vector3 proxyTarget = NavMeshInfo.RandomNavSphere(target, 0f, radiusMod, walkableSurfaces);
+        Debug.Log($"{name} was set to {proxyTarget}");
         agent.SetDestination(proxyTarget);
     }
 }

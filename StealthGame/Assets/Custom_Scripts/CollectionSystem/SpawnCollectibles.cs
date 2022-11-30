@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnCollectibles : MonoBehaviour
 {
-    public GameObject collectibleToSpawn;
+    public GameObject [] collectibleToSpawn;
     private GameObject[] collectibleSpawnLocation;
     private int spawnLocationCount = 0; // wieviele SpawnLocations es für die Collectibles gibt
     public int collectibleAmount = 0; // wieviel Collectibles man spawnen möchte 
@@ -18,6 +18,12 @@ public class SpawnCollectibles : MonoBehaviour
         collectibleSpawnLocation = GameObject.FindGameObjectsWithTag("CollectibleSpawnLocation");
         spawnLocationCount = (int)collectibleSpawnLocation.Length;
         int[] tmpList = new int[spawnLocationCount];
+
+        //Wichtig, nicht mehr Collectables spawnen, als es überhaupt locations gibt!!!
+        if(collectibleAmount > collectibleSpawnLocation.Length)
+        {
+            collectibleAmount = collectibleSpawnLocation.Length;
+        }
 
         for(int x = 0; x < spawnLocationCount; x++) // Array befüllen mit allen möglichen SpawnLocations
         {
@@ -41,7 +47,7 @@ public class SpawnCollectibles : MonoBehaviour
             {
                 randomPosition = tmpList[i];
 
-                Instantiate(collectibleToSpawn, collectibleSpawnLocation[randomPosition].transform.position, collectibleSpawnLocation[randomPosition].transform.rotation);
+                Instantiate(collectibleToSpawn[Random.Range(0, collectibleToSpawn.Length)], collectibleSpawnLocation[randomPosition].transform.position, collectibleSpawnLocation[randomPosition].transform.rotation);
                 collectibleAmount--;
             }
 

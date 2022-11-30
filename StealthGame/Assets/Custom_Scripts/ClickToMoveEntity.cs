@@ -9,7 +9,9 @@ public class ClickToMoveEntity : MonoBehaviour
     ControllableEntity currentPlayer;
     [SerializeField]
     LayerMask clickableObjects;
-
+    [SerializeField]
+    float runTime = 0.5f;
+    float runTimer = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +21,16 @@ public class ClickToMoveEntity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            SendPlayerToLocation();
+        SendPlayerToLocation();
+        if(runTimer >= 0)
+        {
+            runTimer -= Time.deltaTime;
+        }
     }
 
     void SendPlayerToLocation()
     {
+        bool runProxy = false;
         if(currentPlayer != null)
         {
             if (Input.GetKeyDown(KeyCode.Mouse0) && Thief.CanMove)
@@ -34,13 +41,21 @@ public class ClickToMoveEntity : MonoBehaviour
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, clickableObjects))
                 {
                     targetLocation = hit.point;
-                    //Debug.Log($"Hit {hit.collider.name}");
+                    Debug.Log($"Hit {hit.collider.name}");
+                    if(runTimer > 0)
+                    {
+                        runProxy = true;
+                    }
+                    else
+                    {
+                        runTimer = runTime;
+                    }
                 }
                 else
                 {
                     //Debug.Log($"Nothing hit");
                 }
-                currentPlayer.SetAgentDestination(targetLocation);
+                currentPlayer.SetAgentDestination(targetLocation, runProxy);
             }
         }
     }
