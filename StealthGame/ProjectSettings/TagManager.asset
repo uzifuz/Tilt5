@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Thief
+  - Interactable
+  - Collectible
+  - CollectibleSpawnLocation
   layers:
   - Default
   - TransparentFX

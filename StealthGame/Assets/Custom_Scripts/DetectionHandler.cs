@@ -20,6 +20,20 @@ public class DetectionHandler : MonoBehaviour
             Instance._thiefDetected = value;
         }
     }
+    private bool _gameOver;
+    public static bool GameOver
+    {
+        get { return Instance._gameOver; }
+        set 
+        { 
+            Instance._gameOver = value;
+            Instance.GameOverMenu.SetActive(value);
+            Thief.CanMove = !value;
+        }
+    }
+    [SerializeField]
+    GameObject GameOverMenuPrefab;
+    GameObject GameOverMenu;
 
     [SerializeField]
     TMP_Text AlarmDisplay;
@@ -30,7 +44,10 @@ public class DetectionHandler : MonoBehaviour
     void Start()
     {
         Instance = this;
+        GameOverMenu = Object.Instantiate(GameOverMenuPrefab);
+
         ThiefDetected = false;
+        GameOver = false;
     }
     private void SetAlarm(bool state)
     {
@@ -49,7 +66,7 @@ public class DetectionHandler : MonoBehaviour
     private IEnumerator UpdateTimer()
     {
         alarmTimer = alarmTime;
-        for (alarmTimer = alarmTime; alarmTimer > 0; alarmTimer -= Time.deltaTime)
+        for (alarmTimer = alarmTime; alarmTimer >= 0; alarmTimer -= Time.deltaTime)
         {
             int decimalPlaces = 2;
             float pow = Mathf.Pow(10, decimalPlaces);
@@ -61,7 +78,6 @@ public class DetectionHandler : MonoBehaviour
             alarmTimer -= Time.deltaTime;
         }
 
-        //todo: GameOver game logic
-        AlarmDisplay.text = "GAME OVER";
+        GameOver = true;
     }
 }

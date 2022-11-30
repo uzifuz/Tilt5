@@ -1,18 +1,39 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Thief : MonoBehaviour
+public class Thief : ControllableEntity
 {
+    public static bool CanMove;
+    public static Thief Instance { get; private set; }
+    static public bool IsHidden
+    {
+        get;
+        set;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(Instance == null)
+        {
+            Instance = this;
+        } else
+        {
+            Debug.LogWarning("more than two tieves detected!");
+            gameObject.SetActive(false);
+        }
+        IsHidden = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (!CanMove)
+        {
+            //Debug.Log(gameObject.name + ": CanMove is set to false");
+            agent.ResetPath();
+            return;
+        }
     }
 }

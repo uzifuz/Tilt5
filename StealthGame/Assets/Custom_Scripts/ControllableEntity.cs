@@ -17,6 +17,7 @@ public class ControllableEntity : Entity
 
     public void SetAgentDestination(Vector3 target)
     {
+
         Vector3 proxyTarget = NavMeshInfo.RandomNavSphere(target, 0, 1, walkableSurfaces);
         agent.SetDestination(proxyTarget);
     }

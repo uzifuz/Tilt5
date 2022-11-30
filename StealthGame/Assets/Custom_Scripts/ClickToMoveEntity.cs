@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ClickToMoveEntity : MonoBehaviour
@@ -18,14 +19,14 @@ public class ClickToMoveEntity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SendPlayerToLocation();
+            SendPlayerToLocation();
     }
 
     void SendPlayerToLocation()
     {
         if(currentPlayer != null)
         {
-            if(Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 Vector3 targetLocation = Vector3.up * 100f;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
