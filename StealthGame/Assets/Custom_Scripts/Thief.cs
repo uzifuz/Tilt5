@@ -29,11 +29,6 @@ public class Thief : ControllableEntity
     // Update is called once per frame
     void Update()
     {
-        if (!CanMove)
-        {
-            //Debug.Log(gameObject.name + ": CanMove is set to false");
-            agent.ResetPath();
-            return;
-        }
+        
     }
 }
