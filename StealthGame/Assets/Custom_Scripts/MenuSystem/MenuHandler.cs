@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 /// <summary>
 /// Singleton Monobehaviour, use MenuHandler.Instance
@@ -17,7 +18,12 @@ public class MenuHandler : MonoBehaviour
         LoseMenu,
         WinMenu;
 
-    public bool MenuIsOpen { get; private set; }
+    public bool MenuIsOpen 
+        => allMenus
+        .Where(
+            predicate: (KeyValuePair<MenuType, GameObject> menuPair) => menuPair.Value.activeSelf)
+        .Any();
+
 
     private Dictionary<MenuType, GameObject> allMenus;
 
@@ -29,9 +35,12 @@ public class MenuHandler : MonoBehaviour
         }
         Instance = this;
 
-        allMenus.Add(MenuType.Pause, PauseMenu);
-        allMenus.Add(MenuType.Lose, LoseMenu);
-        allMenus.Add(MenuType.Win, WinMenu);
+        allMenus = new()
+        {
+            { MenuType.Pause, PauseMenu },
+            { MenuType.Lose, LoseMenu },
+            { MenuType.Win, WinMenu }
+        };
     }
 
     private void Update()
@@ -74,14 +83,12 @@ public class MenuHandler : MonoBehaviour
     public void ResumeGame()
     {
         Debug.Log("resuming game");
-        OpenMenu(MenuType.Pause);
-        //Cursor.lockState = CursorLockMode.Locked;
+        CloseMenu();
     }
 
     private void PauseGame()
     {
         Debug.Log("Game Paused");
-        CloseMenu();
-        //Cursor.lockState = CursorLockMode.Confined;
+        OpenMenu(MenuType.Pause);
     }
 }

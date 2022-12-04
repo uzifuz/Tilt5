@@ -10,6 +10,11 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Button was pressed");
     }
 
+    public void Resume()
+    {
+        MenuHandler.Instance.ResumeGame();
+    }
+
     public void ReturnToMenu()
     {
         Debug.Log("returning to menu");
