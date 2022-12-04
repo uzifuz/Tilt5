@@ -33,11 +33,7 @@ public class ClickToMoveEntity : MonoBehaviour
         bool runProxy = false;
         if(currentPlayer != null)
         {
-<<<<<<< HEAD:StealthGame/Assets/Custom_Scripts/ClickToMoveEntity.cs
-            if (Input.GetKeyDown(KeyCode.Mouse0) && Thief.CanMove)
-=======
             if (Input.GetKeyDown(KeyCode.Mouse0) && currentPlayer.CanMove)
->>>>>>> refactoring:StealthGame/Assets/Custom_Scripts/MovementSystem/ClickToMoveEntity.cs
             {
                 Vector3 targetLocation = Vector3.up * 100f;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
