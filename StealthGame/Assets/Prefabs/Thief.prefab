@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &716798058233544361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1604611627540692, guid: 0636a8b0926172c499640f89dacb0a94, type: 3}
+  m_PrefabInstance: {fileID: 1512584600}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4047995910466646}
+  m_Layer: 0
+  m_Name: 'SM_Chr_Boss_Male_01 (Missing Prefab with guid: 0636a8b0926172c499640f89dacb0a94)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4047995910466646
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4047994402085326, guid: 0636a8b0926172c499640f89dacb0a94, type: 3}
+  m_PrefabInstance: {fileID: 1512584600}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716798058233544361}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4737468016232438582}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2501677522821634102
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,6 +251,7 @@ MonoBehaviour:
   walkableSurfaces:
     serializedVersion: 2
     m_Bits: 2147483647
+  CanMove: 1
 --- !u!95 &900340303
 Animator:
   serializedVersion: 4
@@ -253,6 +285,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+  stoppingDistance: 0.15
+  footstepSource: {fileID: 0}
+  stepNoiseObject: {fileID: 0}
 --- !u!1 &3006841460957295026
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,8 +576,3 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 95825253257909100, guid: 0636a8b0926172c499640f89dacb0a94, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0636a8b0926172c499640f89dacb0a94, type: 3}
---- !u!4 &4047995910466646 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4047994402085326, guid: 0636a8b0926172c499640f89dacb0a94, type: 3}
-  m_PrefabInstance: {fileID: 1512584600}
-  m_PrefabAsset: {fileID: 0}
