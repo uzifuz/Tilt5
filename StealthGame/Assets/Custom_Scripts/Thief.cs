@@ -5,9 +5,8 @@ using UnityEngine;
 
 public class Thief : ControllableEntity
 {
-    public static bool CanMove;
     public static Thief Instance { get; private set; }
-    static public bool IsHidden
+    public bool IsHidden
     {
         get;
         set;
@@ -29,11 +28,6 @@ public class Thief : ControllableEntity
     // Update is called once per frame
     void Update()
     {
-        if (!CanMove)
-        {
-            //Debug.Log(gameObject.name + ": CanMove is set to false");
-            agent.ResetPath();
-            return;
-        }
+        
     }
 }

@@ -10,7 +10,7 @@ public class DetectionHandler : MonoBehaviour
 {
     public static DetectionHandler Instance { get; private set; }
     private bool _thiefDetected;
-    public static bool ThiefDetected
+    public bool ThiefDetected
     {
         get { return Instance._thiefDetected; }
         set
@@ -18,17 +18,6 @@ public class DetectionHandler : MonoBehaviour
             //if already detected, don't start alarm again
             if (!ThiefDetected || value == false) Instance.SetAlarm(value);
             Instance._thiefDetected = value;
-        }
-    }
-    private bool _gameOver;
-    public static bool GameOver
-    {
-        get { return Instance._gameOver; }
-        set 
-        { 
-            Instance._gameOver = value;
-            Instance.GameOverMenu.SetActive(value);
-            Thief.CanMove = !value;
         }
     }
     [SerializeField]
@@ -47,7 +36,6 @@ public class DetectionHandler : MonoBehaviour
         GameOverMenu = Object.Instantiate(GameOverMenuPrefab);
 
         ThiefDetected = false;
-        GameOver = false;
     }
     private void SetAlarm(bool state)
     {
@@ -78,6 +66,6 @@ public class DetectionHandler : MonoBehaviour
             alarmTimer -= Time.deltaTime;
         }
 
-        GameOver = true;
+        GameHandler.Instance.GameOver(GameHandler.GameOutcome.ThiefLose);
     }
 }

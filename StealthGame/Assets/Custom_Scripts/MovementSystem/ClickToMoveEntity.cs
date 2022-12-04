@@ -26,7 +26,7 @@ public class ClickToMoveEntity : MonoBehaviour
     {
         if(currentPlayer != null)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0) && currentPlayer.CanMove)
             {
                 Vector3 targetLocation = Vector3.up * 100f;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
