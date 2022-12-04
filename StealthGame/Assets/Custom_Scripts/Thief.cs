@@ -5,9 +5,8 @@ using UnityEngine;
 
 public class Thief : ControllableEntity
 {
-    public static bool CanMove;
     public static Thief Instance { get; private set; }
-    static public bool IsHidden
+    public bool IsHidden
     {
         get;
         set;

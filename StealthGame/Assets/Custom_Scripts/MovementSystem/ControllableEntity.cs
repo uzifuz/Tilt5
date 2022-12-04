@@ -8,6 +8,7 @@ public class ControllableEntity : Entity
     public NavMeshAgent agent;
     [SerializeField]
     LayerMask walkableSurfaces;
+    public bool CanMove;
 
     protected override void InheritStart()
     {
