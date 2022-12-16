@@ -16,6 +16,19 @@ public class ControllableEntity : Entity
         agent = GetComponent<NavMeshAgent>();
     }
 
+    protected override void InheritUpdate()
+    {
+        base.InheritUpdate();
+        if(Vector3.Distance(transform.position, agent.destination) < 0.15f)
+        {
+            agent.isStopped = true;
+        }
+        else
+        {
+            agent.isStopped = false;
+        }
+    }
+
     public void SetAgentDestination(Vector3 target, bool run = false, float radiusMod = 1f)
     {
         if(run)

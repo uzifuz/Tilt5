@@ -57,6 +57,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7185285030870549335}
     m_Modifications:
+    - target: {fileID: 9193201173830499375, guid: 18eee8022d603cc479843e83b0bdcc19, type: 3}
+      propertyPath: m_SortingOrder
+      value: 32767
+      objectReference: {fileID: 0}
     - target: {fileID: 9193201173906305576, guid: 18eee8022d603cc479843e83b0bdcc19, type: 3}
       propertyPath: m_Name
       value: WinMenu
@@ -104,6 +108,18 @@ PrefabInstance:
     - target: {fileID: 9193201173906305583, guid: 18eee8022d603cc479843e83b0bdcc19, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193201175126334346, guid: 18eee8022d603cc479843e83b0bdcc19, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193201175126334346, guid: 18eee8022d603cc479843e83b0bdcc19, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193201175126334346, guid: 18eee8022d603cc479843e83b0bdcc19, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18eee8022d603cc479843e83b0bdcc19, type: 3}

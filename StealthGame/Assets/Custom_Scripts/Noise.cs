@@ -31,15 +31,19 @@ public class Noise : MonoBehaviour
     {
         if(other.GetComponent<Guard>() != null)
         {
-            Debug.Log("Guard heared a noise");
-            if(modIntensity > other.GetComponent<Guard>().hearingSensitivity)
+            Guard thisGuard = other.GetComponent<Guard>();
+            if(modIntensity > thisGuard.hearingSensitivity)
             {
-                Debug.Log("Noise was loud enough");
-                other.GetComponent<Guard>().SetAgentDestination(transform.position, false, 1f);
+                //Guard heard the noise
+                thisGuard.suspicionLevel += modIntensity;
+                if(Random.Range(0f, 100f) < thisGuard.suspicionLevel)
+                {
+                    thisGuard.SetAgentDestination(transform.position, false, 1f);
+                }
             }
             else
             {
-                Debug.Log("Noise was too quiet");
+                //Noise was too quiet
             }
         }
     }

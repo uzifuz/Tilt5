@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58de7d550bda5204aa94e6eb3d56a53d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundRange: 15
-  soundIntensity: 10
+  soundRange: 35
+  soundIntensity: 15
 --- !u!135 &3075880419788308726
 SphereCollider:
   m_ObjectHideFlags: 0
