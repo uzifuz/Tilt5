@@ -4,7 +4,7 @@ using UnityEngine;
 public class GemCollectible : MonoBehaviour
 {
     public static event Action OnCollected;
-    public static int totalCount;
+    public static int totalCount = 0;
     public AudioClip clip;
     public float volume = 1;
 

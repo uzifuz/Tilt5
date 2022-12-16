@@ -32,6 +32,7 @@ public class CollectibleCount : MonoBehaviour
         {
             text.text = "You collected all Gems :)";
             winCondition = true;
+            GemCollectible.totalCount = 0;
         }
     }
 }
