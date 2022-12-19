@@ -7,22 +7,26 @@ public class SpawnCollectibles : MonoBehaviour
     public GameObject [] collectibleToSpawn;
     private GameObject[] collectibleSpawnLocation;
     private int spawnLocationCount = 0; // wieviele SpawnLocations es für die Collectibles gibt
-    public int collectibleAmount = 0; // wieviel Collectibles man spawnen möchte 
+    public int mandatoryAmount = 0; // wieviel Mandatory Collectibles man spawnen möchte 
+    public int moneyAmount = 0; // optional 
+    private int wholeAmount = 0;
 
     private int randomPosition;
     private int[] tmpList;
     private int tmpValue;
+    private int mandatoryCollectible;
 
     void Awake()
     {
+        wholeAmount = mandatoryAmount + moneyAmount;
         collectibleSpawnLocation = GameObject.FindGameObjectsWithTag("CollectibleSpawnLocation");
         spawnLocationCount = (int)collectibleSpawnLocation.Length;
         int[] tmpList = new int[spawnLocationCount];
 
         //Wichtig, nicht mehr Collectables spawnen, als es überhaupt locations gibt!!!
-        if(collectibleAmount > collectibleSpawnLocation.Length)
+        if(mandatoryAmount > collectibleSpawnLocation.Length)
         {
-            collectibleAmount = collectibleSpawnLocation.Length;
+            mandatoryAmount = collectibleSpawnLocation.Length;
         }
 
         for(int x = 0; x < spawnLocationCount; x++) // Array befüllen mit allen möglichen SpawnLocations
@@ -40,15 +44,39 @@ public class SpawnCollectibles : MonoBehaviour
             //Debug.Log(tmpList[y]);
         }
 
+        for(int z = 0; z < collectibleToSpawn.Length; z++) // get mandatory collectible
+        {
+             if(collectibleToSpawn[z].name == "Gem") // get mandatory index
+             {
+                mandatoryCollectible = z;
+             }
+        }
+
 
         if (spawnLocationCount > 0)
         {
-            for(int i = 0; i < spawnLocationCount && collectibleAmount > 0; i++) // Collectibles spawnen
+            for(int i = 0; i < spawnLocationCount && wholeAmount > 0; i++) // Collectibles spawnen
             {
                 randomPosition = tmpList[i];
+                if (mandatoryAmount > 0) // zuerst Mandatory Collectibles spawnen
+                {
+                    
+                    Instantiate(collectibleToSpawn[mandatoryCollectible], collectibleSpawnLocation[randomPosition].transform.position, collectibleSpawnLocation[randomPosition].transform.rotation);
+                    mandatoryAmount--;
+                    wholeAmount--;
+                }
+                else // dann erst den Rest (optional)
+                {
+                    int randomIndexNumber = Random.Range(0, collectibleToSpawn.Length);
+                    while(randomIndexNumber == mandatoryAmount)
+                    {
+                        randomIndexNumber = Random.Range(0, collectibleToSpawn.Length);
+                    }
+                    Instantiate(collectibleToSpawn[randomIndexNumber], collectibleSpawnLocation[randomPosition].transform.position, collectibleSpawnLocation[randomPosition].transform.rotation);
+                    moneyAmount--;
+                    wholeAmount--;
+                }
 
-                Instantiate(collectibleToSpawn[Random.Range(0, collectibleToSpawn.Length)], collectibleSpawnLocation[randomPosition].transform.position, collectibleSpawnLocation[randomPosition].transform.rotation);
-                collectibleAmount--;
             }
 
             for (int j = 0; j < spawnLocationCount; j++) // SpawnLocations deaktivieren

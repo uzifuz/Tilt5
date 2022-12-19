@@ -16,8 +16,22 @@ public class CollectibleCount : MonoBehaviour
 
     void Start() => UpdateCount();
 
-    void OnEnable() => GemCollectible.OnCollected += OnCollectibleCollected;
-    void OnDisable() => GemCollectible.OnCollected -= OnCollectibleCollected;
+    void OnEnable() {
+        GemCollectible.OnCollected += OnCollectibleCollected;
+        MoneyCollectible.OnCollected += MoneyCollected;
+    }
+
+    void OnDisable()
+    {
+        GemCollectible.OnCollected -= OnCollectibleCollected;
+        MoneyCollectible.OnCollected -= MoneyCollected;
+    }
+
+    void MoneyCollected()
+    {
+        MoneyCollectible.moneyCount += 100;
+        UpdateCount();
+    }
 
     void OnCollectibleCollected()
     {
@@ -27,12 +41,20 @@ public class CollectibleCount : MonoBehaviour
 
     void UpdateCount()
     {
-        text.text = $"{count} / {GemCollectible.totalCount}";
-        if(count == GemCollectible.totalCount)
+ 
+        if(count >= GemCollectible.totalCount)
         {
-            text.text = "You collected all Gems :)";
+            text.text = $"WinCondition\nMoney: { MoneyCollectible.moneyCount}";
             winCondition = true;
-            GemCollectible.totalCount = 0;
+            GemCollectible.totalCount = -1;
+        }
+        else if(GemCollectible.totalCount != -1)
+        {
+            text.text = $"{count} / {GemCollectible.totalCount}\nMoney: { MoneyCollectible.moneyCount}";
+        }
+        else
+        {
+            text.text = $"\nMoney: { MoneyCollectible.moneyCount}";
         }
     }
 }
