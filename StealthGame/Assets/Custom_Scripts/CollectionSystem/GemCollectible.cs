@@ -3,12 +3,9 @@ using UnityEngine;
 
 public class GemCollectible : MonoBehaviour
 {
-    public static event Action OnCollected;
-    public static int totalCount = 0;
     public AudioClip clip;
     public float volume = 1;
-
-    void Awake() => totalCount++;
+    public bool mandatory = false;
 
     void Update()
     {
@@ -17,11 +14,13 @@ public class GemCollectible : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
         if (other.CompareTag("Thief"))
         {
-            Debug.Log("Collision");
-            OnCollected?.Invoke();
+            if(mandatory)
+            {
+                CollectibleMaster.Instance.mandatoriesClaimed++;
+            }
+            CollectibleMaster.Instance.CheckCollection();
             AudioSource.PlayClipAtPoint(clip, transform.position, volume);
             Destroy(gameObject);
         }

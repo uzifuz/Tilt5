@@ -23,6 +23,10 @@ public class CameraMovement : MonoBehaviour
         {
             transform.localEulerAngles += new Vector3(0, Time.deltaTime * moveSpeed * rotationMultiplier, 0);
         }
+        if(Input.GetKeyDown(KeyCode.Escape))//Remove this on future releases!!!
+        {
+            Application.Quit();
+        }
     }
 
 

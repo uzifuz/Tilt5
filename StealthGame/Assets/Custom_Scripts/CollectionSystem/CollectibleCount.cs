@@ -6,33 +6,25 @@ public class CollectibleCount : MonoBehaviour
 {
     TMPro.TMP_Text text;
     public int count;
-    public static CollectibleCount Instance { get; private set; }
-    public static bool winCondition = false;
+    public bool winCondition = false;
 
-    void Awake()
+    void Start()
     {
         text = GetComponent<TMPro.TMP_Text>();
     }
 
-    void Start() => UpdateCount();
-
-    void OnEnable() => GemCollectible.OnCollected += OnCollectibleCollected;
-    void OnDisable() => GemCollectible.OnCollected -= OnCollectibleCollected;
-
-    void OnCollectibleCollected()
+    public void UpdateCount(string updateTextTo)
     {
-        count++;
-        UpdateCount();
-    }
-
-    void UpdateCount()
-    {
-        text.text = $"{count} / {GemCollectible.totalCount}";
-        if(count == GemCollectible.totalCount)
+        text.text = $"{updateTextTo}";
+        if(CollectibleMaster.Instance.mandatoriesClaimed >= CollectibleMaster.Instance.mandatoryCollectibles.Length)
         {
             text.text = "You collected all Gems :)";
             winCondition = true;
-            GemCollectible.totalCount = 0;
         }
+    }
+
+    public void WinConditionMet()
+    {
+        winCondition = true;
     }
 }

@@ -18,10 +18,7 @@ public class GameHandler
         }
     }
     public bool GameIsOver { get; private set; }
-    private GameHandler()
-    {
-
-    }
+    
     public void GameOver(GameOutcome outcome)
     {
         GameIsOver = true;
