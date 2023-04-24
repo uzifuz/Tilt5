@@ -1,11 +1,17 @@
-using System;
 using UnityEngine;
 
 public class GemCollectible : MonoBehaviour
 {
+    public int curValue = 0;
+    [SerializeField] int minValue = 1, maxValue = 100;
     public AudioClip clip;
     public float volume = 1;
     public bool mandatory = false;
+
+    private void OnEnable()
+    {
+        curValue = Random.Range(minValue, maxValue);
+    }
 
     void Update()
     {
@@ -19,6 +25,7 @@ public class GemCollectible : MonoBehaviour
             if(mandatory)
             {
                 CollectibleMaster.Instance.mandatoriesClaimed++;
+                CollectibleMaster.Instance.collectedValue += curValue;
             }
             CollectibleMaster.Instance.CheckCollection();
             AudioSource.PlayClipAtPoint(clip, transform.position, volume);

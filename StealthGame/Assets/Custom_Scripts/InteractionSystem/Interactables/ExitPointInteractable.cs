@@ -5,6 +5,7 @@ using UnityEngine;
 public class ExitPointInteractable : InteractableObject
 {
     [SerializeField] GameObject highlightedObject, nonHighlightedObject;
+    bool calledOnce = false;
 
     public void ShowExitHighlight(bool show = false)
     {
@@ -16,9 +17,12 @@ public class ExitPointInteractable : InteractableObject
     {
         base.Interact();
 
-        if(CollectibleMaster.Instance.uiCounter.winCondition)
+        if(CollectibleMaster.Instance.uiCounter.winCondition && !calledOnce)
         {
+            calledOnce = true;
             GameHandler.Instance.GameOver(GameHandler.GameOutcome.ThiefWin);
+            Debug.Log("This has been called" + PlayerPrefs.GetInt("TotalPlayerMoney").ToString());
+            PlayerPrefs.SetInt("TotalPlayerMoney", PlayerPrefs.GetInt("TotalPlayerMoney") + CollectibleMaster.Instance.collectedValue);
         }
 
     }

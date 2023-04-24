@@ -11,7 +11,7 @@ public class CollectibleMaster : MonoBehaviour
     public GameObject[] optionalCollectibles;
     [SerializeField]
     bool randomizeOptionalCollectibles = true;
-    public int mandatoriesClaimed = 0;
+    public int mandatoriesClaimed = 0, collectedValue = 0, currentPrefValue;
     [HideInInspector]
     public CollectibleCount uiCounter;
 
@@ -25,6 +25,15 @@ public class CollectibleMaster : MonoBehaviour
         SetMandatoryCollectibles();
         SetOptionalCollectibles();
         CheckCollection();
+    }
+
+    private void Update()
+    {
+        currentPrefValue = PlayerPrefs.GetInt("TotalPlayerMoney");
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            PlayerPrefs.SetInt("TotalPlayerMoney", 0);
+        }
     }
 
     public void SetMandatoryCollectibles()
@@ -80,6 +89,7 @@ public class CollectibleMaster : MonoBehaviour
         {
             uiCounter.UpdateCount($"You collected every objective!");
             uiCounter.WinConditionMet() ;
+
             FindObjectOfType<ExitPointInteractable>().ShowExitHighlight(true);
         }
         else
