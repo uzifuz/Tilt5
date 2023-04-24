@@ -80,6 +80,7 @@ public class CollectibleMaster : MonoBehaviour
         {
             uiCounter.UpdateCount($"You collected every objective!");
             uiCounter.WinConditionMet() ;
+            FindObjectOfType<ExitPointInteractable>().ShowExitHighlight(true);
         }
         else
         {

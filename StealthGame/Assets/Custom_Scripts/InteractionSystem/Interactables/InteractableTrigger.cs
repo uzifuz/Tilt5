@@ -8,7 +8,15 @@ public class InteractableTrigger : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && currentObject != null)
+        bool tiltFiveInteractPressed = false;
+        if(TiltFive.Wand.TryGetWandDevice(TiltFive.PlayerIndex.One, TiltFive.ControllerIndex.Right, out TiltFive.WandDevice wandDevice))
+        {
+            if(wandDevice.One.isPressed)
+            {
+                tiltFiveInteractPressed = true;
+            }
+        }
+        if ((Input.GetKeyDown(KeyCode.F) || tiltFiveInteractPressed) && currentObject != null)
         {
             currentObject.Interact();
         }
