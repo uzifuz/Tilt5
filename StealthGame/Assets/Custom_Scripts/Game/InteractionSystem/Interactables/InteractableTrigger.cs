@@ -5,6 +5,7 @@ using UnityEngine;
 public class InteractableTrigger : MonoBehaviour
 {
     InteractableObject currentObject;
+    public KeyCode interactionKey = KeyCode.F;
 
     private void Update()
     {
@@ -16,7 +17,7 @@ public class InteractableTrigger : MonoBehaviour
                 tiltFiveInteractPressed = true;
             }
         }
-        if ((Input.GetKeyDown(KeyCode.F) || tiltFiveInteractPressed) && currentObject != null)
+        if ((Input.GetKeyDown(interactionKey) || tiltFiveInteractPressed) && currentObject != null)
         {
             currentObject.Interact();
         }

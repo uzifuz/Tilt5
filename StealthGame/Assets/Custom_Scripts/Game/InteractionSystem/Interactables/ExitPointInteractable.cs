@@ -21,7 +21,7 @@ public class ExitPointInteractable : InteractableObject
         {
             calledOnce = true;
             GameHandler.Instance.GameOver(GameHandler.GameOutcome.ThiefWin);
-            Debug.Log("This has been called" + PlayerPrefs.GetInt("TotalPlayerMoney").ToString());
+            //Debug.Log("This has been called" + PlayerPrefs.GetInt("TotalPlayerMoney").ToString());
             PlayerPrefs.SetInt("TotalPlayerMoney", PlayerPrefs.GetInt("TotalPlayerMoney") + CollectibleMaster.Instance.collectedValue);
         }
 
