@@ -17,8 +17,16 @@ public class DetectionUI : MonoBehaviour
     {
         if (detectionText != null)
         {
-            string timeText = remainingTime.ToString("0.00");
-            detectionText.text = $"DETECTED\n{timeText}";
+            if(remainingTime <= 0)
+            {
+                detectionText.text = "";
+            }
+            else
+            {
+                string timeText = remainingTime.ToString("0.00");
+                detectionText.text = $"DETECTED\n{timeText}";
+            }
+            
         }
     }
 }

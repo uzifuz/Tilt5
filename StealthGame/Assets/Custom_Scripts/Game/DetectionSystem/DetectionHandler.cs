@@ -21,7 +21,7 @@ public class DetectionHandler : MonoBehaviour
 
     void Update()
     {
-        if (ThiefDetected)
+        if (ThiefDetected && !GameHandler.Instance.GameIsOver)
         {
            DetectionAlarm.Instance.StartAlarmCountDown();
         }

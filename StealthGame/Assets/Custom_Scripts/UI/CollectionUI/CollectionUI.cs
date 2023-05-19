@@ -14,9 +14,11 @@ public class CollectionUI : MonoBehaviour
 
     public void UpdateCount(string updateTextTo)
     {
-       if(collectionText != null)
-       {
-            collectionText.text = updateTextTo;
-       }
+        if(collectionText == null)
+        {
+            collectionText = GetComponent<TextMeshProUGUI>();
+        }
+
+        collectionText.text = updateTextTo;
     }
 }

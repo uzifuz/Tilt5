@@ -30,7 +30,7 @@ public class DetectionAlarm : MonoBehaviour
             if(alarmTimer <= 0)
             {
                 alarmEnabled = false;
-                alarmTimer = 0;
+                alarmTimer = -1;
                 GameHandler.Instance.GameOver(GameHandler.GameOutcome.ThiefLose);
             }
         }
@@ -38,8 +38,10 @@ public class DetectionAlarm : MonoBehaviour
 
     public void StartAlarmCountDown()
     {
+
         if(!alarmEnabled)
         {
+            Debug.Log("Starting alarm");
             alarmTimer = alarmDuration;
             alarmEnabled = true;
         }

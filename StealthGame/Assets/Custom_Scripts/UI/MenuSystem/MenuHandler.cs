@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Singleton Monobehaviour, use MenuHandler.Instance
@@ -18,11 +19,7 @@ public class MenuHandler : MonoBehaviour
         LoseMenu,
         WinMenu;
 
-    public bool MenuIsOpen 
-        => allMenus
-        .Where(
-            predicate: (KeyValuePair<MenuType, GameObject> menuPair) => menuPair.Value.activeSelf)
-        .Any();
+    public bool MenuIsOpen => allMenus.Where(predicate: (KeyValuePair<MenuType, GameObject> menuPair) => menuPair.Value.activeSelf).Any();
 
 
     private Dictionary<MenuType, GameObject> allMenus;
@@ -31,7 +28,7 @@ public class MenuHandler : MonoBehaviour
     {
         if(Instance != null)
         {
-            Debug.LogError("multiple instances of MenuMaster in scene");
+            Debug.LogError("multiple instances of MenuHandler in scene " + this.name);
         }
         Instance = this;
 
@@ -45,9 +42,9 @@ public class MenuHandler : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("Esc or V pressed");
+            Debug.Log("Esc pressed");
             if (MenuIsOpen && allMenus[MenuType.Pause].activeSelf)
             {
                 ResumeGame();
@@ -61,6 +58,7 @@ public class MenuHandler : MonoBehaviour
 
     public void OpenMenu(MenuType menuType = MenuType.Pause)
     {
+        Time.timeScale = 0f;
         foreach(var pair in allMenus)
         {
             var menuObject = pair.Value;
@@ -74,6 +72,7 @@ public class MenuHandler : MonoBehaviour
 
     public void CloseMenu()
     {
+        Time.timeScale = 1f;
         foreach (var pair in allMenus)
         {
             var menuObject = pair.Value;
@@ -85,11 +84,31 @@ public class MenuHandler : MonoBehaviour
     {
         Debug.Log("resuming game");
         CloseMenu();
+        Time.timeScale = 1f;
     }
 
     private void PauseGame()
     {
         Debug.Log("Game Paused");
         OpenMenu(MenuType.Pause);
+        Time.timeScale = 0f;
+    }
+
+    public void ReturnToMainMenu()
+    {
+        Debug.Log("returning to menu");
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
+    }
+
+    public void TryAgain()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(1);
+    }
+
+    public void NextLevel(int levelIndex)
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(1);
     }
 }
