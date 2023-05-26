@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TiltFiveUI : MonoBehaviour
 {
-    [SerializeField] Button[] allButtons;
+    [SerializeField] Selectable[] allButtons;
     public int curIndex = 0;
     public float swapTime = 0.33f;
     float swapTimer = 0;
@@ -35,6 +35,20 @@ public class TiltFiveUI : MonoBehaviour
                 curIndex = allButtons.Length - 1;
             }
         }
+        else if(TiltFiveInputs.Instance.stickX > 0.25f && swapTimer <= 0)
+        {
+            swapTimer = swapTime;
+            curIndex = 3;
+
+        }
+        else if (TiltFiveInputs.Instance.stickX < -0.25f && swapTimer <= 0)
+        {
+            swapTimer = swapTime;
+            if (curIndex == 3)
+            {
+                curIndex = 0;
+            }
+        }
         HighlightCurButton(curIndex);
         swapTimer -= Time.deltaTime;
     }
@@ -44,8 +58,21 @@ public class TiltFiveUI : MonoBehaviour
         allButtons[index].Select();
     }
 
-    public void CallMethodOf(int index)
+    public void CallMethodOf(int index) 
     {
-        allButtons[index].onClick.Invoke();
+        Debug.Log("CallMethodOf called");
+        if (swapTimer <= 0)
+        {
+            Debug.Log("CallMethodOf in if");
+            swapTimer = swapTime*10;
+            if (allButtons[index] is Button)
+            {
+                allButtons[index].GetComponent<Button>().onClick.Invoke();
+            }
+            else if (allButtons[index] is Toggle)
+            {
+                allButtons[index].GetComponent<Toggle>().isOn = !allButtons[index].GetComponent<Toggle>().isOn;
+            }
+        }
     }
 }

@@ -93,5 +93,17 @@ public class TiltFiveInputs : MonoBehaviour
             stickX = wandDevice.Stick.ReadValue().x;
             stickY = wandDevice.Stick.ReadValue().y;
         }
+        else
+        {
+            one = false;
+            two = false;
+            a = false;
+            b = false;
+            x = false;
+            y = false;
+            trigger = false;
+            stickX = 0;
+            stickY = 0;
+        }
     }
 }

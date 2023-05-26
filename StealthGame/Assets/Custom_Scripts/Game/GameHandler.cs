@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Singleton, use GameHandler.Instance
 /// </summary>
-public class GameHandler
+public class GameHandler : MonoBehaviour
 {
     public enum GameOutcome { ThiefWin, ThiefLose }
     private static GameHandler? _instance;
@@ -18,6 +18,23 @@ public class GameHandler
         }
     }
     public bool GameIsOver { get; private set; }
+
+    [SerializeField]
+    private GameObject tilt5Prototype;
+
+    void Start()
+    {
+        if(PlayerPrefs.GetInt("Tilt5Mode") == 1)
+        {
+            Debug.Log("Tilt5 mode activated");
+            tilt5Prototype.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("Normie mode activated");
+            tilt5Prototype.SetActive(false);
+        }
+    }
     
     public void GameOver(GameOutcome outcome)
     {

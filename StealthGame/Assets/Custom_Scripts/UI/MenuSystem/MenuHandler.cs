@@ -14,15 +14,13 @@ public class MenuHandler : MonoBehaviour
     public static MenuHandler Instance { get; private set; }
 
     [SerializeField]
-    GameObject
+    GameObject[]
         PauseMenu,
         LoseMenu,
         WinMenu;
 
-    public bool MenuIsOpen => allMenus.Where(predicate: (KeyValuePair<MenuType, GameObject> menuPair) => menuPair.Value.activeSelf).Any();
 
-
-    private Dictionary<MenuType, GameObject> allMenus;
+    private Dictionary<MenuType, GameObject[]> allMenus;
 
     void Start()
     {
@@ -42,10 +40,11 @@ public class MenuHandler : MonoBehaviour
 
     private void Update()
     {
+        bool MenuIsOpen = PauseMenu[0].activeSelf || WinMenu[0].activeSelf || LoseMenu[0].activeSelf;
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Debug.Log("Esc pressed");
-            if (MenuIsOpen && allMenus[MenuType.Pause].activeSelf)
+            if (PauseMenu[0].activeSelf)
             {
                 ResumeGame();
             }
@@ -58,26 +57,41 @@ public class MenuHandler : MonoBehaviour
 
     public void OpenMenu(MenuType menuType = MenuType.Pause)
     {
-        Time.timeScale = 0f;
-        foreach(var pair in allMenus)
+        //Time.timeScale = 0f;
+        DeactivateAllMenus();
+        switch(menuType)
         {
-            var menuObject = pair.Value;
-            if (menuObject.activeSelf)
-            {
-                menuObject.SetActive(false);
-            }
+            case MenuType.Pause:
+                SetEachObjectOfArray(PauseMenu, true);
+                break;
+            case MenuType.Win:
+                SetEachObjectOfArray(WinMenu, true);
+                break;
+            case MenuType.Lose:
+                SetEachObjectOfArray(LoseMenu, true);
+                break;
         }
-        allMenus[menuType].SetActive(true);
+    }
+
+    void SetEachObjectOfArray(GameObject[] newArray, bool newState)
+    {
+        for (int i = 0; i < newArray.Length; i++)
+        {
+            newArray[i].SetActive(newState);
+        }
+    }
+
+    void DeactivateAllMenus()
+    {
+        SetEachObjectOfArray(PauseMenu, false);
+        SetEachObjectOfArray(WinMenu, false);
+        SetEachObjectOfArray(LoseMenu, false);
     }
 
     public void CloseMenu()
     {
         Time.timeScale = 1f;
-        foreach (var pair in allMenus)
-        {
-            var menuObject = pair.Value;
-            menuObject.SetActive(false);
-        }
+        DeactivateAllMenus();
     }
 
     public void ResumeGame()
