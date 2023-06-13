@@ -18,6 +18,8 @@ public class ClickToMoveEntity : MonoBehaviour
     [SerializeField]
     float runTime = 0.5f;
     float runTimer = 0f;
+    public bool boardLocked = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -112,7 +114,8 @@ public class ClickToMoveEntity : MonoBehaviour
                 Vector3 wandTipNoY = new Vector3(wandTipTransform.position.x, 0, wandTipTransform.position.z);
                 Vector3 wandGripNoY = new Vector3(wandGripTransform.position.x, 0, wandGripTransform.position.z);
                 Vector3 direction = (wandTipNoY - wandGripNoY).normalized;
-                gameBoard.Translate(Vector3.Cross(direction, gameBoard.up) * wandDevice.Stick.ReadValue().x * Time.deltaTime * boardMoveSpeed + direction * wandDevice.Stick.ReadValue().y * Time.deltaTime * -boardMoveSpeed);
+                if(!boardLocked)
+                    gameBoard.Translate(Vector3.Cross(direction, gameBoard.up) * wandDevice.Stick.ReadValue().x * Time.deltaTime * boardMoveSpeed + direction * wandDevice.Stick.ReadValue().y * Time.deltaTime * -boardMoveSpeed);
                 
             }
         }

@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 public class MenuHandler : MonoBehaviour
 {
     public enum MenuType { Pause, Win, Lose}
-
+    ClickToMoveEntity moveController;
     public static MenuHandler Instance { get; private set; }
 
     [SerializeField]
@@ -36,6 +36,8 @@ public class MenuHandler : MonoBehaviour
             { MenuType.Lose, LoseMenu },
             { MenuType.Win, WinMenu }
         };
+
+        moveController = FindObjectOfType<ClickToMoveEntity>();
     }
 
     private void Update()
@@ -57,7 +59,8 @@ public class MenuHandler : MonoBehaviour
 
     public void OpenMenu(MenuType menuType = MenuType.Pause)
     {
-        //Time.timeScale = 0f;
+        //Nothing moving logic needs to be here!!!
+        moveController.boardLocked = true;
         DeactivateAllMenus();
         switch(menuType)
         {
@@ -92,6 +95,7 @@ public class MenuHandler : MonoBehaviour
     {
         Time.timeScale = 1f;
         DeactivateAllMenus();
+        moveController.boardLocked = false;
     }
 
     public void ResumeGame()

@@ -9,7 +9,7 @@ public class DetectionAlarm : MonoBehaviour
     float alarmDuration = 10f;
     float alarmTimer;
     bool alarmEnabled = false;
-    DetectionUI detectionUI;
+    DetectionUI[] detectionUI;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class DetectionAlarm : MonoBehaviour
         {
             Instance = this;
         }
-        detectionUI = FindObjectOfType<DetectionUI>();
+        detectionUI = FindObjectsOfType<DetectionUI>();
     }
 
     // Update is called once per frame
@@ -50,6 +50,9 @@ public class DetectionAlarm : MonoBehaviour
     private void UpdateTimer()
     {
         alarmTimer -= Time.deltaTime;
-        detectionUI.UpdateText(alarmTimer);
+        foreach(DetectionUI det in detectionUI)
+        {
+            det.UpdateText(alarmTimer);
+        }
     }
 }

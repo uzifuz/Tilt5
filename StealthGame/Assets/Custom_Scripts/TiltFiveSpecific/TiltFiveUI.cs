@@ -35,13 +35,13 @@ public class TiltFiveUI : MonoBehaviour
                 curIndex = allButtons.Length - 1;
             }
         }
-        else if(TiltFiveInputs.Instance.stickX > 0.25f && swapTimer <= 0)
+        else if(TiltFiveInputs.Instance.stickX > 0.25f && swapTimer <= 0 && allButtons.Length > 3)
         {
             swapTimer = swapTime;
             curIndex = 3;
 
         }
-        else if (TiltFiveInputs.Instance.stickX < -0.25f && swapTimer <= 0)
+        else if (TiltFiveInputs.Instance.stickX < -0.25f && swapTimer <= 0 && allButtons.Length > 3)
         {
             swapTimer = swapTime;
             if (curIndex == 3)
