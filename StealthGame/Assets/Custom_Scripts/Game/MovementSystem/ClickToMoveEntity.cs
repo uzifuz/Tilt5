@@ -19,6 +19,8 @@ public class ClickToMoveEntity : MonoBehaviour
     float runTime = 0.5f;
     float runTimer = 0f;
     public bool boardLocked = false;
+    public Color enabledLightColor, disabledLightColor;
+    public float minLightIntensity, maxLightIntensity, lightIntensityMod;
 
     // Start is called before the first frame update
     void Start()
@@ -43,12 +45,14 @@ public class ClickToMoveEntity : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, clickableObjects))
         {
-            torchLight.color = Color.green;
+            torchLight.color = enabledLightColor;
         }
         else
         {
-            torchLight.color = Color.red;
+            torchLight.color = disabledLightColor;
         }
+        torchLight.intensity = torchLight.transform.position.y * lightIntensityMod;
+        torchLight.intensity = Mathf.Clamp(torchLight.intensity, minLightIntensity, maxLightIntensity);
     }
 
     void SendPlayerToLocation()

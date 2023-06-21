@@ -363,11 +363,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4213ce95d3d20e14bbdc1e56074c4ba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxNumberOfRoomsCreated: 10
+  MaxNumberOfRoomsCreated: 15
   possibleRooms:
   - {fileID: 511719625655682574, guid: 78e3f5f83f8ec6545a0dbe581e6da9b3, type: 3}
   - {fileID: 511719625655682574, guid: 78e3f5f83f8ec6545a0dbe581e6da9b3, type: 3}
-  - {fileID: 1066039723159153107, guid: 81290ad0563b32d4fa2f7bb7161b1cc2, type: 3}
   allGeneratedRooms: []
 --- !u!4 &393402089
 Transform:

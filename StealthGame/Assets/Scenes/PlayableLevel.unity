@@ -4541,7 +4541,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.3922214, g: 0.59471613, b: 0.735849, a: 1}
-  m_Intensity: 0.1
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -6129,7 +6129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &265498900
 Transform:
   m_ObjectHideFlags: 0
@@ -24819,6 +24819,11 @@ MonoBehaviour:
     m_Bits: 1
   runTime: 0.5
   boardLocked: 0
+  enabledLightColor: {r: 1, g: 0.8661064, b: 0.48584908, a: 1}
+  disabledLightColor: {r: 1, g: 0, b: 0, a: 1}
+  minLightIntensity: 0
+  maxLightIntensity: 250
+  lightIntensityMod: 75
 --- !u!82 &1086779951
 AudioSource:
   m_ObjectHideFlags: 0
