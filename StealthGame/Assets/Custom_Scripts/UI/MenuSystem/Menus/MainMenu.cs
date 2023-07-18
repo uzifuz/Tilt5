@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         gameModeToggle.isOn = tilt5Prototype.activeSelf;
+        OnGameModeChanged();
     }
 
     public void PlayGame(int sceneIndex)

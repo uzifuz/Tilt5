@@ -115,18 +115,24 @@ public class MenuHandler : MonoBehaviour
     public void ReturnToMainMenu()
     {
         Debug.Log("returning to menu");
+        DetectionHandler.Instance.ThiefDetected = false;
+        GameHandler.Instance.GameOutComeReset();
         SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 
     public void TryAgain()
     {
         Time.timeScale = 1.0f;
+        DetectionHandler.Instance.ThiefDetected = false;
+        GameHandler.Instance.GameOutComeReset();
         SceneManager.LoadScene(1);
     }
 
     public void NextLevel(int levelIndex)
     {
         Time.timeScale = 1.0f;
+        DetectionHandler.Instance.ThiefDetected = false;
+        GameHandler.Instance.GameOutComeReset();
         SceneManager.LoadScene(1);
     }
 }

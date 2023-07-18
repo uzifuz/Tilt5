@@ -54,4 +54,8 @@ public class GameHandler : MonoBehaviour
 
         }
     }
+    public void GameOutComeReset()
+    {
+        GameIsOver = false;
+    }
 }
