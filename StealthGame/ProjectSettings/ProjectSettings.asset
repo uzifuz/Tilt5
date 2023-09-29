@@ -703,7 +703,8 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Standalone: MIXCAST;MIXCAST_TILTFIVE;MIXCAST_TILTFIVE_V2;MIXCAST_URP;MIXCAST_URP_V4
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

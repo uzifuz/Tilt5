@@ -4541,7 +4541,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.3922214, g: 0.59471613, b: 0.735849, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -16424,7 +16424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4611551431890747084, guid: 7c58e089c5150a04faafe5b390bc23fe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4611551431890747120, guid: 7c58e089c5150a04faafe5b390bc23fe, type: 3}
       propertyPath: m_Acceleration
@@ -19672,7 +19672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4611551431890747084, guid: 7c58e089c5150a04faafe5b390bc23fe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4611551431890747120, guid: 7c58e089c5150a04faafe5b390bc23fe, type: 3}
       propertyPath: m_Acceleration
@@ -23166,7 +23166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4611551431890747084, guid: 7c58e089c5150a04faafe5b390bc23fe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4611551431890747120, guid: 7c58e089c5150a04faafe5b390bc23fe, type: 3}
       propertyPath: m_Acceleration
@@ -32831,7 +32831,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.1
+    widthMultiplier: 0
     widthCurve:
       serializedVersion: 2
       m_Curve:
