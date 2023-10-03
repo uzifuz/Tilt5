@@ -366,7 +366,6 @@ MonoBehaviour:
   MaxNumberOfRoomsCreated: 15
   possibleRooms:
   - {fileID: 511719625655682574, guid: 78e3f5f83f8ec6545a0dbe581e6da9b3, type: 3}
-  - {fileID: 511719625655682574, guid: 78e3f5f83f8ec6545a0dbe581e6da9b3, type: 3}
   allGeneratedRooms: []
 --- !u!4 &393402089
 Transform:

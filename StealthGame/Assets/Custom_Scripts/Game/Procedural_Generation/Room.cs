@@ -1,3 +1,4 @@
+using Microsoft.Win32.SafeHandles;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,10 +6,11 @@ using UnityEngine.Rendering;
 
 public class Room : MonoBehaviour
 {
-    public float xSize = 1, zSize = 1;
+    public Vector2 size;
     [SerializeField] Color lineColor;
     public ModifiableDoorway[] PossibleDoors;
     public Vector3 bottomLeftPoint, bottomRightPoint, upperLeftPoint, upperRightPoint;
+    public Vector3 checkPointLeft, checkPointBottom, checkPointRight, checkPointUp, checkCenter;
 
     private void Start()
     {
@@ -22,18 +24,30 @@ public class Room : MonoBehaviour
 
     void SetEdgePoints()
     {
-        bottomLeftPoint = transform.position + new Vector3(-xSize / 2f, 0f, -zSize / 2f);
-        bottomRightPoint = transform.position + new Vector3(xSize / 2f, 0f, -zSize / 2f);
-        upperLeftPoint = transform.position + new Vector3(-xSize / 2f, 0f, zSize / 2f);
-        upperRightPoint = transform.position + new Vector3(xSize / 2f, 0f, zSize / 2f);
+        bottomLeftPoint = transform.position + new Vector3(-size.x / 2f, 0f, -size.y / 2f);
+        bottomRightPoint = transform.position + new Vector3(size.x / 2f, 0f, -size.y / 2f);
+        upperLeftPoint = transform.position + new Vector3(-size.x / 2f, 0f, size.y / 2f);
+        upperRightPoint = transform.position + new Vector3(size.x / 2f, 0f, size.y / 2f);
+        SetCheckPoints();
     }
 
-    public bool CheckIfPointIsInsideRectangle(Vector3 checkedPoint)
+    void SetCheckPoints()
     {
-        if(checkedPoint.x < bottomRightPoint.x && checkedPoint.x > bottomLeftPoint.x && //Horizontally Inside
-            checkedPoint.z < upperLeftPoint.z && checkedPoint.z > bottomLeftPoint.z)//Vertically inside
+        checkPointLeft = (bottomLeftPoint + upperLeftPoint) / 2f;
+        checkPointRight = (bottomRightPoint + upperRightPoint) / 2f;
+        checkPointBottom = (bottomLeftPoint + bottomRightPoint) / 2f;
+        checkPointUp = (upperLeftPoint + upperRightPoint) / 2f;
+        checkCenter = (upperLeftPoint + bottomRightPoint) / 2f;
+    }
+
+    public bool CheckIfRoomOverlapsRoom(Room otherRoom)
+    {
+        Rect roomA = new Rect(this.transform.position, this.size);
+        Rect roomB = new Rect(otherRoom.transform.position, otherRoom.size);
+
+        if (roomA.Overlaps(roomB))
         {
-            Debug.LogError("POINT INSIDE OTHER GEOMETRY; DELETE THIS!!!");
+            Debug.Log("Rooms overlap: Room " + this.name + " and Room " + otherRoom.name);
             return true;
         }
         return false;
@@ -41,19 +55,19 @@ public class Room : MonoBehaviour
 
     public RoomOutgoingDirection GetDoorPosition(ModifiableDoorway checkedDoor)
     {
-        if(checkedDoor.transform.position.x == transform.position.x - xSize / 2f)
+        if(checkedDoor.transform.position.x == transform.position.x - size.x / 2f)
         {
             return RoomOutgoingDirection.Left;
         }
-        else if(checkedDoor.transform.position.x == transform.position.x + xSize / 2f)
+        else if(checkedDoor.transform.position.x == transform.position.x + size.x / 2f)
         {
             return RoomOutgoingDirection.Right;
         }
-        else if(checkedDoor.transform.position.z == transform.position.z - zSize / 2f)
+        else if(checkedDoor.transform.position.z == transform.position.z - size.y / 2f)
         {
             return RoomOutgoingDirection.Down;
         }
-        else if(checkedDoor.transform.position.z == transform.position.z + zSize / 2f)
+        else if(checkedDoor.transform.position.z == transform.position.z + size.y / 2f)
         {
             return RoomOutgoingDirection.Up;
         }
@@ -67,25 +81,25 @@ public class Room : MonoBehaviour
             switch (checkedSide)
             {
                 case RoomOutgoingDirection.Down:
-                    if(door.transform.position.z == transform.position.z - zSize / 2f)
+                    if(door.transform.position.z == transform.position.z - size.y / 2f)
                     {
                         return door;
                     }
                     break;
                 case RoomOutgoingDirection.Left:
-                    if(door.transform.position.x == transform.position.x - xSize / 2f)
+                    if(door.transform.position.x == transform.position.x - size.x / 2f)
                     {
                         return door;
                     }
                     break;
                 case RoomOutgoingDirection.Right:
-                    if(door.transform.position.x == transform.position.x + xSize / 2f)
+                    if(door.transform.position.x == transform.position.x + size.x / 2f)
                     {
                         return door;
                     }
                     break;
                 case RoomOutgoingDirection.Up:
-                    if(door.transform.position.z == transform.position.x + zSize / 2f)
+                    if(door.transform.position.z == transform.position.x + size.y / 2f)
                     {
                         return door;
                     }

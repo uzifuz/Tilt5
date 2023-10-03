@@ -115,7 +115,7 @@ public class ProceduralLevelGenerator : MonoBehaviour
                 Room connectingRoom = GetRoomFromDoor(connectingDoor);
                 if(connectingRoom == null)
                 {
-                    Debug.LogError("CreateRoom ABORTED. Cause: No availableconnecting Room found");
+                    Debug.LogError("CreateRoom ABORTED. Cause: No available connecting Room found");
                     Destroy(newRoom.gameObject);
                     return false;
                 }
@@ -190,16 +190,16 @@ public class ProceduralLevelGenerator : MonoBehaviour
         switch (sideOfOriginalRoomDoor)
         {
             case RoomOutgoingDirection.Left:
-                offset = (originalRoom.xSize / 2f + newRoom.xSize / 2f) * Vector3.left;
+                offset = (originalRoom.size.x / 2f + newRoom.size.x / 2f) * Vector3.left;
                 break;
             case RoomOutgoingDirection.Right:
-                offset = (originalRoom.xSize / 2f + newRoom.xSize / 2f) * Vector3.right;
+                offset = (originalRoom.size.x / 2f + newRoom.size.x / 2f) * Vector3.right;
                 break;
             case RoomOutgoingDirection.Up:
-                offset = (originalRoom.zSize / 2f + newRoom.zSize / 2f) * Vector3.forward;
+                offset = (originalRoom.size.y / 2f + newRoom.size.y / 2f) * Vector3.forward;
                 break;
             case RoomOutgoingDirection.Down:
-                offset = (originalRoom.zSize / 2f + newRoom.zSize / 2f) * Vector3.back;
+                offset = (originalRoom.size.y / 2f + newRoom.size.y / 2f) * Vector3.back;
                 break;
         }
         newRoom.transform.position = originalRoom.transform.position + offset;
@@ -209,11 +209,7 @@ public class ProceduralLevelGenerator : MonoBehaviour
     {
         foreach(Room room in allGeneratedRooms)
         {
-            if(room.CheckIfPointIsInsideRectangle(thisRoom.bottomLeftPoint) || 
-                room.CheckIfPointIsInsideRectangle(thisRoom.bottomRightPoint) ||
-                room.CheckIfPointIsInsideRectangle(thisRoom.upperLeftPoint) ||
-                room.CheckIfPointIsInsideRectangle(thisRoom.upperRightPoint) ||
-                room.CheckIfPointIsInsideRectangle(thisRoom.transform.position))
+            if(room.CheckIfRoomOverlapsRoom(thisRoom))
             {
                 Debug.LogWarning(thisRoom.name + " conflicting with " + room.name + ", about to be deleted");
                 return false;
