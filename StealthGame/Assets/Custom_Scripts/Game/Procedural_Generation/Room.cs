@@ -6,11 +6,15 @@ using UnityEngine.Rendering;
 
 public class Room : MonoBehaviour
 {
+    public bool connectingSegment;
+    public Transform[] DoorAlignedPoints;
     public Vector2 size;
     [SerializeField] Color lineColor;
     public ModifiableDoorway[] PossibleDoors;
     public Vector3 bottomLeftPoint, bottomRightPoint, upperLeftPoint, upperRightPoint;
     public Vector3 checkPointLeft, checkPointBottom, checkPointRight, checkPointUp, checkCenter;
+    Bounds boundsA, boundsB;
+
 
     private void Start()
     {
@@ -42,10 +46,13 @@ public class Room : MonoBehaviour
 
     public bool CheckIfRoomOverlapsRoom(Room otherRoom)
     {
-        Rect roomA = new Rect(this.transform.position, this.size);
-        Rect roomB = new Rect(otherRoom.transform.position, otherRoom.size);
+        boundsA = new Bounds(this.transform.position, new Vector3(size.x, 2f, size.y));
+        boundsB = new Bounds(otherRoom.transform.position, new Vector3(otherRoom.size.x, 2f, otherRoom.size.y));
 
-        if (roomA.Overlaps(roomB))
+        bool xOverlap = boundsA.min.x < boundsB.max.x && boundsA.max.x > boundsB.min.x;
+        bool zOverlap = boundsA.min.z < boundsB.max.z && boundsA.max.z > boundsB.min.z;
+
+        if (xOverlap && zOverlap)
         {
             Debug.Log("Rooms overlap: Room " + this.name + " and Room " + otherRoom.name);
             return true;
@@ -115,6 +122,10 @@ public class Room : MonoBehaviour
         Debug.DrawLine(bottomLeftPoint, upperLeftPoint, lineColor);
         Debug.DrawLine(bottomRightPoint, upperRightPoint, lineColor);
         Debug.DrawLine(upperLeftPoint, upperRightPoint, lineColor);
+
+        Gizmos.DrawWireCube(boundsA.center, boundsA.size);
+        Gizmos.DrawWireCube(boundsB.center, boundsB.size);
+
         for (int i = 0; i < PossibleDoors.Length; i++)
         {
             Gizmos.DrawWireCube(PossibleDoors[i].transform.position, Vector3.one);

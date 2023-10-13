@@ -363,9 +363,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4213ce95d3d20e14bbdc1e56074c4ba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxNumberOfRoomsCreated: 15
+  MaxNumberOfRoomsCreated: 50
+  MaxAreaSize: {x: 100, y: 100}
+  MinUnitSize: 5
   possibleRooms:
   - {fileID: 511719625655682574, guid: 78e3f5f83f8ec6545a0dbe581e6da9b3, type: 3}
+  - {fileID: 8109402253596830639, guid: 455d69edcd701af468e087831708ac90, type: 3}
+  startingRoom: {fileID: 511719625655682575, guid: 78e3f5f83f8ec6545a0dbe581e6da9b3, type: 3}
   allGeneratedRooms: []
 --- !u!4 &393402089
 Transform:
