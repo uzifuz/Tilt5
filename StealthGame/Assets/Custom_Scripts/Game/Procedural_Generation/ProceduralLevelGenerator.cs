@@ -4,6 +4,8 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.AI;
+using Unity.AI.Navigation;
 
 public class ProceduralLevelGenerator : MonoBehaviour
 {
@@ -14,6 +16,12 @@ public class ProceduralLevelGenerator : MonoBehaviour
     public GameObject[] possibleRooms;
     [SerializeField] Room startingRoom;
     [SerializeField] List<Room> allGeneratedRooms = new List<Room>();
+    NavMeshSurface curSurface;
+
+    private void Start()
+    {
+        curSurface = FindObjectOfType<NavMeshSurface>();
+    }
 
     private void Update()
     {
@@ -34,13 +42,15 @@ public class ProceduralLevelGenerator : MonoBehaviour
         {
             SwapDoorStates();
             curNumberOfCreatedRooms++;
+            Debug.Log("Updating NavMeshSurface");
+            curSurface.BuildNavMesh();
         }
     }
 
     Room SelectRoomToBeInstantiated(Room refRoom)
     {
         Room newRoom;
-        Debug.Log("Func => SelectRoomToBeInstantiated at " + transform.position);
+        //Debug.Log("Func => SelectRoomToBeInstantiated at " + transform.position);
         if(curNumberOfCreatedRooms > 0)
         {
             newRoom = Instantiate(possibleRooms[Random.Range(0, possibleRooms.Length)], transform.position, transform.rotation).GetComponent<Room>();
@@ -98,7 +108,7 @@ public class ProceduralLevelGenerator : MonoBehaviour
     void SwapDoorStates()
     {
         ModifiableDoorway[] allDoors = FindObjectsOfType<ModifiableDoorway>();
-        Debug.Log("Func => SwapDoorStates with " + allDoors.Length + " doors");
+        //Debug.Log("Func => SwapDoorStates with " + allDoors.Length + " doors");
         foreach(ModifiableDoorway door in allDoors)
         {
             door.SetDoor(false);
@@ -119,7 +129,7 @@ public class ProceduralLevelGenerator : MonoBehaviour
                     else
                     {
                         float distance = Vector3.Distance(allDoors[j].transform.position, allDoors[i].transform.position);
-                        Debug.Log("Door Distance too great at " + distance);
+                        //Debug.Log("Door Distance too great at " + distance);
                     }
                 }
             }
@@ -132,7 +142,7 @@ public class ProceduralLevelGenerator : MonoBehaviour
         {
             if(room.CheckIfRoomOverlapsRoom(thisRoom))
             {
-                Debug.LogWarning(thisRoom.name + " conflicting with " + room.name + " at "  + thisRoom.transform.position + "/" + room.transform.position + ", about to be deleted");
+                //Debug.LogWarning(thisRoom.name + " conflicting with " + room.name + " at "  + thisRoom.transform.position + "/" + room.transform.position + ", about to be deleted");
                 return true;
             }
         }
