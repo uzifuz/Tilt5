@@ -17,6 +17,9 @@ public class CollectibleMaster : MonoBehaviour
     [HideInInspector]
     public bool allCollectiblesFound = false;
 
+    [HideInInspector]
+    public ExitPointer exitPointer;
+
     private void Start()
     {
         if(Instance == null)
@@ -24,6 +27,7 @@ public class CollectibleMaster : MonoBehaviour
             Instance = FindObjectOfType<CollectibleMaster>();
         }
         uiCounter = FindObjectOfType<CollectionUI>();
+        exitPointer = FindObjectOfType<ExitPointer>();
         SetMandatoryCollectibles();
         SetOptionalCollectibles();
         CheckCollection();
@@ -91,6 +95,7 @@ public class CollectibleMaster : MonoBehaviour
         {
             allCollectiblesFound = true;
             uiCounter.UpdateCount($"Get to the exit point!");
+            exitPointer.UpdateRotation();
 
             FindObjectOfType<ExitPointInteractable>().ShowExitHighlight(true);
         }
