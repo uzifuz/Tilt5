@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4213ce95d3d20e14bbdc1e56074c4ba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxNumberOfRoomsCreated: 7
+  MaxNumberOfRoomsCreated: 12
   MaxAreaSize: {x: 100, y: 100}
   MinUnitSize: 5
   possibleRooms:
