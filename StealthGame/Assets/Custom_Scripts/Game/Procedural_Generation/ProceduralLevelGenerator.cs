@@ -14,6 +14,7 @@ public class ProceduralLevelGenerator : MonoBehaviour
     public float MinUnitSize = 5f;
     int curNumberOfCreatedRooms = 0;
     public GameObject[] possibleRooms;
+    public float RoomProgress = 0f;
     [SerializeField] Room startingRoom;
     [SerializeField] List<Room> allGeneratedRooms = new List<Room>();
     NavMeshSurface curSurface;
@@ -21,28 +22,30 @@ public class ProceduralLevelGenerator : MonoBehaviour
     private void Start()
     {
         curSurface = FindObjectOfType<NavMeshSurface>();
+        StartCoroutine("RoomGenCo");
     }
 
     private void Update()
     {
-        int checkCounter = 0;
-        if (checkCounter < MaxNumberOfRoomsCreated * 10 && curNumberOfCreatedRooms < MaxNumberOfRoomsCreated)
+        
+    }
+
+    IEnumerator RoomGenCo()
+    {
+        if(CreateRoom())
         {
-            checkCounter++;
-            if (CreateRoom())
-            {
-                //
-            }
-            else
-            {
-                checkCounter++;
-            }
+            curNumberOfCreatedRooms++;
+            Debug.Log($"{curNumberOfCreatedRooms} {MaxNumberOfRoomsCreated} {curNumberOfCreatedRooms/MaxNumberOfRoomsCreated}");
+            RoomProgress = (float)(curNumberOfCreatedRooms / MaxNumberOfRoomsCreated) * 100f;
         }
-        if(curNumberOfCreatedRooms == MaxNumberOfRoomsCreated)
+        if(curNumberOfCreatedRooms < MaxNumberOfRoomsCreated)
+        {
+            yield return new WaitForSeconds(0.1f);
+            StartCoroutine("RoomGenCo");
+        }
+        else
         {
             SwapDoorStates();
-            curNumberOfCreatedRooms++;
-            Debug.Log("Updating NavMeshSurface");
             curSurface.BuildNavMesh();
         }
     }
@@ -85,7 +88,7 @@ public class ProceduralLevelGenerator : MonoBehaviour
             }
             else//Any other room
             {
-                Room possibleRoom = SelectRoomToBeInstantiated(allGeneratedRooms[Random.Range(0, curNumberOfCreatedRooms)]);
+                Room possibleRoom = SelectRoomToBeInstantiated(allGeneratedRooms[Random.Range(0, allGeneratedRooms.Count)]);
                 if(!CheckRoomOverlapping(possibleRoom))
                 {
                     allGeneratedRooms.Add(possibleRoom);

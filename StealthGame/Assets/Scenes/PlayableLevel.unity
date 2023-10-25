@@ -4824,7 +4824,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.11672302, g: 0.27080524, b: 0.4056604, a: 1}
-  m_Intensity: 2
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -33910,6 +33910,10 @@ PrefabInstance:
     - target: {fileID: -4899338168007379858, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
       propertyPath: walkableSurfaces.m_Bits
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 716798058233544361, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2501677522821634102, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
       propertyPath: m_IsActive

@@ -373,6 +373,8 @@ MonoBehaviour:
   possibleRooms:
   - {fileID: 511719625655682574, guid: 78e3f5f83f8ec6545a0dbe581e6da9b3, type: 3}
   - {fileID: 8109402253596830639, guid: 455d69edcd701af468e087831708ac90, type: 3}
+  - {fileID: 8109402253596830639, guid: 455d69edcd701af468e087831708ac90, type: 3}
+  RoomProgress: 0
   startingRoom: {fileID: 511719625655682575, guid: 78e3f5f83f8ec6545a0dbe581e6da9b3, type: 3}
   allGeneratedRooms: []
 --- !u!4 &393402089
