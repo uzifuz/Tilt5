@@ -9,6 +9,7 @@ public class ExitPointer : MonoBehaviour
 
     public Transform thiefPos;
     public Transform winPos;
+    public Transform cameraPos;
 
     void Start()
     {
@@ -23,7 +24,7 @@ public class ExitPointer : MonoBehaviour
 
 
         float angle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
-        gameObject.transform.rotation = Quaternion.Euler(0, 0, -angle + 90);
+        gameObject.transform.rotation = Quaternion.Euler(0, 0, -angle + 90 + cameraPos.rotation.y);
 
     }
 

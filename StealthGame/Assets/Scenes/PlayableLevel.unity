@@ -15865,6 +15865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thiefPos: {fileID: 1675481601}
   winPos: {fileID: 1151863337}
+  cameraPos: {fileID: 1086779947}
 --- !u!1 &673634114
 GameObject:
   m_ObjectHideFlags: 0
@@ -24839,6 +24840,7 @@ MonoBehaviour:
   - {fileID: 3161421467647567156, guid: d71bbeb1eece4454dba2acc572662ece, type: 3}
   optionalCollectibles: []
   randomizeOptionalCollectibles: 1
+  mandatoriesSet: 0
   mandatoriesClaimed: 0
   collectedValue: 0
   currentPrefValue: 0
