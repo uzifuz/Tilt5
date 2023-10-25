@@ -47,6 +47,7 @@ public class ProceduralLevelGenerator : MonoBehaviour
         {
             SwapDoorStates();
             curSurface.BuildNavMesh();
+            CollectibleMaster.Instance.SetupCollectionSystem();
         }
     }
 
