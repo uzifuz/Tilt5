@@ -5,27 +5,30 @@ using UnityEngine.UI;
 
 public class ExitPointer : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-    public Transform thiefPos;
-    public Transform winPos;
-    public Transform cameraPos;
+    private GameObject mainCamera;
+    private GameObject worldTargetPosition;
 
     void Start()
     {
-        gameObject.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+        //gameObject.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+        worldTargetPosition = GameObject.Find("WinCondition");
+        mainCamera = GameObject.Find("Main Camera");
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 direction = winPos.position - thiefPos.position;
-        direction.Normalize();
-
-
-        float angle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
-        gameObject.transform.rotation = Quaternion.Euler(0, 0, -angle + 90 + cameraPos.rotation.y);
-
+        if (mainCamera != null)
+        {
+            Vector3 screenPosition = mainCamera.GetComponent<Camera>().WorldToScreenPoint(worldTargetPosition.transform.position);
+            Vector3 directionToTarget = screenPosition - transform.position;
+            float angle = Mathf.Atan2(directionToTarget.y, directionToTarget.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle - 90);
+        }
+        else
+        {
+            Debug.LogError("Camera not found");
+        }
     }
 
     public void UpdateRotation()

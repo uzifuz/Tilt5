@@ -7228,15 +7228,15 @@ MonoBehaviour:
   - {fileID: 5890327751670289460}
   - {fileID: 3132709109358763059}
   - {fileID: 3802905476541876446}
-  bottomLeftPoint: {x: -5.611026, y: 0, z: -2.8487582}
-  bottomRightPoint: {x: 4.388974, y: 0, z: -2.8487582}
-  upperLeftPoint: {x: -5.611026, y: 0, z: 2.1512418}
-  upperRightPoint: {x: 4.388974, y: 0, z: 2.1512418}
-  checkPointLeft: {x: -5.611026, y: 0, z: -0.34875822}
-  checkPointBottom: {x: -0.6110258, y: 0, z: -2.8487582}
-  checkPointRight: {x: 4.388974, y: 0, z: -0.34875822}
-  checkPointUp: {x: -0.6110258, y: 0, z: 2.1512418}
-  checkCenter: {x: -0.6110258, y: 0, z: -0.34875822}
+  bottomLeftPoint: {x: -5, y: 0, z: -2.5}
+  bottomRightPoint: {x: 5, y: 0, z: -2.5}
+  upperLeftPoint: {x: -5, y: 0, z: 2.5}
+  upperRightPoint: {x: 5, y: 0, z: 2.5}
+  checkPointLeft: {x: -5, y: 0, z: 0}
+  checkPointBottom: {x: 0, y: 0, z: -2.5}
+  checkPointRight: {x: 5, y: 0, z: 0}
+  checkPointUp: {x: 0, y: 0, z: 2.5}
+  checkCenter: {x: 0, y: 0, z: 0}
 --- !u!1 &8109402253987314865
 GameObject:
   m_ObjectHideFlags: 0
