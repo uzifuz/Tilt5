@@ -35,7 +35,7 @@ public class ProceduralLevelGenerator : MonoBehaviour
         if(CreateRoom())
         {
             curNumberOfCreatedRooms++;
-            Debug.Log($"{curNumberOfCreatedRooms} {MaxNumberOfRoomsCreated} {curNumberOfCreatedRooms/MaxNumberOfRoomsCreated}");
+            //Debug.Log($"{curNumberOfCreatedRooms} {MaxNumberOfRoomsCreated} {curNumberOfCreatedRooms/MaxNumberOfRoomsCreated}");
             RoomProgress = (float)(curNumberOfCreatedRooms / MaxNumberOfRoomsCreated) * 100f;
         }
         if(curNumberOfCreatedRooms < MaxNumberOfRoomsCreated)
@@ -59,7 +59,8 @@ public class ProceduralLevelGenerator : MonoBehaviour
         {
             newRoom = Instantiate(possibleRooms[Random.Range(0, possibleRooms.Length)], transform.position, transform.rotation).GetComponent<Room>();
             newRoom.name = "Room_Clone_" + allGeneratedRooms.Count.ToString();
-            float randomRotation = Mathf.Round(Random.Range(1, 4)) * 90f;
+            float randomRotation = Mathf.Round(Random.Range(0, 4)) * 90f;
+
             if (randomRotation != 0f && randomRotation != 180f)
                 newRoom.size = new Vector2(newRoom.size.y, newRoom.size.x);
 
