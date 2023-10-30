@@ -12,6 +12,11 @@ public class Thief : ControllableEntity
         get;
         set;
     }
+
+    [SerializeField]
+    private Inventory _inventory;
+
+    private Gadget _selectedGadget;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,15 +25,29 @@ public class Thief : ControllableEntity
             Instance = this;
         } else
         {
-            Debug.LogWarning("more than two tieves detected!");
+            Debug.LogWarning("more than one thief detected!");
             gameObject.SetActive(false);
         }
         IsHidden = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!GameHandler.Instance.GameIsOver)
+        {
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                _inventory.SelectNextGadget();
+            }
+
+            if (Input.GetKeyDown(KeyCode.H))
+            {
+                _inventory.UseSelectedGadget();
+            }
+        }
         
     }
+
 }

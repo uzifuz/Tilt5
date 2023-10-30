@@ -12,6 +12,7 @@ public class CollectibleMaster : MonoBehaviour
     [SerializeField]
     bool randomizeOptionalCollectibles = true;
     public int mandatoriesClaimed = 0, collectedValue = 0, currentPrefValue;
+    public float valueMultiplier = 1.0f;
     [HideInInspector]
     public CollectionUI uiCounter;
     [HideInInspector]
@@ -32,6 +33,7 @@ public class CollectibleMaster : MonoBehaviour
     private void Update()
     {
         currentPrefValue = PlayerPrefs.GetInt("TotalPlayerMoney");
+        //?
         if(Input.GetKeyDown(KeyCode.Space))
         {
             PlayerPrefs.SetInt("TotalPlayerMoney", 0);
@@ -98,5 +100,19 @@ public class CollectibleMaster : MonoBehaviour
         {
             uiCounter.UpdateCount($"{mandatoriesClaimed} of {mandatoryCollectibles.Length} items");
         }
+    }
+
+    public void SetMultiplierForSeconds(float multiplier, float seconds)
+    {
+        StartCoroutine(MultiplierCoroutine(multiplier, seconds));
+    }
+
+    private IEnumerator MultiplierCoroutine(float multiplier, float seconds)
+    {
+        CollectibleMaster.Instance.valueMultiplier = multiplier;
+        Debug.Log("Set multiplier to: " + multiplier);
+        yield return new WaitForSeconds(seconds);
+        CollectibleMaster.Instance.valueMultiplier = 1.0f;
+        Debug.Log("Finished multiplier-coroutine");
     }
 }

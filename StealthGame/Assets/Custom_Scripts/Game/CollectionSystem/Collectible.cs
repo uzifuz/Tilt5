@@ -25,7 +25,7 @@ public class Collectible : MonoBehaviour
             if (mandatory)
             {
                 CollectibleMaster.Instance.mandatoriesClaimed++;
-                CollectibleMaster.Instance.collectedValue += curValue;
+                CollectibleMaster.Instance.collectedValue += (int)(curValue * CollectibleMaster.Instance.valueMultiplier);
             }
             CollectibleMaster.Instance.CheckCollection();
             AudioSource.PlayClipAtPoint(clip, transform.position, volume);
