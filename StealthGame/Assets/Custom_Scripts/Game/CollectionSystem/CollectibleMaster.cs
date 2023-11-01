@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CollectibleMaster : MonoBehaviour
@@ -110,9 +111,12 @@ public class CollectibleMaster : MonoBehaviour
     private IEnumerator MultiplierCoroutine(float multiplier, float seconds)
     {
         CollectibleMaster.Instance.valueMultiplier = multiplier;
+        Thief.Instance.multiplierText.GetComponent<TextMeshPro>().text = "x" + multiplier;
+        Thief.Instance.multiplierText.SetActive(true);
         Debug.Log("Set multiplier to: " + multiplier);
         yield return new WaitForSeconds(seconds);
         CollectibleMaster.Instance.valueMultiplier = 1.0f;
+        Thief.Instance.multiplierText.SetActive(false);
         Debug.Log("Finished multiplier-coroutine");
     }
 }

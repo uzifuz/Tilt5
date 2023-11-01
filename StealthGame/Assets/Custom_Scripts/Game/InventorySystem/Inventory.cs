@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -42,12 +43,18 @@ public class Inventory : MonoBehaviour
 
     public void SelectNextGadget()
     {
-        if (gadgets != null && gadgets.Count > 0)
+        if (gadgets != null && gadgets.Count > 0 && !gadgets.All(gadget => gadget == null))
         {
             ++selectedGadgetIndex;
+
             if (selectedGadgetIndex >= gadgets.Count || selectedGadgetIndex >= 4)
             {
                 selectedGadgetIndex = 0;
+            }
+
+            if (gadgets[selectedGadgetIndex] == null)
+            {
+                SelectNextGadget();
             }
 
             foreach (InventorySlot slot in inventorySlots)
@@ -76,7 +83,19 @@ public class Inventory : MonoBehaviour
     {
         if (gadgets != null && gadgets.Count > 0)
         {
-            gadgets[selectedGadgetIndex].UseGadget();
+            if (gadgets[selectedGadgetIndex] != null)
+            {
+                gadgets[selectedGadgetIndex].UseGadget();
+                gadgets[selectedGadgetIndex] = null;
+                inventorySlots[selectedGadgetIndex].image.enabled = false;
+                inventorySlots[selectedGadgetIndex] = null;
+                SelectNextGadget();
+            }
+            else
+            {
+                Debug.Log("ERR: No gadget selected");
+            }
+            
         }
         else
         {

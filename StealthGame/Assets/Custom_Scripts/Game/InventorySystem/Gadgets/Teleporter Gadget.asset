@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Teleporter
   Icon: {fileID: 21300000, guid: 206f66d07b60cd7458a8f109695dd9aa, type: 3}
+  cursorMarker: {fileID: 1098776744023406058, guid: 741b1f8209bbbd047887e288f094f565, type: 3}

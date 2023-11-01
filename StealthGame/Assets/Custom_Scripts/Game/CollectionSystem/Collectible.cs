@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class Collectible : MonoBehaviour
@@ -7,6 +8,8 @@ public class Collectible : MonoBehaviour
     public AudioClip clip;
     public float volume = 1;
     public bool mandatory = false;
+    [SerializeField]
+    public GameObject amountText;
 
     private void OnEnable()
     {
@@ -26,6 +29,8 @@ public class Collectible : MonoBehaviour
             {
                 CollectibleMaster.Instance.mandatoriesClaimed++;
                 CollectibleMaster.Instance.collectedValue += (int)(curValue * CollectibleMaster.Instance.valueMultiplier);
+                amountText.GetComponent<TextMeshPro>().text = (curValue * CollectibleMaster.Instance.valueMultiplier) + "$";
+                Instantiate(amountText, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.5f, gameObject.transform.position.z), Quaternion.identity);
             }
             CollectibleMaster.Instance.CheckCollection();
             AudioSource.PlayClipAtPoint(clip, transform.position, volume);

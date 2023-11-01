@@ -16,6 +16,9 @@ public class Thief : ControllableEntity
     [SerializeField]
     private Inventory _inventory;
 
+    [SerializeField]
+    public GameObject multiplierText;
+
     private Gadget _selectedGadget;
     // Start is called before the first frame update
     void Start()
