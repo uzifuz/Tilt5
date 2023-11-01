@@ -9,14 +9,13 @@ using Unity.AI.Navigation;
 
 public class ProceduralLevelGenerator : MonoBehaviour
 {
-    public int MaxNumberOfRoomsCreated;
-    public Vector2 MaxAreaSize;
-    public float MinUnitSize = 5f;
+    public float MaxNumberOfRoomsCreated;
     int curNumberOfCreatedRooms = 0;
     public GameObject[] possibleRooms;
-    public float RoomProgress = 0f;
+    public string RoomProgress;
     [SerializeField] Room startingRoom;
     [SerializeField] List<Room> allGeneratedRooms = new List<Room>();
+    List<ModifiableDoorway> allAvailableDoors = new List<ModifiableDoorway>();
     NavMeshSurface curSurface;
 
     private void Start()
@@ -25,22 +24,20 @@ public class ProceduralLevelGenerator : MonoBehaviour
         StartCoroutine("RoomGenCo");
     }
 
-    private void Update()
-    {
-        
-    }
-
     IEnumerator RoomGenCo()
     {
         if(CreateRoom())
         {
-            curNumberOfCreatedRooms++;
-            //Debug.Log($"{curNumberOfCreatedRooms} {MaxNumberOfRoomsCreated} {curNumberOfCreatedRooms/MaxNumberOfRoomsCreated}");
-            RoomProgress = (float)(curNumberOfCreatedRooms / MaxNumberOfRoomsCreated) * 100f;
+            Debug.Log("Room has been created");
+            RoomProgress = $"Progress: {((curNumberOfCreatedRooms / MaxNumberOfRoomsCreated) * 100f).ToString("00.0")} %";
+        }
+        else
+        {
+            Debug.Log("Room has NOT been created");
         }
         if(curNumberOfCreatedRooms < MaxNumberOfRoomsCreated)
         {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
             StartCoroutine("RoomGenCo");
         }
         else
@@ -48,67 +45,147 @@ public class ProceduralLevelGenerator : MonoBehaviour
             SwapDoorStates();
             curSurface.BuildNavMesh();
             CollectibleMaster.Instance.SetupCollectionSystem();
+            allGeneratedRooms.Clear();
         }
-    }
-
-    Room SelectRoomToBeInstantiated(Room refRoom)
-    {
-        Room newRoom;
-        //Debug.Log("Func => SelectRoomToBeInstantiated at " + transform.position);
-        if(curNumberOfCreatedRooms > 0)
-        {
-            newRoom = Instantiate(possibleRooms[Random.Range(0, possibleRooms.Length)], transform.position, transform.rotation).GetComponent<Room>();
-            newRoom.name = "Room_Clone_" + allGeneratedRooms.Count.ToString();
-            float randomRotation = Mathf.Round(Random.Range(0, 4)) * 90f;
-
-            if (randomRotation != 0f && randomRotation != 180f)
-                newRoom.size = new Vector2(newRoom.size.y, newRoom.size.x);
-
-            newRoom.transform.eulerAngles = new Vector3(0f, randomRotation, 0f);
-            int randomCreationPoint = Random.Range(0, refRoom.DoorAlignedPoints.Length);
-            Vector3 creationPointToCenter = refRoom.DoorAlignedPoints[0].position - refRoom.DoorAlignedPoints[randomCreationPoint].position;
-            Vector3 positionOffset = GetCreationPoint((refRoom.size.x + newRoom.size.x) / 2f - creationPointToCenter.x, (refRoom.size.y + newRoom.size.y) / 2f - creationPointToCenter.z);
-
-            newRoom.transform.position = refRoom.DoorAlignedPoints[randomCreationPoint].position + positionOffset;
-        }
-        else
-        {
-            newRoom = Instantiate(refRoom, Vector3.zero, transform.rotation).GetComponent<Room>(); ;
-            newRoom.name = "Starting_Room_Clone_";
-        }
-        return newRoom;
     }
 
     bool CreateRoom()
     {
-        if(curNumberOfCreatedRooms < MaxNumberOfRoomsCreated)//
+        Debug.Log("CreateRoom");
+        //Choose Room to connect new Room
+        Room possibleExistingRoom = ChooseExistingRoomForConnection();
+        //--> Failure: No Room to connect is available. Return false
+        //Choose new Room to be created, and instantiate it
+        Room newlyCreatedRoom = Instantiate(SelectRoomToBeInstantiated().gameObject, transform.position, transform.rotation).GetComponent<Room>();
+        //--> Failure: How would this even fail?!?!??!?
+        //Align new Room for Door to Door connection
+        if(AlignNewRoomToDoor(possibleExistingRoom?.GetRandomUnconnectedDoor(), newlyCreatedRoom))
         {
-            if(allGeneratedRooms.Count == 0)//First Room to be created
+            curNumberOfCreatedRooms++;
+            allGeneratedRooms.Add(newlyCreatedRoom);
+            return true;
+        }
+        else
+        {
+            //Debug.Log("OverlapDetected");
+            //Not correctly assigned or overlapping
+            Destroy(newlyCreatedRoom.gameObject);
+        }
+        
+        return false;
+    }
+
+    Room ChooseExistingRoomForConnection()
+    {
+        Debug.Log("ChooseExistingRoomForConnection");
+        if (curNumberOfCreatedRooms == 0)
+            return null;
+        //If not the start
+        Room returnRoom = null;
+        int safetyCounter = 0;
+        do
+        {
+            int ranNr = Random.Range(0, allGeneratedRooms.Count);
+            if (allGeneratedRooms[ranNr].HasUnconnectedDoors())
             {
-                allGeneratedRooms.Add(SelectRoomToBeInstantiated(startingRoom));
-                curNumberOfCreatedRooms++;
+                returnRoom = allGeneratedRooms[ranNr];
             }
-            else//Any other room
+            safetyCounter++;
+        }
+        while (returnRoom == null && safetyCounter < 100);
+        return returnRoom;
+    }
+
+    Room SelectRoomToBeInstantiated()
+    {
+        Debug.Log("SelectRoomToBeInstantiated");
+        if(curNumberOfCreatedRooms > 0)
+        {
+            return possibleRooms[Random.Range(0, possibleRooms.Length)].GetComponent<Room>();
+        }
+        else
+        {
+            return startingRoom;
+        }
+    }
+
+    Room RotateRoom(Room rotateThisRoom)
+    {
+        Debug.Log("RotateRoom");
+        float randomRotation = Mathf.Round(Random.Range(0, 4)) * 90f;
+
+        if (randomRotation != 0f && randomRotation != 180f)
+            rotateThisRoom.size = new Vector2(rotateThisRoom.size.y, rotateThisRoom.size.x);
+
+        rotateThisRoom.transform.eulerAngles = new Vector3(0f, randomRotation, 0f);
+        rotateThisRoom.ReassignDoorDirections();
+        return rotateThisRoom;
+    }
+
+    bool AlignNewRoomToDoor(ModifiableDoorway alignedDoor, Room newRoom)
+    {
+        Debug.Log("AlignNewRoomToDoor");
+        ModifiableDoorway newRoomDoor = newRoom.GetRandomUnconnectedDoor();
+        if (newRoomDoor == null)
+            return false;
+        else
+            newRoomDoor.ConnectedDoor = alignedDoor;
+
+        if(alignedDoor != null)
+        {
+            int whileExitCheck = 0;
+            while ((int)newRoomDoor.Direction != -(int)alignedDoor.Direction && whileExitCheck < 8)
             {
-                Room possibleRoom = SelectRoomToBeInstantiated(allGeneratedRooms[Random.Range(0, allGeneratedRooms.Count)]);
-                if(!CheckRoomOverlapping(possibleRoom))
-                {
-                    allGeneratedRooms.Add(possibleRoom);
-                    curNumberOfCreatedRooms++;
-                }
-                else
-                {
-                    Destroy(possibleRoom.gameObject);
-                }
+                RotateRoom(newRoom);
+                whileExitCheck++;
+            }
+
+            if (alignedDoor.transform.position != newRoomDoor.transform.position)
+            {
+                newRoom.transform.position = alignedDoor.transform.position;
+                Vector3 doorsOffset = newRoomDoor.transform.position - alignedDoor.transform.position;
+                newRoom.transform.position -= doorsOffset;
+            }
+
+            if (CheckRoomOverlapping(newRoom))
+            {
+                //Debug.Log("Alignement failed due to Overlap");
+                return false;
+            }
+            else
+            {
+                alignedDoor.ConnectedDoor = newRoomDoor;
+                return true;
             }
         }
         else
         {
-            Debug.LogError("CreateRoom ABORTED. Cause: Already enough rooms");
-            return false;
+            return true;
+        }
+        
+    }
+
+    /// <summary>
+    /// Update the door list to only include available doors
+    /// </summary>
+    /// <returns>Returns true if there are still available doors left, false if not</returns>
+    bool UpdateDoorList()
+    {
+        /*foreach(ModifiableDoorway door in allAvailableDoors)
+        {
+            if(door.ConnectedDoor != null)
+            {
+                allAvailableDoors.Remove(door);
+                Debug.Log($"Removed {door.name}");
+            }
+        }*/
+        if(allAvailableDoors.Count > 0)
+        {
+            return true;
         }
         return false;
     }
+
 
     void SwapDoorStates()
     {
@@ -128,8 +205,8 @@ public class ProceduralLevelGenerator : MonoBehaviour
                     {
                         allDoors[i].SetDoor(true);
                         allDoors[j].SetDoor(true);
-                        allDoors[i].ConnectsToThisRoom = GetRoomFromDoor(allDoors[j]);
-                        allDoors[j].ConnectsToThisRoom = GetRoomFromDoor(allDoors[i]);
+                        allDoors[i].ConnectedDoor = allDoors[j];
+                        allDoors[j].ConnectedDoor = allDoors[i];
                     }
                     else
                     {
@@ -147,10 +224,11 @@ public class ProceduralLevelGenerator : MonoBehaviour
         {
             if(room.CheckIfRoomOverlapsRoom(thisRoom))
             {
-                //Debug.LogWarning(thisRoom.name + " conflicting with " + room.name + " at "  + thisRoom.transform.position + "/" + room.transform.position + ", about to be deleted");
+                //They overlap
                 return true;
             }
         }
+        //They do not overlap
         return false;
     }
 

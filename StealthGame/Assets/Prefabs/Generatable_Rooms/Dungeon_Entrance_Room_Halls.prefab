@@ -51,8 +51,8 @@ MonoBehaviour:
   solidWall:
   - {fileID: 4313339969152640176}
   window: []
-  ConnectsToThisRoom: {fileID: 0}
-  OutGoingDirection: 0
+  ConnectedDoor: {fileID: 0}
+  Direction: 2
 --- !u!1 &541734014194533790
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,8 +210,8 @@ MonoBehaviour:
   solidWall:
   - {fileID: 5006022239510961211}
   window: []
-  ConnectsToThisRoom: {fileID: 0}
-  OutGoingDirection: 0
+  ConnectedDoor: {fileID: 0}
+  Direction: 2
 --- !u!1 &2013077088802323973
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,8 +964,8 @@ MonoBehaviour:
   solidWall:
   - {fileID: 5520729050298159779}
   window: []
-  ConnectsToThisRoom: {fileID: 0}
-  OutGoingDirection: 0
+  ConnectedDoor: {fileID: 0}
+  Direction: 2
 --- !u!1 &8936832245483515987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,8 +1135,8 @@ MonoBehaviour:
   solidWall:
   - {fileID: 5443669452151364778}
   window: []
-  ConnectsToThisRoom: {fileID: 0}
-  OutGoingDirection: 0
+  ConnectedDoor: {fileID: 0}
+  Direction: 2
 --- !u!1001 &32330736191246442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5152,6 +5152,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3392742, guid: d35aef65f03ae2a4e98cc24bcb5b5cdc, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: c0f25fbe4b222504db2ea11afb6f2cf8, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6075,6 +6079,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3392742, guid: d35aef65f03ae2a4e98cc24bcb5b5cdc, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: c0f25fbe4b222504db2ea11afb6f2cf8, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6460,6 +6468,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3392742, guid: d35aef65f03ae2a4e98cc24bcb5b5cdc, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: c0f25fbe4b222504db2ea11afb6f2cf8, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6531,6 +6543,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3392742, guid: d35aef65f03ae2a4e98cc24bcb5b5cdc, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: c0f25fbe4b222504db2ea11afb6f2cf8, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

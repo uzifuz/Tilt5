@@ -19,11 +19,20 @@ public class Room : MonoBehaviour
     private void Start()
     {
         SetEdgePoints();
+        ReassignDoorDirections();
     }
 
     void OnValidate()
     {
         SetEdgePoints();
+    }
+
+    public void ReassignDoorDirections()
+    {
+        foreach (ModifiableDoorway door in PossibleDoors)
+        {
+            door.AssignDoorDirection();
+        }
     }
 
     void SetEdgePoints()
@@ -54,7 +63,6 @@ public class Room : MonoBehaviour
 
         if (xOverlap && zOverlap)
         {
-            Debug.Log("Rooms overlap: Room " + this.name + " and Room " + otherRoom.name);
             return true;
         }
         return false;
@@ -112,6 +120,41 @@ public class Room : MonoBehaviour
                     }
                     break;
             }
+        }
+        return null;
+    }
+
+    public ModifiableDoorway GetRandomUnconnectedDoor()
+    {
+        List<ModifiableDoorway> unconnectedDoors = new List<ModifiableDoorway>();
+        for (int i = 0; i < PossibleDoors.Length; i++)
+        {
+            if (PossibleDoors[i].ConnectedDoor == null)
+                unconnectedDoors.Add(PossibleDoors[i]);
+        }
+
+        if (unconnectedDoors.Count == 0)
+            return null;
+        else
+            return unconnectedDoors[Random.Range(0, unconnectedDoors.Count)];
+    }
+
+    public bool HasUnconnectedDoors()
+    {
+        for (int i = 0; i < PossibleDoors.Length; i++)
+        {
+            if (PossibleDoors[i].ConnectedDoor == null)
+                return true;
+        }
+        return false;
+    }
+
+    public ModifiableDoorway GetDoorConnectedTo(ModifiableDoorway otherDoor)
+    {
+        for (int i = 0; i < PossibleDoors.Length; i++)
+        {
+            if (PossibleDoors[i].ConnectedDoor == otherDoor)
+                return PossibleDoors[i];
         }
         return null;
     }
