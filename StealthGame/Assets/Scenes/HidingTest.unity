@@ -1386,37 +1386,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -4899338168007379858, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-      propertyPath: walkableSurfaces.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 716798058233544361, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-      propertyPath: m_Name
-      value: ThiefMesh
-      objectReference: {fileID: 0}
-    - target: {fileID: 716798058233544361, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2501677522821634102, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2749607851269396644, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-      propertyPath: m_Radius
-      value: 0.15
-      objectReference: {fileID: 0}
     - target: {fileID: 2803114837024924929, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
       propertyPath: m_Name
       value: Thief
-      objectReference: {fileID: 0}
-    - target: {fileID: 2803114837024924929, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4737468016232438582, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4737468016232438582, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1458,21 +1430,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6790224995838767003, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-      propertyPath: m_Height
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6790224995838767003, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-      propertyPath: m_Center.y
-      value: -0.25
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2803114837024924929, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1667776736}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
 --- !u!1 &838819911
 GameObject:
@@ -2927,30 +2888,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597027183}
   m_CullTransparentMesh: 1
---- !u!1 &1667776735 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2803114837024924929, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-  m_PrefabInstance: {fileID: 814346455}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1667776736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667776735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a49e0415eff832543ae75ab9d406d513, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stepNoiseObject: {fileID: 3075880419788308727, guid: f5eb8d41eb267624b98f743a976db57b, type: 3}
 --- !u!114 &1667776739 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -4899338168007379858, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
   m_PrefabInstance: {fileID: 814346455}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667776735}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47f1249cb47d81c489f2e58c6d59366a, type: 3}

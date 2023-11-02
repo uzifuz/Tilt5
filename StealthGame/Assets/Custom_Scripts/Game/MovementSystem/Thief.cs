@@ -7,6 +7,8 @@ using UnityEngine;
 public class Thief : ControllableEntity
 {
     public static Thief Instance { get; private set; }
+
+    public GameObject CharacterRenderer;
     public bool IsHidden
     {
         get;

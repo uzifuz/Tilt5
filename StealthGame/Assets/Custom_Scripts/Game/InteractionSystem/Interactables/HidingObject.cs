@@ -5,20 +5,11 @@ using UnityEngine;
 
 public class HidingObject : InteractableObject
 {
-    private GameObject thiefModel;
-    private bool thiefModelState;
-    public GameObject ps;
     public AudioClip appearSound;
     public AudioClip disappearSound;
 
     private float coolDown = 1;
     float lastInputTimeStamp;
-
-    private void Start()
-    {
-        thiefModel = GameObject.Find("ThiefMesh");
-        thiefModelState = thiefModel.activeSelf;
-    }
 
     public override void Interact()
     {
@@ -36,7 +27,7 @@ public class HidingObject : InteractableObject
         //Thief.Instance.agent.isStopped = Thief.Instance.IsHidden;
         Thief.Instance.agent.SetDestination(Thief.Instance.transform.position);
 
-        ps.GetComponent<ParticleSystem>().Play();
+        GetComponentInChildren<ParticleSystem>().Play();
         if (Thief.Instance.IsHidden)
         {
             Camera.main.GetComponent<AudioSource>().PlayOneShot(disappearSound);
@@ -45,9 +36,9 @@ public class HidingObject : InteractableObject
         {
             Camera.main.GetComponent<AudioSource>().PlayOneShot(appearSound);
         }
-        
-        thiefModelState = !thiefModelState;
-        thiefModel.SetActive(thiefModelState);
+
+        Thief.Instance.CharacterRenderer.SetActive(!Thief.Instance.CharacterRenderer.activeSelf);
     }
+
 }
 

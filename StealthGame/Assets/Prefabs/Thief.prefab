@@ -4167,7 +4167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4047995910466646}
   m_Layer: 0
-  m_Name: SM_Chr_Boss_Male_01
+  m_Name: ThiefMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4292,13 +4292,14 @@ GameObject:
   - component: {fileID: 900340303}
   - component: {fileID: 900340304}
   - component: {fileID: 4569523192831296090}
+  - component: {fileID: 392838009723745548}
   m_Layer: 0
   m_Name: Thief
   m_TagString: Thief
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4737468016232438582
 Transform:
   m_ObjectHideFlags: 0
@@ -4461,6 +4462,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   CanMove: 1
+  CharacterRenderer: {fileID: 6345336610817987278}
 --- !u!95 &900340303
 Animator:
   serializedVersion: 5
@@ -4497,6 +4499,19 @@ MonoBehaviour:
   currentState: 0
   stoppingDistance: 0.15
 --- !u!114 &4569523192831296090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2803114837024924929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49e0415eff832543ae75ab9d406d513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stepNoiseObject: {fileID: 3075880419788308727, guid: f5eb8d41eb267624b98f743a976db57b, type: 3}
+--- !u!114 &392838009723745548
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4967,6 +4982,11 @@ PrefabInstance:
 --- !u!4 &6342350118980584346 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4139452749197756, guid: a96b63f27d072234bbc3d7818166e4eb, type: 3}
+  m_PrefabInstance: {fileID: 6343945813371171366}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6345336610817987278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1428387009061096, guid: a96b63f27d072234bbc3d7818166e4eb, type: 3}
   m_PrefabInstance: {fileID: 6343945813371171366}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &6348434992156996516 stripped
