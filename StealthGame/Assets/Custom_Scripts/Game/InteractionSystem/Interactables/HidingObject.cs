@@ -7,7 +7,7 @@ public class HidingObject : InteractableObject
 {
     private GameObject thiefModel;
     private bool thiefModelState;
-    private ParticleSystem ps;
+    public GameObject ps;
     public AudioClip appearSound;
     public AudioClip disappearSound;
 
@@ -16,9 +16,8 @@ public class HidingObject : InteractableObject
 
     private void Start()
     {
-        thiefModel = GameObject.Find("SM_Chr_Business_Male_01");
+        thiefModel = GameObject.Find("ThiefMesh");
         thiefModelState = thiefModel.activeSelf;
-        ps = GetComponent<ParticleSystem>();
     }
 
     public override void Interact()
@@ -37,7 +36,7 @@ public class HidingObject : InteractableObject
         //Thief.Instance.agent.isStopped = Thief.Instance.IsHidden;
         Thief.Instance.agent.SetDestination(Thief.Instance.transform.position);
 
-        ps.Play();
+        ps.GetComponent<ParticleSystem>().Play();
         if (Thief.Instance.IsHidden)
         {
             Camera.main.GetComponent<AudioSource>().PlayOneShot(disappearSound);

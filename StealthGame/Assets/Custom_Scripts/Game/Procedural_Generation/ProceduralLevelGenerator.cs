@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.AI;
 using Unity.AI.Navigation;
+using System.Threading.Tasks;
 
 public class ProceduralLevelGenerator : MonoBehaviour
 {
@@ -20,32 +21,35 @@ public class ProceduralLevelGenerator : MonoBehaviour
 
     private void Start()
     {
-        curSurface = FindObjectOfType<NavMeshSurface>();
-        StartCoroutine("RoomGenCo");
+        curSurface = FindObjectOfType<NavMeshSurface>();      
     }
 
-    IEnumerator RoomGenCo()
+    public IEnumerator RoomGenCo()
     {
-        if(CreateRoom())
+        while(curNumberOfCreatedRooms < MaxNumberOfRoomsCreated)
         {
-            Debug.Log("Room has been created");
-            RoomProgress = $"Progress: {((curNumberOfCreatedRooms / MaxNumberOfRoomsCreated) * 100f).ToString("00.0")} %";
-        }
-        else
-        {
-            Debug.Log("Room has NOT been created");
-        }
-        if(curNumberOfCreatedRooms < MaxNumberOfRoomsCreated)
-        {
-            yield return new WaitForSeconds(0.05f);
-            StartCoroutine("RoomGenCo");
-        }
-        else
-        {
-            SwapDoorStates();
-            curSurface.BuildNavMesh();
-            CollectibleMaster.Instance.SetupCollectionSystem();
-            allGeneratedRooms.Clear();
+            if (CreateRoom())
+            {
+                curNumberOfCreatedRooms++;
+                RoomProgress = $"Progress: {((curNumberOfCreatedRooms / MaxNumberOfRoomsCreated) * 100f).ToString("00.0")} %";
+            }
+            else
+            {
+                //Debug.Log("Room has NOT been created");
+            }
+            if (curNumberOfCreatedRooms < MaxNumberOfRoomsCreated)
+            {
+                yield return new WaitForSeconds(0.05f);
+            }
+            else
+            {
+                SwapDoorStates();
+                curSurface.BuildNavMesh();
+                CollectibleMaster.Instance.SetupCollectionSystem();
+                allGeneratedRooms.Clear();
+                Debug.Log("Room Creation Complete");
+                break;
+            }
         }
     }
 
@@ -61,7 +65,6 @@ public class ProceduralLevelGenerator : MonoBehaviour
         //Align new Room for Door to Door connection
         if(AlignNewRoomToDoor(possibleExistingRoom?.GetRandomUnconnectedDoor(), newlyCreatedRoom))
         {
-            curNumberOfCreatedRooms++;
             allGeneratedRooms.Add(newlyCreatedRoom);
             return true;
         }

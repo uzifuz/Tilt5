@@ -20,6 +20,7 @@ public class ExitPointInteractable : InteractableObject
         if(CollectibleMaster.Instance.allCollectiblesFound && !calledOnce)
         {
             calledOnce = true;
+            Debug.Log($"{GameHandler.Instance != null} {Thief.Instance != null} {DetectionHandler.Instance != null} {MenuHandler.Instance != null}");
             GameHandler.Instance.GameOver(GameHandler.GameOutcome.ThiefWin);
             //Debug.Log("This has been called" + PlayerPrefs.GetInt("TotalPlayerMoney").ToString());
             PlayerPrefs.SetInt("TotalPlayerMoney", PlayerPrefs.GetInt("TotalPlayerMoney") + CollectibleMaster.Instance.collectedValue);

@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7964062522986453496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8059302602582449471}
+  - component: {fileID: 167553808418347238}
+  - component: {fileID: 2546412124857117222}
+  m_Layer: 0
+  m_Name: Procedural_Level_Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8059302602582449471
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7964062522986453496}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &167553808418347238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7964062522986453496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4213ce95d3d20e14bbdc1e56074c4ba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxNumberOfRoomsCreated: 30
+  possibleRooms:
+  - {fileID: 7920541963080843972, guid: f96b9ef1d7ec8144badcb501ed644e61, type: 3}
+  - {fileID: 3628948758749083952, guid: 75d066f5e9d38b641bf5065d1da01bcd, type: 3}
+  - {fileID: 3637530710623809432, guid: 39f3ae561c55d114aa08b924810ebe8c, type: 3}
+  - {fileID: 4919829470998136944, guid: fefcdab8be10f2349b51685c407b2ced, type: 3}
+  - {fileID: 4919829470998136944, guid: fefcdab8be10f2349b51685c407b2ced, type: 3}
+  - {fileID: 1540021862810991961, guid: cb0aa09853a3f3948a76aaecdd22adff, type: 3}
+  - {fileID: 1540021862810991961, guid: cb0aa09853a3f3948a76aaecdd22adff, type: 3}
+  RoomProgress: 
+  startingRoom: {fileID: 5947020982229850391, guid: 845f6aaf351272b4caab2407ef9e6910, type: 3}
+  allGeneratedRooms: []
+--- !u!114 &2546412124857117222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7964062522986453496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 513
+  m_UseGeometry: 1
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.041666668
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 0}
+  m_BuildHeightMesh: 0

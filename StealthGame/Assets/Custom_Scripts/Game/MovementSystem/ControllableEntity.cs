@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class ControllableEntity : Entity
 {
     public NavMeshAgent agent;
+    public float agentWalkSpeed = 1f, agentRunSpeed = 4f;
     [SerializeField]
     LayerMask walkableSurfaces;
     public bool CanMove;
@@ -33,13 +34,13 @@ public class ControllableEntity : Entity
     {
         if(run)
         {
-            agent.speed = 6f;
-            GetComponent<Animator>().SetFloat("animSpeed", 20);
+            agent.speed = agentRunSpeed;
+            GetComponent<Animator>().SetFloat("animSpeed", 4);
         }
         else
         {
-            agent.speed = 1.5f;
-            GetComponent<Animator>().SetFloat("animSpeed", 5);
+            agent.speed = agentWalkSpeed;
+            GetComponent<Animator>().SetFloat("animSpeed", 1);
         }
         Vector3 proxyTarget = NavMeshInfo.RandomNavSphere(target, 0f, radiusMod, walkableSurfaces);
         //Debug.Log($"{name} was set to {proxyTarget}");
