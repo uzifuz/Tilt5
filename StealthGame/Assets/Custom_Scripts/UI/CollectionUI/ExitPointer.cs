@@ -23,7 +23,13 @@ public class ExitPointer : MonoBehaviour
             Vector3 screenPosition = mainCamera.GetComponent<Camera>().WorldToScreenPoint(worldTargetPosition.transform.position);
             Vector3 directionToTarget = screenPosition - transform.position;
             float angle = Mathf.Atan2(directionToTarget.y, directionToTarget.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0, 0, angle - 90);
+
+            if(directionToTarget.z > 0)
+                transform.rotation = Quaternion.Euler(0, 0, angle + 270);
+
+            if(directionToTarget.z < 0)
+                transform.rotation = Quaternion.Euler(0, 0, angle + 90);
+
         }
         else
         {
