@@ -1103,6 +1103,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2546412124857117222, guid: 507971d2c08e73543accc20aaa035e7c, type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: 1db668ac544030e4bba9db98d2153cf6, type: 2}
     - target: {fileID: 7964062522986453496, guid: 507971d2c08e73543accc20aaa035e7c, type: 3}
       propertyPath: m_Name
       value: Procedural_Level_Generator

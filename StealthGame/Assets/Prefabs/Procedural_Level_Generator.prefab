@@ -54,6 +54,7 @@ MonoBehaviour:
   - {fileID: 4919829470998136944, guid: fefcdab8be10f2349b51685c407b2ced, type: 3}
   - {fileID: 1540021862810991961, guid: cb0aa09853a3f3948a76aaecdd22adff, type: 3}
   - {fileID: 1540021862810991961, guid: cb0aa09853a3f3948a76aaecdd22adff, type: 3}
+  - {fileID: 1917070228073449707, guid: d192fef8dee121344812ac3886e73a46, type: 3}
   RoomProgress: 
   startingRoom: {fileID: 5947020982229850391, guid: 845f6aaf351272b4caab2407ef9e6910, type: 3}
   allGeneratedRooms: []
