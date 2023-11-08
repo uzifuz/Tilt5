@@ -3,22 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InventorySlot : MonoBehaviour
+public class AbilitySlot : MonoBehaviour
 {
-    private Gadget _gadget;
-    public Gadget Gadget
+    public List<Ability> Abilities = new List<Ability>();
+
+    private Ability _ability;
+    [SerializeField]
+    public Ability Ability
     {
-        get { return _gadget; }
+        get { return _ability; }
         set
         {
-            _gadget = value;
-            if(_gadget == null)
+            _ability = value;
+            if(_ability == null)
             {
                 image.enabled = false;
             }
             else
             {
-                image.sprite = _gadget.Icon;
+                image.sprite = _ability.Icon;
                 image.enabled = true;
             }
         }

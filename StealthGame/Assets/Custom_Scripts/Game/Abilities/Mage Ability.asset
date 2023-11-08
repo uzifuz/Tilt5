@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a410ca5789e7ef94e823bc6cfeaacba0, type: 3}
-  m_Name: Teleporter Gadget
+  m_Script: {fileID: 11500000, guid: 6cd6c2c92879f6249bee50f5754a2cca, type: 3}
+  m_Name: Mage Ability
   m_EditorClassIdentifier: 
-  Name: Teleporter
-  Icon: {fileID: 21300000, guid: 206f66d07b60cd7458a8f109695dd9aa, type: 3}
-  cursorMarker: {fileID: 1098776744023406058, guid: 741b1f8209bbbd047887e288f094f565, type: 3}
+  Name: Light Beam
+  Icon: {fileID: 21300000, guid: 1cba752926c23d243b8e0e8c36985219, type: 3}
+  Cooldown: 20

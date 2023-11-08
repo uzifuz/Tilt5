@@ -4,6 +4,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum CharacterClass
+{
+    Knight = 0,
+    Thief = 1,
+    Mage = 2,
+}
+
 public class Thief : ControllableEntity
 {
     public static Thief Instance { get; private set; }
@@ -14,12 +21,12 @@ public class Thief : ControllableEntity
     }
 
     [SerializeField]
-    private Inventory _inventory;
+    public CharacterClass CharacterClass;
 
     [SerializeField]
-    public GameObject multiplierText;
+    public AbilitySlot AbilitySlot;
 
-    private Gadget _selectedGadget;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +40,18 @@ public class Thief : ControllableEntity
         }
         IsHidden = false;
 
+        switch(CharacterClass)
+        {
+            case CharacterClass.Knight:
+                AbilitySlot.Ability = AbilitySlot.Abilities[0];
+                break;
+            case CharacterClass.Thief:
+                AbilitySlot.Ability = AbilitySlot.Abilities[1];
+                break;
+            case CharacterClass.Mage:
+                AbilitySlot.Ability = AbilitySlot.Abilities[2];
+                break;
+        }
     }
 
     // Update is called once per frame
@@ -40,17 +59,18 @@ public class Thief : ControllableEntity
     {
         if (!GameHandler.Instance.GameIsOver)
         {
-            if (Input.GetKeyDown(KeyCode.G))
+            if(Input.GetKeyDown(KeyCode.G))
             {
-                _inventory.SelectNextGadget();
-            }
-
-            if (Input.GetKeyDown(KeyCode.H))
-            {
-                _inventory.UseSelectedGadget();
+                if (AbilitySlot.Ability != null)
+                {
+                    AbilitySlot.Ability.UseAbility();
+                }
+                else
+                {
+                    Debug.Log("No ability instantiated");
+                }
             }
         }
-        
     }
 
 }

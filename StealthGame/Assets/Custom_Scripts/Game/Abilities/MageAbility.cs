@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class HighlighterGadget : Gadget
+public class MageAbility : Ability
 {
-    public override void UseGadget()
+    public override void UseAbility()
     {
-        base.UseGadget();
-        
+        base.UseAbility();
     }
 }

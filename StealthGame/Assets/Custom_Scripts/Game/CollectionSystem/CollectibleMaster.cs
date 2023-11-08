@@ -13,7 +13,6 @@ public class CollectibleMaster : MonoBehaviour
     [SerializeField]
     bool randomizeOptionalCollectibles = true;
     public int mandatoriesClaimed = 0, collectedValue = 0, currentPrefValue;
-    public float valueMultiplier = 1.0f;
     [HideInInspector]
     public CollectionUI uiCounter;
     [HideInInspector]
@@ -21,7 +20,7 @@ public class CollectibleMaster : MonoBehaviour
 
     private void Start()
     {
-        if(Instance == null)
+        if (Instance == null)
         {
             Instance = FindObjectOfType<CollectibleMaster>();
         }
@@ -35,15 +34,17 @@ public class CollectibleMaster : MonoBehaviour
     {
         currentPrefValue = PlayerPrefs.GetInt("TotalPlayerMoney");
         //?
-        if(Input.GetKeyDown(KeyCode.Space))
+        /*
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             PlayerPrefs.SetInt("TotalPlayerMoney", 0);
         }
+        */
     }
 
     public void SetMandatoryCollectibles()
     {
-        if(mandatoryLocations.Length == mandatoryCollectibles.Length)
+        if (mandatoryLocations.Length == mandatoryCollectibles.Length)
         {
             for (int i = 0; i < mandatoryLocations.Length; i++)
             {
@@ -55,14 +56,14 @@ public class CollectibleMaster : MonoBehaviour
                 obj.GetComponent<Collectible>().mandatory = true;
             }
         }
-        else if(mandatoryLocations.Length > mandatoryCollectibles.Length)
+        else if (mandatoryLocations.Length > mandatoryCollectibles.Length)
         {
             List<int> positionSave = new List<int>();
             int counter = 0;
-            while(counter < mandatoryCollectibles.Length)
+            while (counter < mandatoryCollectibles.Length)
             {
                 int randomNr = Random.Range(0, mandatoryLocations.Length);
-                if(!positionSave.Contains(randomNr))
+                if (!positionSave.Contains(randomNr))
                 {
                     var obj = Instantiate(mandatoryCollectibles[counter], mandatoryLocations[randomNr].position, mandatoryLocations[randomNr].rotation);
                     obj.GetComponent<Collectible>().mandatory = true;
@@ -77,7 +78,7 @@ public class CollectibleMaster : MonoBehaviour
     {
         for (int i = 0; i < optionalLocations.Length; i++)
         {
-            if(randomizeOptionalCollectibles)
+            if (randomizeOptionalCollectibles)
             {
                 Instantiate(optionalCollectibles[Random.Range(0, optionalCollectibles.Length)], optionalLocations[i].position, optionalLocations[i].rotation);
             }
@@ -103,20 +104,4 @@ public class CollectibleMaster : MonoBehaviour
         }
     }
 
-    public void SetMultiplierForSeconds(float multiplier, float seconds)
-    {
-        StartCoroutine(MultiplierCoroutine(multiplier, seconds));
-    }
-
-    private IEnumerator MultiplierCoroutine(float multiplier, float seconds)
-    {
-        CollectibleMaster.Instance.valueMultiplier = multiplier;
-        Thief.Instance.multiplierText.GetComponent<TextMeshPro>().text = "x" + multiplier;
-        Thief.Instance.multiplierText.SetActive(true);
-        Debug.Log("Set multiplier to: " + multiplier);
-        yield return new WaitForSeconds(seconds);
-        CollectibleMaster.Instance.valueMultiplier = 1.0f;
-        Thief.Instance.multiplierText.SetActive(false);
-        Debug.Log("Finished multiplier-coroutine");
-    }
 }

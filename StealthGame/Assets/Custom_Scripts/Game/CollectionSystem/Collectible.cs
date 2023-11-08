@@ -28,8 +28,8 @@ public class Collectible : MonoBehaviour
             if (mandatory)
             {
                 CollectibleMaster.Instance.mandatoriesClaimed++;
-                CollectibleMaster.Instance.collectedValue += (int)(curValue * CollectibleMaster.Instance.valueMultiplier);
-                amountText.GetComponent<TextMeshPro>().text = (curValue * CollectibleMaster.Instance.valueMultiplier) + "$";
+                CollectibleMaster.Instance.collectedValue += curValue;
+                amountText.GetComponent<TextMeshPro>().text = curValue + "$";
                 Instantiate(amountText, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.5f, gameObject.transform.position.z), Quaternion.identity);
             }
             CollectibleMaster.Instance.CheckCollection();
