@@ -45,16 +45,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4213ce95d3d20e14bbdc1e56074c4ba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxNumberOfRoomsCreated: 30
+  MaxNumberOfRoomsCreated: 25
   possibleRooms:
   - {fileID: 7920541963080843972, guid: f96b9ef1d7ec8144badcb501ed644e61, type: 3}
   - {fileID: 3628948758749083952, guid: 75d066f5e9d38b641bf5065d1da01bcd, type: 3}
   - {fileID: 3637530710623809432, guid: 39f3ae561c55d114aa08b924810ebe8c, type: 3}
+  - {fileID: 1540021862810991961, guid: cb0aa09853a3f3948a76aaecdd22adff, type: 3}
   - {fileID: 4919829470998136944, guid: fefcdab8be10f2349b51685c407b2ced, type: 3}
   - {fileID: 4919829470998136944, guid: fefcdab8be10f2349b51685c407b2ced, type: 3}
-  - {fileID: 1540021862810991961, guid: cb0aa09853a3f3948a76aaecdd22adff, type: 3}
-  - {fileID: 1540021862810991961, guid: cb0aa09853a3f3948a76aaecdd22adff, type: 3}
   - {fileID: 1917070228073449707, guid: d192fef8dee121344812ac3886e73a46, type: 3}
+  - {fileID: 4156609792736813847, guid: 8e51cbc3598dd4e4dbf3f93412a42221, type: 3}
+  - {fileID: 4156609792736813847, guid: 8e51cbc3598dd4e4dbf3f93412a42221, type: 3}
+  - {fileID: 1211194642924529474, guid: 8a387950d9c6ded43adbd4f06ae4abf6, type: 3}
+  - {fileID: 1211194642924529474, guid: 8a387950d9c6ded43adbd4f06ae4abf6, type: 3}
   RoomProgress: 
   startingRoom: {fileID: 5947020982229850391, guid: 845f6aaf351272b4caab2407ef9e6910, type: 3}
   allGeneratedRooms: []

@@ -40,7 +40,7 @@ public class Guard : ControllableEntity
             suspicionLevel -= Time.deltaTime * (suspicionLevel / 2);
         }
         detectionImage.fillAmount = suspicionLevel / 100f;
-        if(patrolTimer <= 0)
+        if(patrolTimer <= 0 && Vector3.Distance(transform.position, agent.destination) <= 1f || patrolTimer < -patrolTime)
         {
             patrolTimer = Random.Range(patrolTime / 2f, patrolTime);
             GuardRandomizedMovement();
