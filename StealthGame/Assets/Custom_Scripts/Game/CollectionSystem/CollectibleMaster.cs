@@ -63,7 +63,7 @@ public class CollectibleMaster : MonoBehaviour
                 break;
             }
             var obj = Instantiate(mandatoryCollectibles[i], mandatoryLocations[i].transform.position, mandatoryLocations[i].transform.rotation);
-            obj.GetComponent<Collectible>().mandatory = true;
+            obj.GetComponent<ChestCollectible>().mandatory = true;
             mandatoriesSet++;
         }
     }
@@ -85,7 +85,7 @@ public class CollectibleMaster : MonoBehaviour
 
     public void CheckCollection()
     {
-        if (mandatoriesClaimed >= mandatoryCollectibles.Length)
+        if (mandatoriesClaimed >= mandatoriesSet)
         {
             allCollectiblesFound = true;
             uiCounter.UpdateCount($"Get to the exit point!");
