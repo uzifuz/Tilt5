@@ -44,7 +44,7 @@ public class MainMenu : MonoBehaviour
         else
         {
             PlayerPrefs.SetInt("Tilt5Mode", 0);
-            GetComponentInParent<RotateTowardsWand>().ResetRotation();
+            //GetComponentInParent<RotateTowardsWand>().ResetRotation();
         }
     }
 }

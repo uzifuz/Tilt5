@@ -1,21 +1,71 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CustomCharacterSettings : MonoBehaviour
 {
-    bool male = true;//Female if false
+    public class ArrayAndIndex
+    {
+        public IndexWrapper assocIndex = new IndexWrapper();
+        public GameObject[] assocArray;
+        public ArrayAndIndex(IndexWrapper newIndex, GameObject[] newArray)
+        {
+            assocIndex = newIndex;
+            assocArray = newArray;
+        }
+    };
+
+    public class IndexWrapper
+    {
+        public int IntValue = 0;
+    };
+
+    public enum PartToSwap { hair = 0, beard = 1, head = 2, eyeBrows = 3, torso = 4, shoulders = 5, hips = 6, upperArm = 7, ellbow = 8, lowerArm = 9, hands = 10, legs = 11 }
+    public bool male = true;//Female if false
+    [SerializeField] GameObject[] hair;
+    [SerializeField] GameObject[] beardMale, beardFemale;
     [SerializeField] GameObject[] headMale, headFemale;
+    [SerializeField] GameObject[] eyeBrowsMale, eyeBrowsFemale;
     [SerializeField] GameObject[] torsoMale, torsoFemale;
     [SerializeField] GameObject[] hipsMale, hipsFemale;
-    [SerializeField] GameObject[] leftHands, rightHands;
-    [SerializeField] GameObject[] leftLowerArm, rightLowerArm;
-    [SerializeField] GameObject[] leftUpperArm, rightUpperArm;
-    int headIndex = 0, torsoIndex = 0, hipsIndex = 0, handsIndex = 0, lowerArmIndex = 0, upperArmIndex = 0;
+    [SerializeField] GameObject[] leftShoulder, rightShoulder;
+    [SerializeField] GameObject[] leftHandsMale, rightHandsMale, leftHandsFemale, rightHandsFemale;
+    [SerializeField] GameObject[] leftLowerArmMale, rightLowerArmMale, leftLowerArmFemale, rightLowerArmFemale;
+    [SerializeField] GameObject[] leftEllbow, rightEllbow;
+    [SerializeField] GameObject[] leftUpperArmMale, rightUpperArmMale, leftUpperArmFemale, rightUpperArmFemale;
+    [SerializeField] GameObject[] leftLegMale, rightLegMale, leftLegFemale, rightLegFemale;
+    IndexWrapper hairIndex = new IndexWrapper(), beardIndex = new IndexWrapper(), headIndex = new IndexWrapper(), eyebrowsIndex = new IndexWrapper(), torsoIndex = new IndexWrapper(), shoulderIndex = new IndexWrapper(), hipsIndex = new IndexWrapper(), handsIndex = new IndexWrapper(), lowerArmIndex = new IndexWrapper(), ellbowIndex = new IndexWrapper(), upperArmIndex = new IndexWrapper(), legsIndex = new IndexWrapper();
 
     private void Start()
     {
-        SwapHead(0);
+        ReadAllIndicesFromPlayerPref();
+        SetAllPartsActive();
+        InitializeCoupling();
+        IniTializeAllParts();
+        SwapMaleFemale(male);
+    }
+
+    void InitializeCoupling()
+    {
+        CoupleDoubleParts(leftHandsMale, rightHandsMale);
+        CoupleDoubleParts(leftHandsFemale, rightHandsFemale);
+        CoupleDoubleParts(leftLowerArmMale, rightLowerArmMale);
+        CoupleDoubleParts(leftLowerArmFemale, rightLowerArmFemale);
+        CoupleDoubleParts(leftUpperArmMale, rightUpperArmMale);
+        CoupleDoubleParts(leftUpperArmFemale, rightUpperArmFemale);
+        CoupleDoubleParts(leftLegMale, rightLegMale);
+        CoupleDoubleParts(leftLegFemale, rightLegFemale);
+        CoupleDoubleParts(leftShoulder, rightShoulder);
+        CoupleDoubleParts(leftEllbow, rightEllbow);
+    }
+
+    void CoupleDoubleParts(GameObject[] newArray, GameObject[] coupledArray)
+    {
+        for (int i = 0; i < newArray.Length; i++)
+        {
+            newArray[i].GetComponent<PartSynchronisation>().SetCouplingTo(coupledArray[i]);
+        }
     }
 
     void SetAllOfArrayInactive(GameObject[] newArray)
@@ -26,53 +76,199 @@ public class CustomCharacterSettings : MonoBehaviour
         }
     }
 
-    public void SwapHead(int direction)
+    void SetAllOfArrayActive(GameObject[] newArray)
     {
-        SetAllOfArrayInactive(headMale);
-        SetAllOfArrayInactive(headFemale);
-        headIndex = headIndex + direction;
-        if (male)
+        foreach (GameObject obj in newArray)
         {
-            if(headIndex >=  headMale.Length)
-            {
-                headIndex = 0;
-            }
-            else if(headIndex < 0)
-            {
-                headIndex = headMale.Length - 1;
-            }
-            headMale[headIndex].SetActive(true);
-        }
-        else
-        {
-            if (headIndex >= headFemale.Length)
-            {
-                headIndex = 0;
-            }
-            else if (headIndex < 0)
-            {
-                headIndex = headFemale.Length - 1;
-            }
-            headFemale[headIndex].SetActive(true);
+            obj.SetActive(true);
         }
     }
 
-    public void SwapTorso(int direction)
+    void SetAllPartsActive()
     {
-        torsoIndex = torsoIndex + direction;
-        if (male)
+        SetAllOfArrayActive(hair);
+        SetAllOfArrayActive(beardMale);
+        SetAllOfArrayActive(beardFemale);
+        SetAllOfArrayActive(headMale);
+        SetAllOfArrayActive(headFemale);
+        SetAllOfArrayActive(torsoMale);
+        SetAllOfArrayActive(torsoFemale);
+        SetAllOfArrayActive(hipsMale);
+        SetAllOfArrayActive(hipsFemale);
+        SetAllOfArrayActive(leftUpperArmMale);
+        SetAllOfArrayActive(leftLowerArmMale);
+        SetAllOfArrayActive(leftHandsMale);
+        SetAllOfArrayActive(leftUpperArmFemale);
+        SetAllOfArrayActive(leftLowerArmFemale);
+        SetAllOfArrayActive(leftHandsFemale);
+        SetAllOfArrayActive(leftShoulder);
+        SetAllOfArrayActive(leftEllbow);
+    }
+
+    ArrayAndIndex GetArrayByPart(PartToSwap thisPart)
+    {
+        switch(thisPart)
         {
-            if (torsoIndex > torsoMale.Length)
-            {
-                headIndex = 0;
-            }
+            case PartToSwap.hair:
+                return new ArrayAndIndex(hairIndex, hair);
+            case PartToSwap.beard:
+                return new ArrayAndIndex(beardIndex, male ? beardMale : beardFemale);
+            case PartToSwap.head:
+                return new ArrayAndIndex(headIndex, male ? headMale : headFemale);
+            case PartToSwap.eyeBrows:
+                return new ArrayAndIndex(eyebrowsIndex, male ? eyeBrowsMale : eyeBrowsFemale);
+            case PartToSwap.torso:
+                return new ArrayAndIndex(torsoIndex, male ? torsoMale : torsoFemale);
+            case PartToSwap.shoulders:
+                return new ArrayAndIndex(shoulderIndex, leftShoulder);
+            case PartToSwap.hips:
+                return new ArrayAndIndex(hipsIndex, male ? hipsMale : hipsFemale);
+            case PartToSwap.upperArm:
+                return new ArrayAndIndex(upperArmIndex, male ? leftUpperArmMale : leftUpperArmFemale);
+            case PartToSwap.ellbow:
+                return new ArrayAndIndex(ellbowIndex, leftEllbow);
+            case PartToSwap.lowerArm:
+                return new ArrayAndIndex(lowerArmIndex, male ? leftLowerArmMale : leftLowerArmFemale);
+            case PartToSwap.hands:
+                return new ArrayAndIndex(handsIndex, male ? leftHandsMale : leftHandsFemale);
+            case PartToSwap.legs:
+                return new ArrayAndIndex(legsIndex, male ? leftLegMale : leftLegFemale);
+
         }
-        else
+        return new ArrayAndIndex(null, null);
+    }
+
+    public void SwapMaleFemale(bool newValue)
+    {
+        male = newValue;
+        switch(male)
         {
-            if (torsoIndex > torsoFemale.Length)
-            {
-                headIndex = 0;
-            }
+            case true:
+                SetAllOfArrayInactive(headFemale);
+                SetAllOfArrayInactive(beardFemale);
+                SetAllOfArrayInactive(eyeBrowsFemale);
+                SetAllOfArrayInactive(torsoFemale);
+                SetAllOfArrayInactive(hipsFemale);
+                SetAllOfArrayInactive(leftUpperArmFemale);
+                SetAllOfArrayInactive(leftLowerArmFemale);
+                SetAllOfArrayInactive(leftHandsFemale);
+                SetAllOfArrayInactive(leftLegFemale);
+
+                break;
+            case false:
+                SetAllOfArrayInactive(headMale);
+                SetAllOfArrayInactive(beardMale);
+                SetAllOfArrayInactive(eyeBrowsMale);
+                SetAllOfArrayInactive(torsoMale);
+                SetAllOfArrayInactive(hipsMale);
+                SetAllOfArrayInactive(leftUpperArmMale);
+                SetAllOfArrayInactive(leftLowerArmMale);
+                SetAllOfArrayInactive(leftHandsMale);
+                SetAllOfArrayInactive(leftLegMale);
+
+                break;
         }
+        InitializePart(0);
+        InitializePart(1);
+        InitializePart(2);
+        InitializePart(3);
+        InitializePart(4);
+        InitializePart(5);
+        InitializePart(6);
+        InitializePart(7);
+        InitializePart(8);
+        InitializePart(9);
+        InitializePart(10);
+        InitializePart(11);
+    }
+
+    public GameObject SwapPartUp(int part)
+    {
+        ArrayAndIndex newStruct = GetArrayByPart((PartToSwap)part);
+        GameObject[] currentArray = newStruct.assocArray;
+        IndexWrapper newIndex = newStruct.assocIndex;
+        //-->Setting!
+        SetAllOfArrayInactive(currentArray);
+        newIndex.IntValue = newIndex.IntValue + 1;
+        if (newIndex.IntValue >= currentArray.Length)
+        {
+            newIndex.IntValue = 0;
+        }
+        currentArray[newIndex.IntValue].SetActive(true);
+        return currentArray[newIndex.IntValue];
+    }
+
+    public GameObject SwapPartDown(int part)
+    {
+        ArrayAndIndex newStruct = GetArrayByPart((PartToSwap)part);
+        GameObject[] currentArray = newStruct.assocArray;
+        IndexWrapper newIndex = newStruct.assocIndex;
+        //-->Setting!
+        SetAllOfArrayInactive(currentArray);
+        newIndex.IntValue = newIndex.IntValue - 1;
+        if (newIndex.IntValue < 0)
+        {
+            newIndex.IntValue = currentArray.Length - 1;
+        }
+        currentArray[newIndex.IntValue].SetActive(true);
+        return currentArray[newIndex.IntValue];
+    }
+
+    void IniTializeAllParts()
+    {
+        for (int i = 0; i < Enum.GetNames(typeof(PartToSwap)).Length; i++)
+        {
+            InitializePart(i);
+        }
+        male = !male;
+        for (int i = 0; i < Enum.GetNames(typeof(PartToSwap)).Length; i++)
+        {
+            InitializePart(i);
+        }
+        male = !male;
+    }
+
+    void InitializePart(int part)
+    {
+        ArrayAndIndex newStruct = GetArrayByPart((PartToSwap)part);
+        GameObject[] currentArray = newStruct.assocArray;
+        SetAllOfArrayInactive(currentArray);
+        if (newStruct.assocIndex.IntValue >= currentArray.Length)
+            newStruct.assocIndex.IntValue = 0;
+        currentArray[newStruct.assocIndex.IntValue].SetActive(true);
+    }
+
+    public void SetAllIndicesToPlayerPref()
+    {
+        PlayerPrefs.SetInt("male", male ? 1 : 0);
+        PlayerPrefs.SetInt("hairIndex", hairIndex.IntValue);
+        PlayerPrefs.SetInt("beardIndex", beardIndex.IntValue);
+        PlayerPrefs.SetInt("headIndex", headIndex.IntValue);
+        PlayerPrefs.SetInt("eyebrowsIndex", eyebrowsIndex.IntValue);
+        PlayerPrefs.SetInt("torsoIndex", torsoIndex.IntValue);
+        PlayerPrefs.SetInt("shoulderIndex", shoulderIndex.IntValue);
+        PlayerPrefs.SetInt("hipsIndex", hipsIndex.IntValue);
+        PlayerPrefs.SetInt("handsIndex", handsIndex.IntValue);
+        PlayerPrefs.SetInt("lowerArmIndex", lowerArmIndex.IntValue);
+        PlayerPrefs.SetInt("ellbowIndex", ellbowIndex.IntValue);
+        PlayerPrefs.SetInt("upperArmIndex", upperArmIndex.IntValue);
+        PlayerPrefs.SetInt("legsIndex", legsIndex.IntValue);
+    }
+
+    public void ReadAllIndicesFromPlayerPref()
+    {
+        male = PlayerPrefs.GetInt("male", 1) == 1;
+        hairIndex.IntValue = PlayerPrefs.GetInt("hairIndex", 0);
+        beardIndex.IntValue =  PlayerPrefs.GetInt("beardIndex", 0);
+        headIndex.IntValue = PlayerPrefs.GetInt("headIndex", 0);
+        eyebrowsIndex.IntValue = PlayerPrefs.GetInt("eyebrowsIndex", 0);
+        torsoIndex.IntValue = PlayerPrefs.GetInt("torsoIndex", 0);
+        shoulderIndex.IntValue = PlayerPrefs.GetInt("shoulderIndex", 0);
+        hipsIndex.IntValue = PlayerPrefs.GetInt("hipsIndex", 0);
+        handsIndex.IntValue = PlayerPrefs.GetInt("handsIndex", 0);
+        lowerArmIndex.IntValue = PlayerPrefs.GetInt("lowerArmIndex", 0);
+        ellbowIndex.IntValue = PlayerPrefs.GetInt("ellbowIndex", 0);
+        upperArmIndex.IntValue = PlayerPrefs.GetInt("upperArmIndex", 0);
+        legsIndex.IntValue = PlayerPrefs.GetInt("legsIndex", 0);
     }
 }
