@@ -5,6 +5,8 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     public float moveSpeed = 3f, rotationMultiplier = 5f;
+    public bool FollowPlayer = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,16 +16,28 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Input.GetAxis("Horizontal") * transform.right * Time.deltaTime * moveSpeed + Input.GetAxis("Vertical") * transform.forward * Time.deltaTime * moveSpeed;
-        if(Input.GetKey(KeyCode.Q))
+        if(FollowPlayer)
+        {
+            if(Thief.Instance != null)
+            {
+                transform.position = Thief.Instance.transform.position;
+            }
+        }
+        else
+        {
+            transform.position += Input.GetAxis("Horizontal") * transform.right * Time.deltaTime * moveSpeed + Input.GetAxis("Vertical") * transform.forward * Time.deltaTime * moveSpeed;
+        }
+
+        if (Input.GetKey(KeyCode.Q) || TiltFiveInputs.Instance.stickX < 0f)
         {
             transform.localEulerAngles += new Vector3(0, -Time.deltaTime * moveSpeed * rotationMultiplier, 0);
         }
-        else if(Input.GetKey(KeyCode.E))
+        else if (Input.GetKey(KeyCode.E) || TiltFiveInputs.Instance.stickX > 0f)
         {
             transform.localEulerAngles += new Vector3(0, Time.deltaTime * moveSpeed * rotationMultiplier, 0);
         }
-        if(Input.GetKeyDown(KeyCode.Escape))//Remove this on future releases!!!
+
+        if (Input.GetKeyDown(KeyCode.Escape))//Remove this on future releases!!!
         {
             Application.Quit();
         }

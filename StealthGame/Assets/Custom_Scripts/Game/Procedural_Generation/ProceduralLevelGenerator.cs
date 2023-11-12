@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 public class ProceduralLevelGenerator : MonoBehaviour
 {
+    [SerializeField] GameObject PlayerCharacter;
     public float MaxNumberOfRoomsCreated;
     int curNumberOfCreatedRooms = 0;
     public GameObject[] possibleRooms;
@@ -47,6 +48,7 @@ public class ProceduralLevelGenerator : MonoBehaviour
                 curSurface.BuildNavMesh();
                 CollectibleMaster.Instance.SetupCollectionSystem();
                 allGeneratedRooms.Clear();
+                PlayerCharacter.SetActive(true);
                 Debug.Log("Room Creation Complete");
                 break;
             }

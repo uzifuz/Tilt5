@@ -31,6 +31,10 @@ public class Thief : ControllableEntity
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetFloat("animSpeed", 1);
+            anim.Play("Ability");
+        }
     }
 }

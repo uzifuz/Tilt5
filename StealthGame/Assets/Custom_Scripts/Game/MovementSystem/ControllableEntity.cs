@@ -10,11 +10,13 @@ public class ControllableEntity : Entity
     [SerializeField]
     LayerMask walkableSurfaces;
     public bool CanMove;
+    public Animator anim;
 
     protected override void InheritStart()
     {
         base.InheritStart();
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
     }
 
     protected override void InheritUpdate()
@@ -35,15 +37,14 @@ public class ControllableEntity : Entity
         if(run)
         {
             agent.speed = agentRunSpeed;
-            GetComponent<Animator>().SetFloat("animSpeed", 4);
+            anim.SetFloat("animSpeed", 4);
         }
         else
         {
             agent.speed = agentWalkSpeed;
-            GetComponent<Animator>().SetFloat("animSpeed", 1);
+            anim.SetFloat("animSpeed", 1);
         }
         Vector3 proxyTarget = NavMeshInfo.RandomNavSphere(target, 0f, radiusMod, walkableSurfaces);
-        //Debug.Log($"{name} was set to {proxyTarget}");
         agent.SetDestination(proxyTarget);
     }
 }

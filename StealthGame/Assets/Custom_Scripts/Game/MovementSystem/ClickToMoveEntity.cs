@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class ClickToMoveEntity : MonoBehaviour
 {
     public GameObject wandTip;
-    public Transform gameBoard, wandTipTransform, wandGripTransform;
+    public Transform gameBoard, camMaster, wandTipTransform, wandGripTransform;
     public Light torchLight;
     public float boardMoveSpeed = 1f;
     bool wandButtonPressed = false;
@@ -119,7 +119,11 @@ public class ClickToMoveEntity : MonoBehaviour
                 Vector3 wandGripNoY = new Vector3(wandGripTransform.position.x, 0, wandGripTransform.position.z);
                 Vector3 direction = (wandTipNoY - wandGripNoY).normalized;
                 if(!boardLocked)
-                    gameBoard.Translate(Vector3.Cross(direction, gameBoard.up) * wandDevice.Stick.ReadValue().x * Time.deltaTime * boardMoveSpeed + direction * wandDevice.Stick.ReadValue().y * Time.deltaTime * -boardMoveSpeed);
+                {
+                    //gameBoard.Translate(Vector3.Cross(direction, gameBoard.up) * wandDevice.Stick.ReadValue().x * Time.deltaTime * boardMoveSpeed + direction * wandDevice.Stick.ReadValue().y * Time.deltaTime * -boardMoveSpeed);
+                    gameBoard.transform.position = camMaster.transform.position;
+                    gameBoard.transform.rotation = camMaster.transform.rotation;
+                }
                 
             }
         }

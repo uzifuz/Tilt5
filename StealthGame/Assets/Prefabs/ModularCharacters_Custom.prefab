@@ -106,6 +106,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &24148862430812562
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,6 +227,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &37597868608387627
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,6 +334,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &46124837436646940
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,6 +441,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &75792312979221148
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,6 +708,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &112617473781229275
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,6 +829,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &118171901193727511
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,6 +951,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &122717417928233148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,6 +1063,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &130797611361601465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,6 +1170,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &147723550017762157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,6 +1277,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &147914689655349960
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,6 +1384,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &155082276204124224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,6 +1491,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &157949325837042552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1590,11 +1602,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Cowl
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &158005649630342049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1701,6 +1714,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &167027098997196988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1843,6 +1857,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &188087360619463668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1955,6 +1970,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &189023743703883256
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,6 +2091,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &195204509771105669
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,11 +2251,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Cloth
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &229956470636505209
 GameObject:
   m_ObjectHideFlags: 0
@@ -2345,6 +2363,57 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
+--- !u!1 &246895243945362296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3140166508966090388}
+  - component: {fileID: 2029064990660344869}
+  m_Layer: 0
+  m_Name: Empty
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3140166508966090388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246895243945362296}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 315945902479615705}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2029064990660344869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246895243945362296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PartName: Clean Shave
+  SpeedMod: 0
+  HealthMod: 0
+  CooldownReduction: 0
+  NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &252762148167784917
 GameObject:
   m_ObjectHideFlags: 0
@@ -2407,6 +2476,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 9197634686455696107}
   - {fileID: 5023018762239193372}
   - {fileID: 3753855915678923466}
   - {fileID: 3555430454236366731}
@@ -2790,6 +2860,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &298843402843246441
 GameObject:
   m_ObjectHideFlags: 0
@@ -2898,6 +2969,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &349853809321328692
 GameObject:
   m_ObjectHideFlags: 0
@@ -3006,6 +3078,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &362809501426479576
 GameObject:
   m_ObjectHideFlags: 0
@@ -3157,6 +3230,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &402524729367981464
 GameObject:
   m_ObjectHideFlags: 0
@@ -3267,11 +3341,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Mail Hood
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 0000000001000000
 --- !u!1 &405678951078049858
 GameObject:
   m_ObjectHideFlags: 0
@@ -3385,11 +3460,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Studded Steel
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 00000000
 --- !u!1 &413605822409090899
 GameObject:
   m_ObjectHideFlags: 0
@@ -3510,6 +3586,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &414003086543029133
 GameObject:
   m_ObjectHideFlags: 0
@@ -3626,6 +3703,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &415150630326338694
 GameObject:
   m_ObjectHideFlags: 0
@@ -3733,6 +3811,125 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
+--- !u!1 &418648979389324506
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4441539336389172080}
+  - component: {fileID: 9146409747148055167}
+  - component: {fileID: 3265048054520575018}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4441539336389172080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418648979389324506}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 1.6386, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1157465791121857643}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &9146409747148055167
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418648979389324506}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.6700679, b: 0.1462264, a: 1}
+  m_Intensity: 2
+  m_Range: 13
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 1
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &3265048054520575018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418648979389324506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &426147285768297715
 GameObject:
   m_ObjectHideFlags: 0
@@ -3845,6 +4042,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &440129703583563912
 GameObject:
   m_ObjectHideFlags: 0
@@ -3960,6 +4158,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &445481867793091582
 GameObject:
   m_ObjectHideFlags: 0
@@ -4070,6 +4269,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &470243146740534215
 GameObject:
   m_ObjectHideFlags: 0
@@ -4190,6 +4390,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &542519293507781272
 GameObject:
   m_ObjectHideFlags: 0
@@ -4303,11 +4504,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Giant Steel
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 00000000
 --- !u!1 &557334915472620676
 GameObject:
   m_ObjectHideFlags: 0
@@ -4428,6 +4630,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &560244918656702139
 GameObject:
   m_ObjectHideFlags: 0
@@ -4620,6 +4823,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &583034143729685780
 GameObject:
   m_ObjectHideFlags: 0
@@ -4726,6 +4930,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &583176041695229081
 GameObject:
   m_ObjectHideFlags: 0
@@ -4832,6 +5037,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &585322133949338223
 GameObject:
   m_ObjectHideFlags: 0
@@ -4975,6 +5181,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &616801534820729816
 GameObject:
   m_ObjectHideFlags: 0
@@ -5081,6 +5288,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &620975336037058147
 GameObject:
   m_ObjectHideFlags: 0
@@ -5189,6 +5397,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &623049570763071029
 GameObject:
   m_ObjectHideFlags: 0
@@ -5327,6 +5536,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &647423566388499582
 GameObject:
   m_ObjectHideFlags: 0
@@ -5437,6 +5647,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &653335244767195785
 GameObject:
   m_ObjectHideFlags: 0
@@ -5566,6 +5777,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &664950990793605602
 GameObject:
   m_ObjectHideFlags: 0
@@ -5670,6 +5882,44 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
+--- !u!1 &667499774764662752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1795746499956235663}
+  m_Layer: 0
+  m_Name: Right_Hand_Items
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1795746499956235663
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667499774764662752}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.5854977, y: 0.36300978, z: -0.4113178, w: 0.5968535}
+  m_LocalPosition: {x: 8.34, y: 2.79, z: 3.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6630107561971954886}
+  - {fileID: 7866211206343090454}
+  - {fileID: 1927860741776731349}
+  - {fileID: 593636697861493301}
+  - {fileID: 6409403232104037932}
+  - {fileID: 8882811903493818796}
+  m_Father: {fileID: 7962345250815733921}
+  m_LocalEulerAnglesHint: {x: -23.596, y: 86.82, z: -91.499}
 --- !u!1 &669764905838873419
 GameObject:
   m_ObjectHideFlags: 0
@@ -5894,6 +6144,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &674316589983152846
 GameObject:
   m_ObjectHideFlags: 0
@@ -6086,6 +6337,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &696678375084922191
 GameObject:
   m_ObjectHideFlags: 0
@@ -6206,6 +6458,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &698262163891777155
 GameObject:
   m_ObjectHideFlags: 0
@@ -6326,6 +6579,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &699538681253741155
 GameObject:
   m_ObjectHideFlags: 0
@@ -6432,6 +6686,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &709327875783013156
 GameObject:
   m_ObjectHideFlags: 0
@@ -6536,6 +6791,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &716295387792110810
 GameObject:
   m_ObjectHideFlags: 0
@@ -6665,6 +6921,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &739021312360658381
 GameObject:
   m_ObjectHideFlags: 0
@@ -6785,6 +7042,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &744878239436654676
 GameObject:
   m_ObjectHideFlags: 0
@@ -6983,6 +7241,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &769455414069465584
 GameObject:
   m_ObjectHideFlags: 0
@@ -7089,6 +7348,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &772635861277849110
 GameObject:
   m_ObjectHideFlags: 0
@@ -7201,6 +7461,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &778606149086658942
 GameObject:
   m_ObjectHideFlags: 0
@@ -7307,6 +7568,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &798834703854744365
 GameObject:
   m_ObjectHideFlags: 0
@@ -7422,6 +7684,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &816948110004366416
 GameObject:
   m_ObjectHideFlags: 0
@@ -7628,6 +7891,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &827298967117206868
 GameObject:
   m_ObjectHideFlags: 0
@@ -7749,6 +8013,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &840824098966134128
 GameObject:
   m_ObjectHideFlags: 0
@@ -7962,6 +8227,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &871531691311096556
 GameObject:
   m_ObjectHideFlags: 0
@@ -8080,6 +8346,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &889993852031238462
 GameObject:
   m_ObjectHideFlags: 0
@@ -8200,6 +8467,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &894198819899296437
 GameObject:
   m_ObjectHideFlags: 0
@@ -8306,6 +8574,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &901216720289073569
 GameObject:
   m_ObjectHideFlags: 0
@@ -8480,6 +8749,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &920350522494129382
 GameObject:
   m_ObjectHideFlags: 0
@@ -8586,6 +8856,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &925153088597478389
 GameObject:
   m_ObjectHideFlags: 0
@@ -8704,6 +8975,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &934115797760887719
 GameObject:
   m_ObjectHideFlags: 0
@@ -8810,6 +9082,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &934581859386633814
 GameObject:
   m_ObjectHideFlags: 0
@@ -8931,6 +9204,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &967690952013014904
 GameObject:
   m_ObjectHideFlags: 0
@@ -9041,11 +9315,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Rain Hat
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &978147316974286064
 GameObject:
   m_ObjectHideFlags: 0
@@ -9062,7 +9337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7758551185098885775
 Transform:
   m_ObjectHideFlags: 0
@@ -9098,7 +9373,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ea128b040f8b0af4c9d2de400aaff30a, type: 2}
+  - {fileID: 2100000, guid: 2cc073c8e42416145ad86a215a19c07b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9239,6 +9514,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &997162794287834729
 GameObject:
   m_ObjectHideFlags: 0
@@ -9347,6 +9623,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1003264362454281141
 GameObject:
   m_ObjectHideFlags: 0
@@ -9455,6 +9732,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1012049170963679133
 GameObject:
   m_ObjectHideFlags: 0
@@ -9605,6 +9883,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1019885750085272060
 GameObject:
   m_ObjectHideFlags: 0
@@ -9720,6 +9999,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1053498689703723311
 GameObject:
   m_ObjectHideFlags: 0
@@ -9864,6 +10144,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1079918359123395521
 GameObject:
   m_ObjectHideFlags: 0
@@ -9972,6 +10253,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1096465886891027771
 GameObject:
   m_ObjectHideFlags: 0
@@ -10259,6 +10541,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1126949840660074952
 GameObject:
   m_ObjectHideFlags: 0
@@ -10397,6 +10680,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1136817789374565921
 GameObject:
   m_ObjectHideFlags: 0
@@ -10510,11 +10794,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Large Lion
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 00000000
 --- !u!1 &1137256627126646102
 GameObject:
   m_ObjectHideFlags: 0
@@ -10614,11 +10899,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Slackjaw
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1137449131249589373
 GameObject:
   m_ObjectHideFlags: 0
@@ -10731,6 +11017,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1166292359269511393
 GameObject:
   m_ObjectHideFlags: 0
@@ -10975,6 +11262,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1254142385634760200
 GameObject:
   m_ObjectHideFlags: 0
@@ -11223,6 +11511,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1289639997410681595
 GameObject:
   m_ObjectHideFlags: 0
@@ -11329,6 +11618,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1304564370106494212
 GameObject:
   m_ObjectHideFlags: 0
@@ -11617,6 +11907,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1329076919792149882
 GameObject:
   m_ObjectHideFlags: 0
@@ -11746,6 +12037,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1332233906270185831
 GameObject:
   m_ObjectHideFlags: 0
@@ -11938,6 +12230,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1333855143898816100
 GameObject:
   m_ObjectHideFlags: 0
@@ -11954,7 +12247,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5389045298166090931
 Transform:
   m_ObjectHideFlags: 0
@@ -11990,7 +12283,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ea128b040f8b0af4c9d2de400aaff30a, type: 2}
+  - {fileID: 2100000, guid: 2cc073c8e42416145ad86a215a19c07b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12140,6 +12433,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1339141874800817113
 GameObject:
   m_ObjectHideFlags: 0
@@ -12250,11 +12544,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Tight Helmet
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 00000000
 --- !u!1 &1347735892167619259
 GameObject:
   m_ObjectHideFlags: 0
@@ -12361,6 +12656,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1380224775332394849
 GameObject:
   m_ObjectHideFlags: 0
@@ -12467,6 +12763,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1385309434130532279
 GameObject:
   m_ObjectHideFlags: 0
@@ -12587,6 +12884,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1388810797340798189
 GameObject:
   m_ObjectHideFlags: 0
@@ -12616,6 +12914,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7968626186511852209}
   - {fileID: 3783334742877606203}
   - {fileID: 8423950232628228338}
   - {fileID: 7079664607796398923}
@@ -12736,6 +13035,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1398776151075524245
 GameObject:
   m_ObjectHideFlags: 0
@@ -12857,6 +13157,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1401924906877707636
 GameObject:
   m_ObjectHideFlags: 0
@@ -12968,6 +13269,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1417787609853095515
 GameObject:
   m_ObjectHideFlags: 0
@@ -13097,6 +13399,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1430975403900775201
 GameObject:
   m_ObjectHideFlags: 0
@@ -13207,6 +13510,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1435523893649129739
 GameObject:
   m_ObjectHideFlags: 0
@@ -13319,6 +13623,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1454128935247079081
 GameObject:
   m_ObjectHideFlags: 0
@@ -13425,6 +13730,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1493431776362139572
 GameObject:
   m_ObjectHideFlags: 0
@@ -13617,6 +13923,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1515884084224335565
 GameObject:
   m_ObjectHideFlags: 0
@@ -13633,7 +13940,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3107203324612026021
 Transform:
   m_ObjectHideFlags: 0
@@ -13669,7 +13976,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ea128b040f8b0af4c9d2de400aaff30a, type: 2}
+  - {fileID: 2100000, guid: 2cc073c8e42416145ad86a215a19c07b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13810,6 +14117,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1538197185204776275
 GameObject:
   m_ObjectHideFlags: 0
@@ -13925,6 +14233,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1565857517087797552
 GameObject:
   m_ObjectHideFlags: 0
@@ -14045,6 +14354,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1572955793678755011
 GameObject:
   m_ObjectHideFlags: 0
@@ -14151,6 +14461,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1579911801316676800
 GameObject:
   m_ObjectHideFlags: 0
@@ -14259,6 +14570,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1582499032206099151
 GameObject:
   m_ObjectHideFlags: 0
@@ -14365,6 +14677,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1588028579706013116
 GameObject:
   m_ObjectHideFlags: 0
@@ -14653,6 +14966,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1662462331467654569
 GameObject:
   m_ObjectHideFlags: 0
@@ -14860,6 +15174,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1677807701045964534
 GameObject:
   m_ObjectHideFlags: 0
@@ -14966,6 +15281,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1694749370802789942
 GameObject:
   m_ObjectHideFlags: 0
@@ -15076,6 +15392,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1698604036150812672
 GameObject:
   m_ObjectHideFlags: 0
@@ -15182,6 +15499,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1701019047385276959
 GameObject:
   m_ObjectHideFlags: 0
@@ -15297,6 +15615,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1714462146404765784
 GameObject:
   m_ObjectHideFlags: 0
@@ -15407,6 +15726,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1715994294452565859
 GameObject:
   m_ObjectHideFlags: 0
@@ -15522,6 +15842,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1733658047982492944
 GameObject:
   m_ObjectHideFlags: 0
@@ -15726,6 +16047,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1756287729547119609
 GameObject:
   m_ObjectHideFlags: 0
@@ -15838,6 +16160,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1769733656262139999
 GameObject:
   m_ObjectHideFlags: 0
@@ -15958,6 +16281,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1773357393017165889
 GameObject:
   m_ObjectHideFlags: 0
@@ -16057,11 +16381,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Saruman
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1802641309629033766
 GameObject:
   m_ObjectHideFlags: 0
@@ -16182,6 +16507,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1807354941074071229
 GameObject:
   m_ObjectHideFlags: 0
@@ -16297,6 +16623,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1821223748793349117
 GameObject:
   m_ObjectHideFlags: 0
@@ -16417,6 +16744,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1826464384637994157
 GameObject:
   m_ObjectHideFlags: 0
@@ -16523,6 +16851,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1826994065215909695
 GameObject:
   m_ObjectHideFlags: 0
@@ -16695,6 +17024,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1868759307235099567
 GameObject:
   m_ObjectHideFlags: 0
@@ -16866,6 +17196,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1881921096605742578
 GameObject:
   m_ObjectHideFlags: 0
@@ -16972,6 +17303,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1891856684376670496
 GameObject:
   m_ObjectHideFlags: 0
@@ -17183,6 +17515,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1905522148484228618
 GameObject:
   m_ObjectHideFlags: 0
@@ -17289,6 +17622,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1907022054720617491
 GameObject:
   m_ObjectHideFlags: 0
@@ -17395,6 +17729,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1914154081878422617
 GameObject:
   m_ObjectHideFlags: 0
@@ -17524,6 +17859,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1946600514880223149
 GameObject:
   m_ObjectHideFlags: 0
@@ -17623,11 +17959,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: Default
+  PartName: Big Mono
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1957664999828597354
 GameObject:
   m_ObjectHideFlags: 0
@@ -17740,6 +18077,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &1958606531677787569
 GameObject:
   m_ObjectHideFlags: 0
@@ -17893,6 +18231,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2002932080841060598
 GameObject:
   m_ObjectHideFlags: 0
@@ -18006,11 +18345,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Less Show Off
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 00000000
 --- !u!1 &2007901697053097561
 GameObject:
   m_ObjectHideFlags: 0
@@ -18117,6 +18457,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2013003200176880486
 GameObject:
   m_ObjectHideFlags: 0
@@ -18237,6 +18578,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2017048205173986599
 GameObject:
   m_ObjectHideFlags: 0
@@ -18387,6 +18729,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2024041827224909790
 GameObject:
   m_ObjectHideFlags: 0
@@ -18499,6 +18842,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2038605134417684863
 GameObject:
   m_ObjectHideFlags: 0
@@ -18645,6 +18989,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2043659754137111022
 GameObject:
   m_ObjectHideFlags: 0
@@ -18757,6 +19102,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2057868691256893959
 GameObject:
   m_ObjectHideFlags: 0
@@ -18877,6 +19223,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2060514786462074799
 GameObject:
   m_ObjectHideFlags: 0
@@ -18990,11 +19337,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Tiny Plate
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2062425437004812897
 GameObject:
   m_ObjectHideFlags: 0
@@ -19103,6 +19451,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2065266292850480019
 GameObject:
   m_ObjectHideFlags: 0
@@ -19202,11 +19551,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Neutral Bushy
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2069992287718756890
 GameObject:
   m_ObjectHideFlags: 0
@@ -19431,6 +19781,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2114040621767048817
 GameObject:
   m_ObjectHideFlags: 0
@@ -19537,6 +19888,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2121989299448732876
 GameObject:
   m_ObjectHideFlags: 0
@@ -19645,6 +19997,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2127854959505655464
 GameObject:
   m_ObjectHideFlags: 0
@@ -19751,6 +20104,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2140231187480469206
 GameObject:
   m_ObjectHideFlags: 0
@@ -19857,6 +20211,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2146844030112926408
 GameObject:
   m_ObjectHideFlags: 0
@@ -19986,6 +20341,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2149085651983262114
 GameObject:
   m_ObjectHideFlags: 0
@@ -20182,6 +20538,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2152364684911328300
 GameObject:
   m_ObjectHideFlags: 0
@@ -20288,6 +20645,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2166376426295044991
 GameObject:
   m_ObjectHideFlags: 0
@@ -20394,6 +20752,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2194257644842913229
 GameObject:
   m_ObjectHideFlags: 0
@@ -20515,6 +20874,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2203432889508657486
 GameObject:
   m_ObjectHideFlags: 0
@@ -20665,6 +21025,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2217222406755813980
 GameObject:
   m_ObjectHideFlags: 0
@@ -20860,6 +21221,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2247746343082775484
 GameObject:
   m_ObjectHideFlags: 0
@@ -20972,6 +21334,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2247902661379833884
 GameObject:
   m_ObjectHideFlags: 0
@@ -21178,6 +21541,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2258374648314390992
 GameObject:
   m_ObjectHideFlags: 0
@@ -21290,6 +21654,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2269395435841937276
 GameObject:
   m_ObjectHideFlags: 0
@@ -21488,6 +21853,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2298460706789721177
 GameObject:
   m_ObjectHideFlags: 0
@@ -21685,6 +22051,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2349585184461610253
 GameObject:
   m_ObjectHideFlags: 0
@@ -21793,6 +22160,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2363362923176732510
 GameObject:
   m_ObjectHideFlags: 0
@@ -21906,11 +22274,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Rounded Leather
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2365875841243218667
 GameObject:
   m_ObjectHideFlags: 0
@@ -22031,6 +22400,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2366608782621311385
 GameObject:
   m_ObjectHideFlags: 0
@@ -22233,6 +22603,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2391210455021055862
 GameObject:
   m_ObjectHideFlags: 0
@@ -22339,6 +22710,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2446888682437222817
 GameObject:
   m_ObjectHideFlags: 0
@@ -22451,6 +22823,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2447566038964464283
 GameObject:
   m_ObjectHideFlags: 0
@@ -22543,6 +22916,124 @@ SkinnedMeshRenderer:
     m_Center: {x: -47.56395, y: -1.0032921, z: 0}
     m_Extent: {x: 19.907402, y: 47.839565, z: 27.039919}
   m_DirtyAABB: 0
+--- !u!1 &2494890774180519484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1362806574944641933}
+  - component: {fileID: 6515533250534140855}
+  - component: {fileID: 2857972290777758171}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1362806574944641933
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2494890774180519484}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.606, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5396900547260337457}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &6515533250534140855
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2494890774180519484}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 0.2216981, g: 0.82824826, b: 1, a: 1}
+  m_Intensity: 2
+  m_Range: 13
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 1
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &2857972290777758171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2494890774180519484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &2505894627887099540
 GameObject:
   m_ObjectHideFlags: 0
@@ -22737,6 +23228,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2534315233631320061
 GameObject:
   m_ObjectHideFlags: 0
@@ -22874,6 +23366,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2535666092220091112
 GameObject:
   m_ObjectHideFlags: 0
@@ -22982,6 +23475,71 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
+--- !u!1 &2572363342419382805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6409403232104037932}
+  - component: {fileID: 8454315210106999006}
+  - component: {fileID: 4383261694419019134}
+  m_Layer: 0
+  m_Name: Nothing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6409403232104037932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2572363342419382805}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1795746499956235663}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8454315210106999006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2572363342419382805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PartName: Nature's Staff
+  SpeedMod: 0
+  HealthMod: 0
+  CooldownReduction: 0
+  NoiseMod: 0
+  ExclusiveTo: 02000000
+--- !u!114 &4383261694419019134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2572363342419382805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2298468a3d68748978221536ff2eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coupledObject: {fileID: 5401913692774397827}
 --- !u!1 &2577917692061630781
 GameObject:
   m_ObjectHideFlags: 0
@@ -23144,6 +23702,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2618171139455184574
 GameObject:
   m_ObjectHideFlags: 0
@@ -23252,6 +23811,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2624808128529394681
 GameObject:
   m_ObjectHideFlags: 0
@@ -23451,6 +24011,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2631875458135113294
 GameObject:
   m_ObjectHideFlags: 0
@@ -23559,6 +24120,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2641083910785354245
 GameObject:
   m_ObjectHideFlags: 0
@@ -23699,6 +24261,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2655390674528771421
 GameObject:
   m_ObjectHideFlags: 0
@@ -23828,6 +24391,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2660823663694720996
 GameObject:
   m_ObjectHideFlags: 0
@@ -23934,6 +24498,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2672332039974393786
 GameObject:
   m_ObjectHideFlags: 0
@@ -24040,6 +24605,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2676169157800655155
 GameObject:
   m_ObjectHideFlags: 0
@@ -24146,6 +24712,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2676722825079133027
 GameObject:
   m_ObjectHideFlags: 0
@@ -24261,6 +24828,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2682436478142569565
 GameObject:
   m_ObjectHideFlags: 0
@@ -24372,6 +24940,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2683579247885508906
 GameObject:
   m_ObjectHideFlags: 0
@@ -24570,6 +25139,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2718946925979462685
 GameObject:
   m_ObjectHideFlags: 0
@@ -24690,6 +25260,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2738859876491228336
 GameObject:
   m_ObjectHideFlags: 0
@@ -24798,6 +25369,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2750558464938282920
 GameObject:
   m_ObjectHideFlags: 0
@@ -24918,6 +25490,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2763005484285655515
 GameObject:
   m_ObjectHideFlags: 0
@@ -25024,6 +25597,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2784320589521950486
 GameObject:
   m_ObjectHideFlags: 0
@@ -25164,6 +25738,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2787022790095938147
 GameObject:
   m_ObjectHideFlags: 0
@@ -25179,7 +25754,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7585201511424574018
 Transform:
   m_ObjectHideFlags: 0
@@ -25314,6 +25889,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2825676745953959857
 GameObject:
   m_ObjectHideFlags: 0
@@ -25426,6 +26002,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2834174961348603426
 GameObject:
   m_ObjectHideFlags: 0
@@ -25541,6 +26118,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2836837981888620168
 GameObject:
   m_ObjectHideFlags: 0
@@ -25726,11 +26304,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Santa
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2869286270990764423
 GameObject:
   m_ObjectHideFlags: 0
@@ -25837,6 +26416,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2892361628591043301
 GameObject:
   m_ObjectHideFlags: 0
@@ -26117,6 +26697,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2919332674495380124
 GameObject:
   m_ObjectHideFlags: 0
@@ -26223,6 +26804,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2920151937339041401
 GameObject:
   m_ObjectHideFlags: 0
@@ -26334,6 +26916,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2920427413638784387
 GameObject:
   m_ObjectHideFlags: 0
@@ -26446,6 +27029,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &2923016185758066844
 GameObject:
   m_ObjectHideFlags: 0
@@ -26644,6 +27228,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3000661677851752125
 GameObject:
   m_ObjectHideFlags: 0
@@ -26750,6 +27335,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3013828163282246134
 GameObject:
   m_ObjectHideFlags: 0
@@ -26871,6 +27457,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3032527267623057266
 GameObject:
   m_ObjectHideFlags: 0
@@ -26977,6 +27564,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3040770024503457691
 GameObject:
   m_ObjectHideFlags: 0
@@ -27076,11 +27664,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Mustache
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3042737539643924508
 GameObject:
   m_ObjectHideFlags: 0
@@ -27273,6 +27862,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3102905139661416731
 GameObject:
   m_ObjectHideFlags: 0
@@ -27388,6 +27978,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3104995093624985966
 GameObject:
   m_ObjectHideFlags: 0
@@ -27517,6 +28108,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3137128025629704464
 GameObject:
   m_ObjectHideFlags: 0
@@ -27627,6 +28219,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3151052758455558855
 GameObject:
   m_ObjectHideFlags: 0
@@ -27756,6 +28349,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3158695880928676089
 GameObject:
   m_ObjectHideFlags: 0
@@ -27864,6 +28458,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3171318059156715001
 GameObject:
   m_ObjectHideFlags: 0
@@ -27970,6 +28565,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3181561741932612651
 GameObject:
   m_ObjectHideFlags: 0
@@ -28069,11 +28665,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: True Neutral
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3203603342221460125
 GameObject:
   m_ObjectHideFlags: 0
@@ -28453,6 +29050,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3235587804533334359
 GameObject:
   m_ObjectHideFlags: 0
@@ -28482,6 +29080,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 3140166508966090388}
   - {fileID: 3126786029001066376}
   - {fileID: 6951387753622182820}
   - {fileID: 4023061745109854797}
@@ -28642,6 +29241,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3249948968102816309
 GameObject:
   m_ObjectHideFlags: 0
@@ -28794,6 +29394,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3256712047901158047
 GameObject:
   m_ObjectHideFlags: 0
@@ -28982,6 +29583,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3314162747445313766
 GameObject:
   m_ObjectHideFlags: 0
@@ -29102,6 +29704,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3322256839579822235
 GameObject:
   m_ObjectHideFlags: 0
@@ -29222,6 +29825,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3330005568604996140
 GameObject:
   m_ObjectHideFlags: 0
@@ -29373,6 +29977,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3345676197625364323
 GameObject:
   m_ObjectHideFlags: 0
@@ -29493,6 +30098,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3368807315988222467
 GameObject:
   m_ObjectHideFlags: 0
@@ -29599,6 +30205,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3378746532181584279
 GameObject:
   m_ObjectHideFlags: 0
@@ -29741,6 +30348,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3387128170046954863
 GameObject:
   m_ObjectHideFlags: 0
@@ -29955,6 +30563,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3406680144706178073
 GameObject:
   m_ObjectHideFlags: 0
@@ -30061,6 +30670,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3421901130033029504
 GameObject:
   m_ObjectHideFlags: 0
@@ -30341,6 +30951,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3433146968844369626
 GameObject:
   m_ObjectHideFlags: 0
@@ -30451,6 +31062,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3439074763183191593
 GameObject:
   m_ObjectHideFlags: 0
@@ -30572,6 +31184,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3442132219912584631
 GameObject:
   m_ObjectHideFlags: 0
@@ -30685,11 +31298,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Flat Steel
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 00000000
 --- !u!1 &3463375586418371059
 GameObject:
   m_ObjectHideFlags: 0
@@ -30914,6 +31528,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3484591176851155878
 GameObject:
   m_ObjectHideFlags: 0
@@ -31022,6 +31637,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3490848133053812334
 GameObject:
   m_ObjectHideFlags: 0
@@ -31142,6 +31758,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3499285371496458655
 GameObject:
   m_ObjectHideFlags: 0
@@ -31251,6 +31868,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3502544856899161106
 GameObject:
   m_ObjectHideFlags: 0
@@ -31359,6 +31977,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3506674840141677972
 GameObject:
   m_ObjectHideFlags: 0
@@ -31511,6 +32130,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3530687117144784034
 GameObject:
   m_ObjectHideFlags: 0
@@ -31803,6 +32423,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3555584085092651182
 GameObject:
   m_ObjectHideFlags: 0
@@ -31909,6 +32530,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3559019430418782526
 GameObject:
   m_ObjectHideFlags: 0
@@ -32180,11 +32802,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Angry Bushy
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3586681278344932740
 GameObject:
   m_ObjectHideFlags: 0
@@ -32297,6 +32920,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3612230314779912616
 GameObject:
   m_ObjectHideFlags: 0
@@ -32470,11 +33094,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Bear Head
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 0000000002000000
 --- !u!1 &3619123429942470167
 GameObject:
   m_ObjectHideFlags: 0
@@ -32581,6 +33206,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3632433537645512415
 GameObject:
   m_ObjectHideFlags: 0
@@ -32701,6 +33327,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3634943291082305397
 GameObject:
   m_ObjectHideFlags: 0
@@ -32821,6 +33448,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3639419136410545832
 GameObject:
   m_ObjectHideFlags: 0
@@ -33164,6 +33792,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3698602051759436757
 GameObject:
   m_ObjectHideFlags: 0
@@ -33293,6 +33922,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3701448617044581641
 GameObject:
   m_ObjectHideFlags: 0
@@ -33401,6 +34031,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3702580170504131338
 GameObject:
   m_ObjectHideFlags: 0
@@ -33547,11 +34178,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Plain & Ugly
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 00000000
 --- !u!1 &3711732679824834856
 GameObject:
   m_ObjectHideFlags: 0
@@ -33658,6 +34290,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3723933909555711181
 GameObject:
   m_ObjectHideFlags: 0
@@ -33773,6 +34406,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3742259196409996122
 GameObject:
   m_ObjectHideFlags: 0
@@ -33888,6 +34522,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3747862099474599608
 GameObject:
   m_ObjectHideFlags: 0
@@ -33994,6 +34629,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3760720046787024272
 GameObject:
   m_ObjectHideFlags: 0
@@ -34106,6 +34742,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3777344332057792012
 GameObject:
   m_ObjectHideFlags: 0
@@ -34298,6 +34935,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3791124728715761440
 GameObject:
   m_ObjectHideFlags: 0
@@ -34565,11 +35203,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Goatee
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3816882372044057085
 GameObject:
   m_ObjectHideFlags: 0
@@ -34676,6 +35315,71 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
+--- !u!1 &3830713096888305733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8882811903493818796}
+  - component: {fileID: 892093080921152711}
+  - component: {fileID: 19095895292002586}
+  m_Layer: 0
+  m_Name: Nothing (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8882811903493818796
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3830713096888305733}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1795746499956235663}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &892093080921152711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3830713096888305733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PartName: Sun Staff
+  SpeedMod: 0
+  HealthMod: 0
+  CooldownReduction: 0
+  NoiseMod: 0
+  ExclusiveTo: 02000000
+--- !u!114 &19095895292002586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3830713096888305733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2298468a3d68748978221536ff2eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coupledObject: {fileID: 1157465791121627013}
 --- !u!1 &3845601485007590412
 GameObject:
   m_ObjectHideFlags: 0
@@ -34782,6 +35486,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3850581715927827774
 GameObject:
   m_ObjectHideFlags: 0
@@ -34888,6 +35593,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3851047001753251386
 GameObject:
   m_ObjectHideFlags: 0
@@ -34994,6 +35700,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3853127634963132730
 GameObject:
   m_ObjectHideFlags: 0
@@ -35100,6 +35807,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3859397057455367267
 GameObject:
   m_ObjectHideFlags: 0
@@ -35215,6 +35923,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3864410208714156248
 GameObject:
   m_ObjectHideFlags: 0
@@ -35321,6 +36030,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3867051896551256367
 GameObject:
   m_ObjectHideFlags: 0
@@ -35436,6 +36146,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3867816610820329647
 GameObject:
   m_ObjectHideFlags: 0
@@ -35542,6 +36253,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3877892577725630520
 GameObject:
   m_ObjectHideFlags: 0
@@ -35694,6 +36406,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3907427311670953107
 GameObject:
   m_ObjectHideFlags: 0
@@ -35934,6 +36647,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3941254762683480535
 GameObject:
   m_ObjectHideFlags: 0
@@ -36048,6 +36762,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3951652738333901433
 GameObject:
   m_ObjectHideFlags: 0
@@ -36154,6 +36869,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3963652078610076497
 GameObject:
   m_ObjectHideFlags: 0
@@ -36260,6 +36976,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3965982836110047918
 GameObject:
   m_ObjectHideFlags: 0
@@ -36467,6 +37184,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3981759630301567259
 GameObject:
   m_ObjectHideFlags: 0
@@ -36579,6 +37297,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &3985002921867764589
 GameObject:
   m_ObjectHideFlags: 0
@@ -36785,6 +37504,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4011924983490431546
 GameObject:
   m_ObjectHideFlags: 0
@@ -36914,6 +37634,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4018168688438784355
 GameObject:
   m_ObjectHideFlags: 0
@@ -37034,6 +37755,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4026573977617274030
 GameObject:
   m_ObjectHideFlags: 0
@@ -37163,6 +37885,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4036901808480354524
 GameObject:
   m_ObjectHideFlags: 0
@@ -37277,6 +38000,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4051706155719226961
 GameObject:
   m_ObjectHideFlags: 0
@@ -37583,6 +38307,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4076950128472741666
 GameObject:
   m_ObjectHideFlags: 0
@@ -37712,6 +38437,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4081974273404637272
 GameObject:
   m_ObjectHideFlags: 0
@@ -37823,6 +38549,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4088221810928910649
 GameObject:
   m_ObjectHideFlags: 0
@@ -38021,6 +38748,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4090616632844711699
 GameObject:
   m_ObjectHideFlags: 0
@@ -38213,6 +38941,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4141561568298613499
 GameObject:
   m_ObjectHideFlags: 0
@@ -38408,6 +39137,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4155067520238826445
 GameObject:
   m_ObjectHideFlags: 0
@@ -38600,6 +39330,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4176553667946407415
 GameObject:
   m_ObjectHideFlags: 0
@@ -38646,6 +39377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fb2d953cafdd414fbb3798afb8940b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentCharacterClass: 0
   male: 1
   hair:
   - {fileID: 3137128025629704464}
@@ -38700,6 +39432,7 @@ MonoBehaviour:
   - {fileID: 402524729367981464}
   - {fileID: 6408146316325689642}
   beardMale:
+  - {fileID: 246895243945362296}
   - {fileID: 4725702327957836102}
   - {fileID: 2852508845626907091}
   - {fileID: 5657072704767405160}
@@ -38908,6 +39641,7 @@ MonoBehaviour:
   - {fileID: 3701448617044581641}
   - {fileID: 1003264362454281141}
   leftShoulder:
+  - {fileID: 6703156339493145494}
   - {fileID: 405678951078049858}
   - {fileID: 3442132219912584631}
   - {fileID: 8328944337230871807}
@@ -38930,6 +39664,7 @@ MonoBehaviour:
   - {fileID: 6620964619640421950}
   - {fileID: 2002932080841060598}
   rightShoulder:
+  - {fileID: 4404024948877607922}
   - {fileID: 7199417332947777149}
   - {fileID: 1493431776362139572}
   - {fileID: 9027803614077986064}
@@ -39108,6 +39843,7 @@ MonoBehaviour:
   - {fileID: 8455629060786991544}
   - {fileID: 2534957594440045208}
   leftEllbow:
+  - {fileID: 7937648960730543893}
   - {fileID: 925153088597478389}
   - {fileID: 1739742055093860199}
   - {fileID: 5767206399349016395}
@@ -39115,6 +39851,7 @@ MonoBehaviour:
   - {fileID: 5381702373622754181}
   - {fileID: 871531691311096556}
   rightEllbow:
+  - {fileID: 7782524672576408070}
   - {fileID: 3777344332057792012}
   - {fileID: 4435052810503430987}
   - {fileID: 8069184997939553389}
@@ -39293,6 +40030,13 @@ MonoBehaviour:
   - {fileID: 1014750651776839700}
   - {fileID: 8428957422862989509}
   - {fileID: 1333201602806428300}
+  weapons:
+  - {fileID: 6633921295060141368}
+  - {fileID: 7871420975342295374}
+  - {fileID: 1927860741776538769}
+  - {fileID: 593636697861725663}
+  - {fileID: 2572363342419382805}
+  - {fileID: 3830713096888305733}
 --- !u!1 &4181234859161425836
 GameObject:
   m_ObjectHideFlags: 0
@@ -39392,11 +40136,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Amish
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4188935515387719061
 GameObject:
   m_ObjectHideFlags: 0
@@ -39509,6 +40254,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4194094675217771894
 GameObject:
   m_ObjectHideFlags: 0
@@ -39617,6 +40363,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4198405281668347851
 GameObject:
   m_ObjectHideFlags: 0
@@ -39725,6 +40472,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4199911570929167774
 GameObject:
   m_ObjectHideFlags: 0
@@ -39831,6 +40579,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4232153569188713790
 GameObject:
   m_ObjectHideFlags: 0
@@ -40136,6 +40885,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4241805218151140203
 GameObject:
   m_ObjectHideFlags: 0
@@ -40251,6 +41001,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4256085679433145493
 GameObject:
   m_ObjectHideFlags: 0
@@ -40363,6 +41114,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4280235746595245611
 GameObject:
   m_ObjectHideFlags: 0
@@ -40559,6 +41311,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4292940742959352535
 GameObject:
   m_ObjectHideFlags: 0
@@ -40623,6 +41376,111 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8491205003174784152}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4297825621696169702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 571975308362641530}
+  - component: {fileID: 3389563750802073524}
+  - component: {fileID: 5290114362484901771}
+  - component: {fileID: 8889245174115294523}
+  m_Layer: 0
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &571975308362641530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4297825621696169702}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.643, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1157465791121857643}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3389563750802073524
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4297825621696169702}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &5290114362484901771
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4297825621696169702}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: f019f4cdb0c8c5b43b791fcddcf8cd9c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &8889245174115294523
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4297825621696169702}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4304459255876572290
 GameObject:
   m_ObjectHideFlags: 0
@@ -40639,7 +41497,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &857410546727711299
 Transform:
   m_ObjectHideFlags: 0
@@ -40896,11 +41754,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Lumberjack
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4315680812317410830
 GameObject:
   m_ObjectHideFlags: 0
@@ -41009,6 +41868,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4321024698552361186
 GameObject:
   m_ObjectHideFlags: 0
@@ -41115,6 +41975,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4321792467918477078
 GameObject:
   m_ObjectHideFlags: 0
@@ -41408,6 +42269,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4364873699378246866
 GameObject:
   m_ObjectHideFlags: 0
@@ -41520,6 +42382,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4377719799901368051
 GameObject:
   m_ObjectHideFlags: 0
@@ -41633,6 +42496,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4378199915962422026
 GameObject:
   m_ObjectHideFlags: 0
@@ -41753,6 +42617,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4379580484080084556
 GameObject:
   m_ObjectHideFlags: 0
@@ -41852,11 +42717,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Incomplete Puberty
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4384583957470908706
 GameObject:
   m_ObjectHideFlags: 0
@@ -42236,6 +43102,38 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
+--- !u!1 &4404024948877607922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8516321724353234033}
+  m_Layer: 0
+  m_Name: Empty
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8516321724353234033
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4404024948877607922}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5536037716290569225}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4422639284495302620
 GameObject:
   m_ObjectHideFlags: 0
@@ -42563,6 +43461,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4460703618225906696
 GameObject:
   m_ObjectHideFlags: 0
@@ -42675,11 +43574,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Wolf Head
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 0000000002000000
 --- !u!1 &4475592137986336983
 GameObject:
   m_ObjectHideFlags: 0
@@ -42836,6 +43736,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4493202484392901171
 GameObject:
   m_ObjectHideFlags: 0
@@ -42956,6 +43857,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4493863203986712967
 GameObject:
   m_ObjectHideFlags: 0
@@ -43071,6 +43973,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4495434089108997307
 GameObject:
   m_ObjectHideFlags: 0
@@ -43177,6 +44080,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4503194301404723137
 GameObject:
   m_ObjectHideFlags: 0
@@ -43324,6 +44228,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4513698002083576415
 GameObject:
   m_ObjectHideFlags: 0
@@ -43444,6 +44349,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4515847587050602436
 GameObject:
   m_ObjectHideFlags: 0
@@ -43550,6 +44456,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4539405607270092933
 GameObject:
   m_ObjectHideFlags: 0
@@ -43670,6 +44577,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4544891914352171790
 GameObject:
   m_ObjectHideFlags: 0
@@ -43871,6 +44779,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4554015689190986119
 GameObject:
   m_ObjectHideFlags: 0
@@ -44083,6 +44992,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4566354526735284413
 GameObject:
   m_ObjectHideFlags: 0
@@ -44203,6 +45113,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4568789911592857189
 GameObject:
   m_ObjectHideFlags: 0
@@ -44318,6 +45229,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4581020283893747087
 GameObject:
   m_ObjectHideFlags: 0
@@ -44463,6 +45375,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4631159008970320356
 GameObject:
   m_ObjectHideFlags: 0
@@ -44656,6 +45569,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4652813077335786202
 GameObject:
   m_ObjectHideFlags: 0
@@ -44862,6 +45776,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4695323405364890039
 GameObject:
   m_ObjectHideFlags: 0
@@ -45085,6 +46000,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4705553346312814968
 GameObject:
   m_ObjectHideFlags: 0
@@ -45134,7 +46050,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3126786029001066376
 Transform:
   m_ObjectHideFlags: 0
@@ -45216,11 +46132,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Full & Glorious
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4791875357798847184
 GameObject:
   m_ObjectHideFlags: 0
@@ -45459,6 +46376,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4820498706663995296
 GameObject:
   m_ObjectHideFlags: 0
@@ -45572,11 +46490,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Small Steel
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4841232241694276041
 GameObject:
   m_ObjectHideFlags: 0
@@ -45814,6 +46733,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4892643029496639939
 GameObject:
   m_ObjectHideFlags: 0
@@ -45997,6 +46917,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4908861307938072773
 GameObject:
   m_ObjectHideFlags: 0
@@ -46103,6 +47024,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4922576849100577116
 GameObject:
   m_ObjectHideFlags: 0
@@ -46447,6 +47369,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4949250211049886082
 GameObject:
   m_ObjectHideFlags: 0
@@ -46553,6 +47476,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4951766960121911823
 GameObject:
   m_ObjectHideFlags: 0
@@ -46666,11 +47590,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Small & Flat
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 00000000
 --- !u!1 &4957359797544506089
 GameObject:
   m_ObjectHideFlags: 0
@@ -46783,6 +47708,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4980013206682301233
 GameObject:
   m_ObjectHideFlags: 0
@@ -46904,6 +47830,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &4990357035918774078
 GameObject:
   m_ObjectHideFlags: 0
@@ -47044,6 +47971,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5021911708432137056
 GameObject:
   m_ObjectHideFlags: 0
@@ -47152,6 +48080,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5030914190563213194
 GameObject:
   m_ObjectHideFlags: 0
@@ -47439,6 +48368,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5094865026423916173
 GameObject:
   m_ObjectHideFlags: 0
@@ -47560,6 +48490,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5118877311124005225
 GameObject:
   m_ObjectHideFlags: 0
@@ -47666,6 +48597,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5143940215152731947
 GameObject:
   m_ObjectHideFlags: 0
@@ -47786,6 +48718,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5163388810528003704
 GameObject:
   m_ObjectHideFlags: 0
@@ -47979,6 +48912,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5193430716130660901
 GameObject:
   m_ObjectHideFlags: 0
@@ -48100,6 +49034,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5228710499550999341
 GameObject:
   m_ObjectHideFlags: 0
@@ -48215,6 +49150,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5252539661911361376
 GameObject:
   m_ObjectHideFlags: 0
@@ -48323,6 +49259,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5293206692587782378
 GameObject:
   m_ObjectHideFlags: 0
@@ -48435,6 +49372,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5301644432181593593
 GameObject:
   m_ObjectHideFlags: 0
@@ -48587,6 +49525,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5307277059266086741
 GameObject:
   m_ObjectHideFlags: 0
@@ -48721,11 +49660,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Hermit
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5349432443053871980
 GameObject:
   m_ObjectHideFlags: 0
@@ -48837,6 +49777,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5377375577807422717
 GameObject:
   m_ObjectHideFlags: 0
@@ -48936,11 +49877,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Ultimate Mono
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5381702373622754181
 GameObject:
   m_ObjectHideFlags: 0
@@ -49059,6 +50001,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5390426260315873520
 GameObject:
   m_ObjectHideFlags: 0
@@ -49167,6 +50110,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5417090658168015508
 GameObject:
   m_ObjectHideFlags: 0
@@ -49394,6 +50338,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5424214310392653792
 GameObject:
   m_ObjectHideFlags: 0
@@ -49539,11 +50484,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Scaled Spikes
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 00000000
 --- !u!1 &5441947313031132860
 GameObject:
   m_ObjectHideFlags: 0
@@ -49652,6 +50598,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5442036788170095092
 GameObject:
   m_ObjectHideFlags: 0
@@ -49681,6 +50628,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7512035129288094231}
   - {fileID: 1562947979664361260}
   - {fileID: 7044407310546464501}
   - {fileID: 6435884048788942595}
@@ -49860,6 +50808,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5485278744355555395
 GameObject:
   m_ObjectHideFlags: 0
@@ -49970,6 +50919,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5509367359368983734
 GameObject:
   m_ObjectHideFlags: 0
@@ -50090,6 +51040,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5518145096117797709
 GameObject:
   m_ObjectHideFlags: 0
@@ -50205,6 +51156,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5520010377468311636
 GameObject:
   m_ObjectHideFlags: 0
@@ -50372,6 +51324,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5547278059398354058
 GameObject:
   m_ObjectHideFlags: 0
@@ -50478,6 +51431,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5550182574491272287
 GameObject:
   m_ObjectHideFlags: 0
@@ -50584,6 +51538,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5567674731324440713
 GameObject:
   m_ObjectHideFlags: 0
@@ -50713,6 +51668,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5567906640811108463
 GameObject:
   m_ObjectHideFlags: 0
@@ -50905,6 +51861,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5627607575138488504
 GameObject:
   m_ObjectHideFlags: 0
@@ -51034,6 +51991,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5628106236610981005
 GameObject:
   m_ObjectHideFlags: 0
@@ -51146,6 +52104,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5635437329708541288
 GameObject:
   m_ObjectHideFlags: 0
@@ -51252,6 +52211,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5657072704767405160
 GameObject:
   m_ObjectHideFlags: 0
@@ -51351,11 +52311,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Toilet
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5679040265097810743
 GameObject:
   m_ObjectHideFlags: 0
@@ -51554,6 +52515,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5682693265998044336
 GameObject:
   m_ObjectHideFlags: 0
@@ -51669,6 +52631,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5686001845109326366
 GameObject:
   m_ObjectHideFlags: 0
@@ -51798,6 +52761,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5687416446716912745
 GameObject:
   m_ObjectHideFlags: 0
@@ -51916,6 +52880,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5690189360479356592
 GameObject:
   m_ObjectHideFlags: 0
@@ -52036,6 +53001,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5690443578643801800
 GameObject:
   m_ObjectHideFlags: 0
@@ -52151,6 +53117,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5698811291560785171
 GameObject:
   m_ObjectHideFlags: 0
@@ -52291,6 +53258,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5729092560027313340
 GameObject:
   m_ObjectHideFlags: 0
@@ -52397,6 +53365,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5729688342811883271
 GameObject:
   m_ObjectHideFlags: 0
@@ -52664,6 +53633,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5753842515365145946
 GameObject:
   m_ObjectHideFlags: 0
@@ -52770,6 +53740,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5767206399349016395
 GameObject:
   m_ObjectHideFlags: 0
@@ -52888,6 +53859,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5770650622141363055
 GameObject:
   m_ObjectHideFlags: 0
@@ -53100,6 +54072,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5810107580058847666
 GameObject:
   m_ObjectHideFlags: 0
@@ -53229,6 +54202,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5820877482266992877
 GameObject:
   m_ObjectHideFlags: 0
@@ -53349,6 +54323,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5824055765577980857
 GameObject:
   m_ObjectHideFlags: 0
@@ -53469,6 +54444,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5843872018589484999
 GameObject:
   m_ObjectHideFlags: 0
@@ -53782,6 +54758,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5885812505237889435
 GameObject:
   m_ObjectHideFlags: 0
@@ -53902,6 +54879,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5904989088101993523
 GameObject:
   m_ObjectHideFlags: 0
@@ -54008,6 +54986,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5931300499108238303
 GameObject:
   m_ObjectHideFlags: 0
@@ -54128,6 +55107,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5933791510137039392
 GameObject:
   m_ObjectHideFlags: 0
@@ -54234,6 +55214,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5952892744610743880
 GameObject:
   m_ObjectHideFlags: 0
@@ -54342,6 +55323,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5960819526823864664
 GameObject:
   m_ObjectHideFlags: 0
@@ -54454,6 +55436,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5990696917934218378
 GameObject:
   m_ObjectHideFlags: 0
@@ -54574,6 +55557,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5997044929440560936
 GameObject:
   m_ObjectHideFlags: 0
@@ -54694,6 +55678,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &5999693339733990497
 GameObject:
   m_ObjectHideFlags: 0
@@ -54814,6 +55799,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6008173516405492709
 GameObject:
   m_ObjectHideFlags: 0
@@ -54920,6 +55906,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6037624265627896436
 GameObject:
   m_ObjectHideFlags: 0
@@ -55026,6 +56013,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6056392783584132197
 GameObject:
   m_ObjectHideFlags: 0
@@ -55241,6 +56229,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6065046501208562765
 GameObject:
   m_ObjectHideFlags: 0
@@ -55347,6 +56336,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6146395914098865889
 GameObject:
   m_ObjectHideFlags: 0
@@ -55467,6 +56457,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6149169319683089694
 GameObject:
   m_ObjectHideFlags: 0
@@ -55676,6 +56667,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6182705640479327175
 GameObject:
   m_ObjectHideFlags: 0
@@ -55892,6 +56884,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6223968782696022061
 GameObject:
   m_ObjectHideFlags: 0
@@ -55998,6 +56991,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6225610203359252307
 GameObject:
   m_ObjectHideFlags: 0
@@ -56118,6 +57112,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6227330874370696485
 GameObject:
   m_ObjectHideFlags: 0
@@ -56256,6 +57251,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6276768851792343843
 GameObject:
   m_ObjectHideFlags: 0
@@ -56355,11 +57351,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Muttchops
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6303392411882012750
 GameObject:
   m_ObjectHideFlags: 0
@@ -56466,6 +57463,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6305169644185654963
 GameObject:
   m_ObjectHideFlags: 0
@@ -56580,6 +57578,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6324359880818784346
 GameObject:
   m_ObjectHideFlags: 0
@@ -56700,6 +57699,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6326910578823670039
 GameObject:
   m_ObjectHideFlags: 0
@@ -56893,6 +57893,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6358799197231651720
 GameObject:
   m_ObjectHideFlags: 0
@@ -57001,6 +58002,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6388803325810321209
 GameObject:
   m_ObjectHideFlags: 0
@@ -57107,6 +58109,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6395179527362749871
 GameObject:
   m_ObjectHideFlags: 0
@@ -57309,6 +58312,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6403426121925432054
 GameObject:
   m_ObjectHideFlags: 0
@@ -57438,6 +58442,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6408146316325689642
 GameObject:
   m_ObjectHideFlags: 0
@@ -57548,11 +58553,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Peasant Hood
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6440940699374305401
 GameObject:
   m_ObjectHideFlags: 0
@@ -57659,6 +58665,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6443753220076423625
 GameObject:
   m_ObjectHideFlags: 0
@@ -57765,6 +58772,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6447540230961722409
 GameObject:
   m_ObjectHideFlags: 0
@@ -57871,6 +58879,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6460760533797117052
 GameObject:
   m_ObjectHideFlags: 0
@@ -58108,6 +59117,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6479062003356506551
 GameObject:
   m_ObjectHideFlags: 0
@@ -58308,6 +59318,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6549818397941756151
 GameObject:
   m_ObjectHideFlags: 0
@@ -58423,6 +59434,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6552162136032712052
 GameObject:
   m_ObjectHideFlags: 0
@@ -58543,6 +59555,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6559483250149043049
 GameObject:
   m_ObjectHideFlags: 0
@@ -58642,11 +59655,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Inspector
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6573877000945196620
 GameObject:
   m_ObjectHideFlags: 0
@@ -58753,6 +59767,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6585097261652380741
 GameObject:
   m_ObjectHideFlags: 0
@@ -58861,6 +59876,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6589634738231293501
 GameObject:
   m_ObjectHideFlags: 0
@@ -58960,11 +59976,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Cut
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6592505531721340980
 GameObject:
   m_ObjectHideFlags: 0
@@ -59094,6 +60111,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6597735221718999880
 GameObject:
   m_ObjectHideFlags: 0
@@ -59123,6 +60141,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8516321724353234033}
   - {fileID: 4864772385881975424}
   - {fileID: 5694669483241499054}
   - {fileID: 3555560401114910685}
@@ -59258,6 +60277,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6609439427587581869
 GameObject:
   m_ObjectHideFlags: 0
@@ -59379,6 +60399,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6609623269369137845
 GameObject:
   m_ObjectHideFlags: 0
@@ -59487,6 +60508,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6611423117608725939
 GameObject:
   m_ObjectHideFlags: 0
@@ -59632,11 +60654,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Show Off
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 00000000
 --- !u!1 &6626244812076555084
 GameObject:
   m_ObjectHideFlags: 0
@@ -59743,6 +60766,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6647273397785287302
 GameObject:
   m_ObjectHideFlags: 0
@@ -59842,11 +60866,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Godchops
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6656265430128054356
 GameObject:
   m_ObjectHideFlags: 0
@@ -60047,6 +61072,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6667417177609092702
 GameObject:
   m_ObjectHideFlags: 0
@@ -60157,11 +61183,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Hood
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6671012004788036972
 GameObject:
   m_ObjectHideFlags: 0
@@ -60291,6 +61318,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6677345471061840816
 GameObject:
   m_ObjectHideFlags: 0
@@ -60461,6 +61489,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6689305415213060471
 GameObject:
   m_ObjectHideFlags: 0
@@ -60659,6 +61688,71 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
+--- !u!1 &6703156339493145494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7512035129288094231}
+  - component: {fileID: 4481544441430852092}
+  - component: {fileID: 85427423612638203}
+  m_Layer: 0
+  m_Name: Empty
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7512035129288094231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6703156339493145494}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3930806735819622819}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4481544441430852092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6703156339493145494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2298468a3d68748978221536ff2eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coupledObject: {fileID: 4404024948877607922}
+--- !u!114 &85427423612638203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6703156339493145494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PartName: Nothing
+  SpeedMod: 0
+  HealthMod: 0
+  CooldownReduction: 0
+  NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6726473143024006310
 GameObject:
   m_ObjectHideFlags: 0
@@ -60810,6 +61904,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6727619348437947396
 GameObject:
   m_ObjectHideFlags: 0
@@ -61136,11 +62231,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Krampus
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6823406762315972785
 GameObject:
   m_ObjectHideFlags: 0
@@ -61249,6 +62345,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6829168253547218600
 GameObject:
   m_ObjectHideFlags: 0
@@ -61455,6 +62552,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6853849620144016563
 GameObject:
   m_ObjectHideFlags: 0
@@ -61575,6 +62673,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6854180834977844066
 GameObject:
   m_ObjectHideFlags: 0
@@ -61695,6 +62794,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6856774682528634337
 GameObject:
   m_ObjectHideFlags: 0
@@ -61762,7 +62862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8300210384471297226
 Transform:
   m_ObjectHideFlags: 0
@@ -62143,6 +63243,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6959164730372625458
 GameObject:
   m_ObjectHideFlags: 0
@@ -62251,6 +63352,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &6964992909545034825
 GameObject:
   m_ObjectHideFlags: 0
@@ -62361,11 +63463,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Mail Helmet
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 00000000
 --- !u!1 &6970743506171493433
 GameObject:
   m_ObjectHideFlags: 0
@@ -62712,6 +63815,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7042370296319489084
 GameObject:
   m_ObjectHideFlags: 0
@@ -62818,6 +63922,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7047553652986728772
 GameObject:
   m_ObjectHideFlags: 0
@@ -62926,6 +64031,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7050804233915894995
 GameObject:
   m_ObjectHideFlags: 0
@@ -63132,11 +64238,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Wolf Head
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 02000000
 --- !u!1 &7063970441941347915
 GameObject:
   m_ObjectHideFlags: 0
@@ -63243,6 +64350,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7070158991315244736
 GameObject:
   m_ObjectHideFlags: 0
@@ -63259,7 +64367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7763903324452240598
 Transform:
   m_ObjectHideFlags: 0
@@ -63295,7 +64403,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ea128b040f8b0af4c9d2de400aaff30a, type: 2}
+  - {fileID: 2100000, guid: 2cc073c8e42416145ad86a215a19c07b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -63459,6 +64567,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7077864991159135221
 GameObject:
   m_ObjectHideFlags: 0
@@ -63538,7 +64647,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4916166256191260225
 Transform:
   m_ObjectHideFlags: 0
@@ -63574,7 +64683,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ea128b040f8b0af4c9d2de400aaff30a, type: 2}
+  - {fileID: 2100000, guid: 2cc073c8e42416145ad86a215a19c07b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -63750,6 +64859,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7114652292975794347
 GameObject:
   m_ObjectHideFlags: 0
@@ -63856,6 +64966,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7132697266125088344
 GameObject:
   m_ObjectHideFlags: 0
@@ -63962,6 +65073,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7165475545125073322
 GameObject:
   m_ObjectHideFlags: 0
@@ -64074,6 +65186,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7185290273694336305
 GameObject:
   m_ObjectHideFlags: 0
@@ -64224,6 +65337,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7190681592456003192
 GameObject:
   m_ObjectHideFlags: 0
@@ -64508,6 +65622,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7205774762046651523
 GameObject:
   m_ObjectHideFlags: 0
@@ -64711,11 +65826,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Horns & Steel
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 00000000
 --- !u!1 &7217837508527552716
 GameObject:
   m_ObjectHideFlags: 0
@@ -64824,6 +65940,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7230871934949847421
 GameObject:
   m_ObjectHideFlags: 0
@@ -64932,6 +66049,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7239434499212645578
 GameObject:
   m_ObjectHideFlags: 0
@@ -65047,6 +66165,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7242797202621068643
 GameObject:
   m_ObjectHideFlags: 0
@@ -65249,11 +66368,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Big Chungus
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 00000000
 --- !u!1 &7284200852626344279
 GameObject:
   m_ObjectHideFlags: 0
@@ -65487,6 +66607,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7314805167562765265
 GameObject:
   m_ObjectHideFlags: 0
@@ -65726,6 +66847,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7351116177972610396
 GameObject:
   m_ObjectHideFlags: 0
@@ -65846,6 +66968,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7352431671681642645
 GameObject:
   m_ObjectHideFlags: 0
@@ -65952,6 +67075,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7354250056144911828
 GameObject:
   m_ObjectHideFlags: 0
@@ -66058,6 +67182,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7362462844393052475
 GameObject:
   m_ObjectHideFlags: 0
@@ -66178,6 +67303,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7371347862436454342
 GameObject:
   m_ObjectHideFlags: 0
@@ -66277,11 +67403,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Musketeer
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7374950771476643638
 GameObject:
   m_ObjectHideFlags: 0
@@ -66394,6 +67521,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7386996439129698465
 GameObject:
   m_ObjectHideFlags: 0
@@ -66591,11 +67719,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Other Cowl
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7406357091315138315
 GameObject:
   m_ObjectHideFlags: 0
@@ -66612,7 +67741,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &944260365272189314
 Transform:
   m_ObjectHideFlags: 0
@@ -66648,7 +67777,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ea128b040f8b0af4c9d2de400aaff30a, type: 2}
+  - {fileID: 2100000, guid: 2cc073c8e42416145ad86a215a19c07b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -66782,11 +67911,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Small Mono
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7430974071962991220
 GameObject:
   m_ObjectHideFlags: 0
@@ -66902,6 +68032,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7435637725223158034
 GameObject:
   m_ObjectHideFlags: 0
@@ -67031,6 +68162,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7437921170703520200
 GameObject:
   m_ObjectHideFlags: 0
@@ -67151,6 +68283,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7440747594488565084
 GameObject:
   m_ObjectHideFlags: 0
@@ -67271,6 +68404,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7445038765009471538
 GameObject:
   m_ObjectHideFlags: 0
@@ -67377,6 +68511,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7469521795703191257
 GameObject:
   m_ObjectHideFlags: 0
@@ -67476,11 +68611,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Mustee
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7484645790739068125
 GameObject:
   m_ObjectHideFlags: 0
@@ -67589,6 +68725,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7485094896843620278
 GameObject:
   m_ObjectHideFlags: 0
@@ -67718,6 +68855,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7485961275973766043
 GameObject:
   m_ObjectHideFlags: 0
@@ -67830,6 +68968,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7499960038635315283
 GameObject:
   m_ObjectHideFlags: 0
@@ -67936,6 +69075,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7504254652658798657
 GameObject:
   m_ObjectHideFlags: 0
@@ -68051,6 +69191,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7504742413104076408
 GameObject:
   m_ObjectHideFlags: 0
@@ -68163,6 +69304,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7512105356903695224
 GameObject:
   m_ObjectHideFlags: 0
@@ -68283,6 +69425,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7526848558726228202
 GameObject:
   m_ObjectHideFlags: 0
@@ -68427,6 +69570,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7535732087789453862
 GameObject:
   m_ObjectHideFlags: 0
@@ -68533,6 +69677,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7539287600110052166
 GameObject:
   m_ObjectHideFlags: 0
@@ -68639,6 +69784,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7575615688911571773
 GameObject:
   m_ObjectHideFlags: 0
@@ -68738,11 +69884,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Very Cut
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7583442142736588982
 GameObject:
   m_ObjectHideFlags: 0
@@ -68863,6 +70010,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7609478936325372622
 GameObject:
   m_ObjectHideFlags: 0
@@ -68969,6 +70117,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7612204163285269269
 GameObject:
   m_ObjectHideFlags: 0
@@ -69075,6 +70224,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7615643510776547451
 GameObject:
   m_ObjectHideFlags: 0
@@ -69190,6 +70340,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7623619419464217038
 GameObject:
   m_ObjectHideFlags: 0
@@ -69310,6 +70461,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7632788174891855669
 GameObject:
   m_ObjectHideFlags: 0
@@ -69416,6 +70568,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7646790117428277118
 GameObject:
   m_ObjectHideFlags: 0
@@ -69522,6 +70675,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7672924203551256964
 GameObject:
   m_ObjectHideFlags: 0
@@ -69755,6 +70909,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7695164469148066030
 GameObject:
   m_ObjectHideFlags: 0
@@ -69861,6 +71016,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7695268846276535847
 GameObject:
   m_ObjectHideFlags: 0
@@ -69982,6 +71138,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7704222481812543628
 GameObject:
   m_ObjectHideFlags: 0
@@ -70111,6 +71268,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7729600926334755967
 GameObject:
   m_ObjectHideFlags: 0
@@ -70224,11 +71382,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Spiked Steel 2
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 00000000
 --- !u!1 &7737845565126545535
 GameObject:
   m_ObjectHideFlags: 0
@@ -70261,6 +71420,7 @@ Transform:
   - {fileID: 6178771850622352062}
   - {fileID: 7252704634678944397}
   - {fileID: 3859820634846419012}
+  - {fileID: 4559156224631042753}
   m_Father: {fileID: 3261365449267519383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7739267802594805293
@@ -70375,6 +71535,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7751822402608242966
 GameObject:
   m_ObjectHideFlags: 0
@@ -70481,6 +71642,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7756419275053134865
 GameObject:
   m_ObjectHideFlags: 0
@@ -70497,7 +71659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &856071415032223366
 Transform:
   m_ObjectHideFlags: 0
@@ -70584,7 +71746,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7791281060242594254
 Transform:
   m_ObjectHideFlags: 0
@@ -70620,7 +71782,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ea128b040f8b0af4c9d2de400aaff30a, type: 2}
+  - {fileID: 2100000, guid: 2cc073c8e42416145ad86a215a19c07b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -70784,6 +71946,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7770762866139679966
 GameObject:
   m_ObjectHideFlags: 0
@@ -70897,11 +72060,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Round Spikes
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 00000000
 --- !u!1 &7779121979014917072
 GameObject:
   m_ObjectHideFlags: 0
@@ -70951,6 +72115,38 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
+--- !u!1 &7782524672576408070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7968626186511852209}
+  m_Layer: 0
+  m_Name: Empty
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7968626186511852209
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7782524672576408070}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2870548174428078654}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7795857794194112248
 GameObject:
   m_ObjectHideFlags: 0
@@ -71059,6 +72255,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7798247354771905265
 GameObject:
   m_ObjectHideFlags: 0
@@ -71341,6 +72538,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7828156246216789571
 GameObject:
   m_ObjectHideFlags: 0
@@ -71461,6 +72659,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7832362495741559518
 GameObject:
   m_ObjectHideFlags: 0
@@ -71571,6 +72770,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7837902199713706335
 GameObject:
   m_ObjectHideFlags: 0
@@ -71683,6 +72883,44 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
+--- !u!1 &7838159513012123851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4559156224631042753}
+  m_Layer: 0
+  m_Name: Left_Hand_Items
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4559156224631042753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7838159513012123851}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7156613, y: -0.07087753, z: 0.07259299, w: 0.69103956}
+  m_LocalPosition: {x: -7.4, y: -2, z: 0.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1439022016318566772}
+  - {fileID: 7797927822691480461}
+  - {fileID: 7029787453130472736}
+  - {fileID: 799607177173901184}
+  - {fileID: 5396900547260337457}
+  - {fileID: 1157465791121857643}
+  m_Father: {fileID: 2761717578466983302}
+  m_LocalEulerAnglesHint: {x: 92, y: -9.809, z: 1.838}
 --- !u!1 &7840563407974507451
 GameObject:
   m_ObjectHideFlags: 0
@@ -71795,6 +73033,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7841947516838197272
 GameObject:
   m_ObjectHideFlags: 0
@@ -71988,6 +73227,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7859478722913426547
 GameObject:
   m_ObjectHideFlags: 0
@@ -72094,6 +73334,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7866005834604700745
 GameObject:
   m_ObjectHideFlags: 0
@@ -72214,6 +73455,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7870898149687960318
 GameObject:
   m_ObjectHideFlags: 0
@@ -72424,6 +73666,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7876117532107846258
 GameObject:
   m_ObjectHideFlags: 0
@@ -72582,6 +73825,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7891830835918911926
 GameObject:
   m_ObjectHideFlags: 0
@@ -72688,6 +73932,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7893005102612279105
 GameObject:
   m_ObjectHideFlags: 0
@@ -72787,11 +74032,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Hipster
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7900925209938588054
 GameObject:
   m_ObjectHideFlags: 0
@@ -72903,6 +74149,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7907663298993169758
 GameObject:
   m_ObjectHideFlags: 0
@@ -73011,6 +74258,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7917098345282802543
 GameObject:
   m_ObjectHideFlags: 0
@@ -73119,6 +74367,71 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
+--- !u!1 &7937648960730543893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9197634686455696107}
+  - component: {fileID: 831541497495587821}
+  - component: {fileID: 5568452030574547279}
+  m_Layer: 0
+  m_Name: Empty
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9197634686455696107
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7937648960730543893}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4968356447982370244}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &831541497495587821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7937648960730543893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PartName: Nothing
+  SpeedMod: 0
+  HealthMod: 0
+  CooldownReduction: 0
+  NoiseMod: 0
+  ExclusiveTo: 
+--- !u!114 &5568452030574547279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7937648960730543893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2298468a3d68748978221536ff2eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coupledObject: {fileID: 7782524672576408070}
 --- !u!1 &7958227137789223971
 GameObject:
   m_ObjectHideFlags: 0
@@ -73256,6 +74569,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7977074932658090308
 GameObject:
   m_ObjectHideFlags: 0
@@ -73362,6 +74676,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7988224325420293851
 GameObject:
   m_ObjectHideFlags: 0
@@ -73482,6 +74797,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &7991197562697566018
 GameObject:
   m_ObjectHideFlags: 0
@@ -73595,11 +74911,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Huge Plate
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 00000000
 --- !u!1 &7993395874623471136
 GameObject:
   m_ObjectHideFlags: 0
@@ -73712,6 +75029,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8045282765046518609
 GameObject:
   m_ObjectHideFlags: 0
@@ -73728,7 +75046,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1251868883866247205
 Transform:
   m_ObjectHideFlags: 0
@@ -73997,6 +75315,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8116111087298735388
 GameObject:
   m_ObjectHideFlags: 0
@@ -74103,6 +75422,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8125349488566660236
 GameObject:
   m_ObjectHideFlags: 0
@@ -74218,6 +75538,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8145841291485321253
 GameObject:
   m_ObjectHideFlags: 0
@@ -74357,6 +75678,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8162733724806710282
 GameObject:
   m_ObjectHideFlags: 0
@@ -74463,6 +75785,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8165944752288659702
 GameObject:
   m_ObjectHideFlags: 0
@@ -74569,6 +75892,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8198189983432993432
 GameObject:
   m_ObjectHideFlags: 0
@@ -74675,6 +75999,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8210374684547123783
 GameObject:
   m_ObjectHideFlags: 0
@@ -74795,6 +76120,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8220392995155773153
 GameObject:
   m_ObjectHideFlags: 0
@@ -74924,6 +76250,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8220659982616895635
 GameObject:
   m_ObjectHideFlags: 0
@@ -75035,6 +76362,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8227162516644999849
 GameObject:
   m_ObjectHideFlags: 0
@@ -75141,6 +76469,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8252768199712818847
 GameObject:
   m_ObjectHideFlags: 0
@@ -75262,6 +76591,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8258845149117354944
 GameObject:
   m_ObjectHideFlags: 0
@@ -75375,6 +76705,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8312211638282245292
 GameObject:
   m_ObjectHideFlags: 0
@@ -75481,6 +76812,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8317369923399822031
 GameObject:
   m_ObjectHideFlags: 0
@@ -75589,6 +76921,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8328944337230871807
 GameObject:
   m_ObjectHideFlags: 0
@@ -75702,11 +77035,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Spiked Steel 1
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 00000000
 --- !u!1 &8336508781253015095
 GameObject:
   m_ObjectHideFlags: 0
@@ -75827,6 +77161,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8338832377351378394
 GameObject:
   m_ObjectHideFlags: 0
@@ -75942,6 +77277,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8358067120983157151
 GameObject:
   m_ObjectHideFlags: 0
@@ -76048,6 +77384,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8362110060115325094
 GameObject:
   m_ObjectHideFlags: 0
@@ -76168,6 +77505,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8364474786332226502
 GameObject:
   m_ObjectHideFlags: 0
@@ -76282,6 +77620,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8374522019214771577
 GameObject:
   m_ObjectHideFlags: 0
@@ -76402,6 +77741,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8379646409021198522
 GameObject:
   m_ObjectHideFlags: 0
@@ -76508,6 +77848,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8385499827929896692
 GameObject:
   m_ObjectHideFlags: 0
@@ -76616,6 +77957,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8396772722382723507
 GameObject:
   m_ObjectHideFlags: 0
@@ -76736,6 +78078,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8428957422862989509
 GameObject:
   m_ObjectHideFlags: 0
@@ -76842,6 +78185,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8446482569374121833
 GameObject:
   m_ObjectHideFlags: 0
@@ -77041,6 +78385,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8458255813585936428
 GameObject:
   m_ObjectHideFlags: 0
@@ -77161,6 +78506,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8466111642645692399
 GameObject:
   m_ObjectHideFlags: 0
@@ -77273,6 +78619,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8493989348937893287
 GameObject:
   m_ObjectHideFlags: 0
@@ -77381,6 +78728,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8503253752746004091
 GameObject:
   m_ObjectHideFlags: 0
@@ -77510,6 +78858,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8519464605245408098
 GameObject:
   m_ObjectHideFlags: 0
@@ -77623,11 +78972,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Scaled Leather
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8526037782612359896
 GameObject:
   m_ObjectHideFlags: 0
@@ -77734,6 +79084,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8527076757721261565
 GameObject:
   m_ObjectHideFlags: 0
@@ -77915,11 +79266,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Open Visor
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 00000000
 --- !u!1 &8572751973347191898
 GameObject:
   m_ObjectHideFlags: 0
@@ -78040,6 +79392,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8579050231115054268
 GameObject:
   m_ObjectHideFlags: 0
@@ -78160,6 +79513,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8584973355578112988
 GameObject:
   m_ObjectHideFlags: 0
@@ -78367,6 +79721,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8664155905660830383
 GameObject:
   m_ObjectHideFlags: 0
@@ -78477,11 +79832,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Pointy Cowl
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 01000000
 --- !u!1 &8665179998559127794
 GameObject:
   m_ObjectHideFlags: 0
@@ -78594,6 +79950,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8683483040069328302
 GameObject:
   m_ObjectHideFlags: 0
@@ -78704,6 +80061,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8685071370459508844
 GameObject:
   m_ObjectHideFlags: 0
@@ -78808,6 +80166,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8723209360404010634
 GameObject:
   m_ObjectHideFlags: 0
@@ -78928,6 +80287,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8752005994151167160
 GameObject:
   m_ObjectHideFlags: 0
@@ -79034,6 +80394,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8758301462040788298
 GameObject:
   m_ObjectHideFlags: 0
@@ -79146,6 +80507,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8766892472867264938
 GameObject:
   m_ObjectHideFlags: 0
@@ -79350,6 +80712,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8795819980420581548
 GameObject:
   m_ObjectHideFlags: 0
@@ -79489,6 +80852,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8816967908450320491
 GameObject:
   m_ObjectHideFlags: 0
@@ -79597,6 +80961,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8830248740712264742
 GameObject:
   m_ObjectHideFlags: 0
@@ -79717,6 +81082,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8838465681806882951
 GameObject:
   m_ObjectHideFlags: 0
@@ -79829,6 +81195,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8844535485154993709
 GameObject:
   m_ObjectHideFlags: 0
@@ -79933,6 +81300,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8855933461349132656
 GameObject:
   m_ObjectHideFlags: 0
@@ -80039,6 +81407,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8859799253286921289
 GameObject:
   m_ObjectHideFlags: 0
@@ -80055,7 +81424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5659486475790961050
 Transform:
   m_ObjectHideFlags: 0
@@ -80239,11 +81608,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Rounded Guard
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 00000000
 --- !u!1 &8884411367255908723
 GameObject:
   m_ObjectHideFlags: 0
@@ -80350,6 +81720,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8886860128591247019
 GameObject:
   m_ObjectHideFlags: 0
@@ -80471,6 +81842,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8914531612028328512
 GameObject:
   m_ObjectHideFlags: 0
@@ -80575,6 +81947,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8915726925683990179
 GameObject:
   m_ObjectHideFlags: 0
@@ -80720,6 +82093,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8929990955656251941
 GameObject:
   m_ObjectHideFlags: 0
@@ -80786,6 +82160,7 @@ Transform:
   - {fileID: 8440580412881139671}
   - {fileID: 774498145982007769}
   - {fileID: 6244139434746881180}
+  - {fileID: 1795746499956235663}
   m_Father: {fileID: 8491205003174784152}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8957357755248374784
@@ -80917,6 +82292,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8970123035510242905
 GameObject:
   m_ObjectHideFlags: 0
@@ -81029,6 +82405,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8979441275929821072
 GameObject:
   m_ObjectHideFlags: 0
@@ -81133,6 +82510,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &8988334644975480303
 GameObject:
   m_ObjectHideFlags: 0
@@ -81348,6 +82726,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &9018186982507322244
 GameObject:
   m_ObjectHideFlags: 0
@@ -81468,6 +82847,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &9020132033077581002
 GameObject:
   m_ObjectHideFlags: 0
@@ -81574,6 +82954,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &9027803614077986064
 GameObject:
   m_ObjectHideFlags: 0
@@ -81813,6 +83194,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &9065496589386799919
 GameObject:
   m_ObjectHideFlags: 0
@@ -81921,6 +83303,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &9070688416600352120
 GameObject:
   m_ObjectHideFlags: 0
@@ -82118,6 +83501,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &9097561989491778971
 GameObject:
   m_ObjectHideFlags: 0
@@ -82217,11 +83601,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Full & Short
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &9129941464627979130
 GameObject:
   m_ObjectHideFlags: 0
@@ -82321,11 +83706,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PartName: 
+  PartName: Big Bushy
   SpeedMod: 0
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &9171931620677633890
 GameObject:
   m_ObjectHideFlags: 0
@@ -82342,7 +83728,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2958278424244569583
 Transform:
   m_ObjectHideFlags: 0
@@ -82378,7 +83764,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ea128b040f8b0af4c9d2de400aaff30a, type: 2}
+  - {fileID: 2100000, guid: 2cc073c8e42416145ad86a215a19c07b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82533,6 +83919,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &9185784929490555954
 GameObject:
   m_ObjectHideFlags: 0
@@ -82639,6 +84026,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &9193694258025246555
 GameObject:
   m_ObjectHideFlags: 0
@@ -82745,6 +84133,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &9197055468097747549
 GameObject:
   m_ObjectHideFlags: 0
@@ -82853,6 +84242,7 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
 --- !u!1 &9210784604361574704
 GameObject:
   m_ObjectHideFlags: 0
@@ -82982,3 +84372,1014 @@ MonoBehaviour:
   HealthMod: 0
   CooldownReduction: 0
   NoiseMod: 0
+  ExclusiveTo: 
+--- !u!1001 &177160958979312133
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4559156224631042753}
+    m_Modifications:
+    - target: {fileID: 7945098501571611508, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_Name
+      value: Torch_Prefab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129325426895336510, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_Range
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129325426895336510, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+--- !u!4 &7797927822691480461 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+  m_PrefabInstance: {fileID: 177160958979312133}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7797927822691762545 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7945098501571611508, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+  m_PrefabInstance: {fileID: 177160958979312133}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &593636697861617727
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1795746499956235663}
+    m_Modifications:
+    - target: {fileID: 157152, guid: 03eb254be55316240929244bd19caa02, type: 3}
+      propertyPath: m_Name
+      value: SM_Item_Potion_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 453130, guid: 03eb254be55316240929244bd19caa02, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 453130, guid: 03eb254be55316240929244bd19caa02, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 453130, guid: 03eb254be55316240929244bd19caa02, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 453130, guid: 03eb254be55316240929244bd19caa02, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453130, guid: 03eb254be55316240929244bd19caa02, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -17.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 453130, guid: 03eb254be55316240929244bd19caa02, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453130, guid: 03eb254be55316240929244bd19caa02, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 453130, guid: 03eb254be55316240929244bd19caa02, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453130, guid: 03eb254be55316240929244bd19caa02, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453130, guid: 03eb254be55316240929244bd19caa02, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453130, guid: 03eb254be55316240929244bd19caa02, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453130, guid: 03eb254be55316240929244bd19caa02, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453130, guid: 03eb254be55316240929244bd19caa02, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 453130, guid: 03eb254be55316240929244bd19caa02, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 64173581108920664, guid: 03eb254be55316240929244bd19caa02, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 157152, guid: 03eb254be55316240929244bd19caa02, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 681194898638100996}
+    - targetCorrespondingSourceObject: {fileID: 157152, guid: 03eb254be55316240929244bd19caa02, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5218188854735586881}
+  m_SourcePrefab: {fileID: 100100000, guid: 03eb254be55316240929244bd19caa02, type: 3}
+--- !u!4 &593636697861493301 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 453130, guid: 03eb254be55316240929244bd19caa02, type: 3}
+  m_PrefabInstance: {fileID: 593636697861617727}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &593636697861725663 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 157152, guid: 03eb254be55316240929244bd19caa02, type: 3}
+  m_PrefabInstance: {fileID: 593636697861617727}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &681194898638100996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593636697861725663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PartName: Speed Potion
+  SpeedMod: 0
+  HealthMod: 0
+  CooldownReduction: 0
+  NoiseMod: 0
+  ExclusiveTo: 01000000
+--- !u!114 &5218188854735586881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593636697861725663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2298468a3d68748978221536ff2eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coupledObject: {fileID: 799607177173609852}
+--- !u!1001 &1138419562396009640
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4559156224631042753}
+    m_Modifications:
+    - target: {fileID: 7945098501571611508, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_Name
+      value: Torch_Prefab (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129325426895336510, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_Range
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129325426895336510, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+--- !u!1 &7029787453130166236 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7945098501571611508, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+  m_PrefabInstance: {fileID: 1138419562396009640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7029787453130472736 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+  m_PrefabInstance: {fileID: 1138419562396009640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1157465791121780399
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4559156224631042753}
+    m_Modifications:
+    - target: {fileID: 162090, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+      propertyPath: m_Name
+      value: SM_Wep_Ornate_Spikes_Long_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 455364, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 455364, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 455364, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 455364, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 455364, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -103.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 455364, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 455364, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 455364, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 455364, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 455364, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 455364, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 455364, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 455364, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 455364, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 64073430614599052, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 455364, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4441539336389172080}
+    - targetCorrespondingSourceObject: {fileID: 455364, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 571975308362641530}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+--- !u!1 &1157465791121627013 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 162090, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+  m_PrefabInstance: {fileID: 1157465791121780399}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1157465791121857643 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 455364, guid: e424689f401e2c3489f80be092782c5e, type: 3}
+  m_PrefabInstance: {fileID: 1157465791121780399}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1927860741776542127
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1795746499956235663}
+    m_Modifications:
+    - target: {fileID: 128318, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+      propertyPath: m_Name
+      value: SM_Item_Potion_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 451962, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 451962, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 451962, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 451962, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451962, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -20.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 451962, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451962, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 451962, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451962, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451962, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451962, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451962, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451962, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451962, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 64251634587037306, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 128318, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6539198665827458890}
+    - targetCorrespondingSourceObject: {fileID: 128318, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5919397602424404719}
+  m_SourcePrefab: {fileID: 100100000, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+--- !u!1 &1927860741776538769 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 128318, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+  m_PrefabInstance: {fileID: 1927860741776542127}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6539198665827458890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927860741776538769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PartName: Invisibility Potion
+  SpeedMod: 0
+  HealthMod: 0
+  CooldownReduction: 0
+  NoiseMod: 0
+  ExclusiveTo: 01000000
+--- !u!114 &5919397602424404719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927860741776538769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2298468a3d68748978221536ff2eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coupledObject: {fileID: 7029787453130166236}
+--- !u!4 &1927860741776731349 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 451962, guid: c341d70d4dd30454881fcc7fa6d0baa4, type: 3}
+  m_PrefabInstance: {fileID: 1927860741776542127}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5401151849063562053
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4559156224631042753}
+    m_Modifications:
+    - target: {fileID: 1069959841205446, guid: d9197eec8ecc7714cbb8825a1467ae11, type: 3}
+      propertyPath: m_Name
+      value: SM_Wep_Staff_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814251842664052, guid: d9197eec8ecc7714cbb8825a1467ae11, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100.000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814251842664052, guid: d9197eec8ecc7714cbb8825a1467ae11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814251842664052, guid: d9197eec8ecc7714cbb8825a1467ae11, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814251842664052, guid: d9197eec8ecc7714cbb8825a1467ae11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814251842664052, guid: d9197eec8ecc7714cbb8825a1467ae11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814251842664052, guid: d9197eec8ecc7714cbb8825a1467ae11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814251842664052, guid: d9197eec8ecc7714cbb8825a1467ae11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814251842664052, guid: d9197eec8ecc7714cbb8825a1467ae11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814251842664052, guid: d9197eec8ecc7714cbb8825a1467ae11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814251842664052, guid: d9197eec8ecc7714cbb8825a1467ae11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814251842664052, guid: d9197eec8ecc7714cbb8825a1467ae11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814251842664052, guid: d9197eec8ecc7714cbb8825a1467ae11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814251842664052, guid: d9197eec8ecc7714cbb8825a1467ae11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814251842664052, guid: d9197eec8ecc7714cbb8825a1467ae11, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4814251842664052, guid: d9197eec8ecc7714cbb8825a1467ae11, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1362806574944641933}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d9197eec8ecc7714cbb8825a1467ae11, type: 3}
+--- !u!4 &5396900547260337457 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4814251842664052, guid: d9197eec8ecc7714cbb8825a1467ae11, type: 3}
+  m_PrefabInstance: {fileID: 5401151849063562053}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5401913692774397827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1069959841205446, guid: d9197eec8ecc7714cbb8825a1467ae11, type: 3}
+  m_PrefabInstance: {fileID: 5401151849063562053}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6634873338590404608
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1795746499956235663}
+    m_Modifications:
+    - target: {fileID: 1022962149991736, guid: 3068d57202960404b8d79e3845baf3e8, type: 3}
+      propertyPath: m_Name
+      value: SM_Wep_Mace_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804414197732550, guid: 3068d57202960404b8d79e3845baf3e8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804414197732550, guid: 3068d57202960404b8d79e3845baf3e8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804414197732550, guid: 3068d57202960404b8d79e3845baf3e8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804414197732550, guid: 3068d57202960404b8d79e3845baf3e8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804414197732550, guid: 3068d57202960404b8d79e3845baf3e8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804414197732550, guid: 3068d57202960404b8d79e3845baf3e8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804414197732550, guid: 3068d57202960404b8d79e3845baf3e8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804414197732550, guid: 3068d57202960404b8d79e3845baf3e8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804414197732550, guid: 3068d57202960404b8d79e3845baf3e8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804414197732550, guid: 3068d57202960404b8d79e3845baf3e8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804414197732550, guid: 3068d57202960404b8d79e3845baf3e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804414197732550, guid: 3068d57202960404b8d79e3845baf3e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804414197732550, guid: 3068d57202960404b8d79e3845baf3e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804414197732550, guid: 3068d57202960404b8d79e3845baf3e8, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1022962149991736, guid: 3068d57202960404b8d79e3845baf3e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6858549653914635492}
+    - targetCorrespondingSourceObject: {fileID: 1022962149991736, guid: 3068d57202960404b8d79e3845baf3e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2490387974685154639}
+  m_SourcePrefab: {fileID: 100100000, guid: 3068d57202960404b8d79e3845baf3e8, type: 3}
+--- !u!4 &6630107561971954886 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4804414197732550, guid: 3068d57202960404b8d79e3845baf3e8, type: 3}
+  m_PrefabInstance: {fileID: 6634873338590404608}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6633921295060141368 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1022962149991736, guid: 3068d57202960404b8d79e3845baf3e8, type: 3}
+  m_PrefabInstance: {fileID: 6634873338590404608}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6858549653914635492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6633921295060141368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PartName: Mace
+  SpeedMod: 0
+  HealthMod: 0
+  CooldownReduction: 0
+  NoiseMod: 0
+  ExclusiveTo: 00000000
+--- !u!114 &2490387974685154639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6633921295060141368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2298468a3d68748978221536ff2eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coupledObject: {fileID: 1439022016318849928}
+--- !u!1001 &7303271257756345864
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4559156224631042753}
+    m_Modifications:
+    - target: {fileID: 7945098501571611508, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_Name
+      value: Torch_Prefab (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129325426895336510, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_Range
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129325426895336510, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+--- !u!1 &799607177173609852 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7945098501571611508, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+  m_PrefabInstance: {fileID: 7303271257756345864}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &799607177173901184 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+  m_PrefabInstance: {fileID: 7303271257756345864}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7870854536462336976
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1795746499956235663}
+    m_Modifications:
+    - target: {fileID: 1693058865961630, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+      propertyPath: m_Name
+      value: SM_Wep_Sword_Rapier_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645529486811846, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645529486811846, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645529486811846, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645529486811846, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645529486811846, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645529486811846, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645529486811846, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645529486811846, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0000000119830394
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645529486811846, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000037252896
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645529486811846, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0000000060674146
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645529486811846, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645529486811846, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645529486811846, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645529486811846, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23504868076524036, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2cc073c8e42416145ad86a215a19c07b, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1693058865961630, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7592896809558129500}
+    - targetCorrespondingSourceObject: {fileID: 1693058865961630, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 757246629074996540}
+  m_SourcePrefab: {fileID: 100100000, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+--- !u!4 &7866211206343090454 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4645529486811846, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+  m_PrefabInstance: {fileID: 7870854536462336976}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7871420975342295374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1693058865961630, guid: 1a66284f93ee5da4faa156902261b154, type: 3}
+  m_PrefabInstance: {fileID: 7870854536462336976}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7592896809558129500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7871420975342295374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc6153ac41db5e43925a14b4dd50c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PartName: Sword
+  SpeedMod: 0
+  HealthMod: 0
+  CooldownReduction: 0
+  NoiseMod: 0
+  ExclusiveTo: 00000000
+--- !u!114 &757246629074996540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7871420975342295374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2298468a3d68748978221536ff2eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coupledObject: {fileID: 7797927822691762545}
+--- !u!1001 &9059771408016263420
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4559156224631042753}
+    m_Modifications:
+    - target: {fileID: 7945098501571611508, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_Name
+      value: Torch_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129325426895336510, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_Range
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129325426895336510, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+--- !u!4 &1439022016318566772 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7945098501571918216, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+  m_PrefabInstance: {fileID: 9059771408016263420}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1439022016318849928 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7945098501571611508, guid: 4786c91aa1ae96a49b9acd9912ed7dff, type: 3}
+  m_PrefabInstance: {fileID: 9059771408016263420}
+  m_PrefabAsset: {fileID: 0}

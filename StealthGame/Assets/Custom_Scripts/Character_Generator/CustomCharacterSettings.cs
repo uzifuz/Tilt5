@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class CustomCharacterSettings : MonoBehaviour
@@ -21,7 +22,9 @@ public class CustomCharacterSettings : MonoBehaviour
         public int IntValue = 0;
     };
 
-    public enum PartToSwap { hair = 0, beard = 1, head = 2, eyeBrows = 3, torso = 4, shoulders = 5, hips = 6, upperArm = 7, ellbow = 8, lowerArm = 9, hands = 10, legs = 11 }
+    public enum CharacterClass { Knight = 0, Thief = 1, Wizard = 2 }
+    public CharacterClass CurrentCharacterClass;
+    public enum PartToSwap { hair = 0, beard = 1, head = 2, eyeBrows = 3, torso = 4, shoulders = 5, hips = 6, upperArm = 7, ellbow = 8, lowerArm = 9, hands = 10, legs = 11, weapon = 12 }
     public bool male = true;//Female if false
     [SerializeField] GameObject[] hair;
     [SerializeField] GameObject[] beardMale, beardFemale;
@@ -35,14 +38,15 @@ public class CustomCharacterSettings : MonoBehaviour
     [SerializeField] GameObject[] leftEllbow, rightEllbow;
     [SerializeField] GameObject[] leftUpperArmMale, rightUpperArmMale, leftUpperArmFemale, rightUpperArmFemale;
     [SerializeField] GameObject[] leftLegMale, rightLegMale, leftLegFemale, rightLegFemale;
-    IndexWrapper hairIndex = new IndexWrapper(), beardIndex = new IndexWrapper(), headIndex = new IndexWrapper(), eyebrowsIndex = new IndexWrapper(), torsoIndex = new IndexWrapper(), shoulderIndex = new IndexWrapper(), hipsIndex = new IndexWrapper(), handsIndex = new IndexWrapper(), lowerArmIndex = new IndexWrapper(), ellbowIndex = new IndexWrapper(), upperArmIndex = new IndexWrapper(), legsIndex = new IndexWrapper();
+    [SerializeField] GameObject[] weapons;
+    IndexWrapper hairIndex = new IndexWrapper(), beardIndex = new IndexWrapper(), headIndex = new IndexWrapper(), eyebrowsIndex = new IndexWrapper(), torsoIndex = new IndexWrapper(), shoulderIndex = new IndexWrapper(), hipsIndex = new IndexWrapper(), handsIndex = new IndexWrapper(), lowerArmIndex = new IndexWrapper(), ellbowIndex = new IndexWrapper(), upperArmIndex = new IndexWrapper(), legsIndex = new IndexWrapper(), weaponIndex = new IndexWrapper();
 
     private void Start()
     {
         ReadAllIndicesFromPlayerPref();
         SetAllPartsActive();
         InitializeCoupling();
-        IniTializeAllParts();
+        InitializeAllParts();
         SwapMaleFemale(male);
     }
 
@@ -70,9 +74,9 @@ public class CustomCharacterSettings : MonoBehaviour
 
     void SetAllOfArrayInactive(GameObject[] newArray)
     {
-        foreach(GameObject obj in newArray)
+        for (int i = 0; i < newArray.Length; i++)
         {
-            obj.SetActive(false);
+            newArray[i].SetActive(false);
         }
     }
 
@@ -103,6 +107,7 @@ public class CustomCharacterSettings : MonoBehaviour
         SetAllOfArrayActive(leftHandsFemale);
         SetAllOfArrayActive(leftShoulder);
         SetAllOfArrayActive(leftEllbow);
+        SetAllOfArrayActive(weapons);
     }
 
     ArrayAndIndex GetArrayByPart(PartToSwap thisPart)
@@ -133,6 +138,8 @@ public class CustomCharacterSettings : MonoBehaviour
                 return new ArrayAndIndex(handsIndex, male ? leftHandsMale : leftHandsFemale);
             case PartToSwap.legs:
                 return new ArrayAndIndex(legsIndex, male ? leftLegMale : leftLegFemale);
+            case PartToSwap.weapon:
+                return new ArrayAndIndex(weaponIndex, weapons);
 
         }
         return new ArrayAndIndex(null, null);
@@ -168,18 +175,35 @@ public class CustomCharacterSettings : MonoBehaviour
 
                 break;
         }
-        InitializePart(0);
-        InitializePart(1);
-        InitializePart(2);
-        InitializePart(3);
-        InitializePart(4);
-        InitializePart(5);
-        InitializePart(6);
-        InitializePart(7);
-        InitializePart(8);
-        InitializePart(9);
-        InitializePart(10);
-        InitializePart(11);
+
+        for (int i = 0; i < Enum.GetNames(typeof(PartToSwap)).Length; i++)
+        {
+            InitializePart(i);
+        }
+    }
+
+    public void SwapCharacterClass(int dir)
+    {
+        CurrentCharacterClass += dir;
+        if((int)CurrentCharacterClass >= Enum.GetNames(typeof(CharacterClass)).Length)
+        {
+            CurrentCharacterClass = (CharacterClass)0;
+        }
+        else if((int)CurrentCharacterClass < 0)
+        {
+            CurrentCharacterClass = (CharacterClass)Enum.GetNames(typeof(CharacterClass)).Length - 1;
+        }
+    }
+
+    public GameObject GetCurrentPart(int part)
+    {
+        ArrayAndIndex newStruct = GetArrayByPart((PartToSwap)part);
+        GameObject[] currentArray = newStruct.assocArray;
+        IndexWrapper newIndex = newStruct.assocIndex;
+        //-->Setting!
+        SetAllOfArrayInactive(currentArray);
+        currentArray[newIndex.IntValue].SetActive(true);
+        return currentArray[newIndex.IntValue];
     }
 
     public GameObject SwapPartUp(int part)
@@ -189,11 +213,15 @@ public class CustomCharacterSettings : MonoBehaviour
         IndexWrapper newIndex = newStruct.assocIndex;
         //-->Setting!
         SetAllOfArrayInactive(currentArray);
-        newIndex.IntValue = newIndex.IntValue + 1;
-        if (newIndex.IntValue >= currentArray.Length)
+        do
         {
-            newIndex.IntValue = 0;
+            newIndex.IntValue = newIndex.IntValue + 1;
+            if (newIndex.IntValue >= currentArray.Length)
+            {
+                newIndex.IntValue = 0;
+            }
         }
+        while (!currentArray[newIndex.IntValue].GetComponent<PartSpecification>().CheckExclusivity(CurrentCharacterClass));
         currentArray[newIndex.IntValue].SetActive(true);
         return currentArray[newIndex.IntValue];
     }
@@ -205,16 +233,20 @@ public class CustomCharacterSettings : MonoBehaviour
         IndexWrapper newIndex = newStruct.assocIndex;
         //-->Setting!
         SetAllOfArrayInactive(currentArray);
-        newIndex.IntValue = newIndex.IntValue - 1;
-        if (newIndex.IntValue < 0)
+        do
         {
-            newIndex.IntValue = currentArray.Length - 1;
+            newIndex.IntValue = newIndex.IntValue - 1;
+            if (newIndex.IntValue < 0)
+            {
+                newIndex.IntValue = currentArray.Length - 1;
+            }
         }
+        while (!currentArray[newIndex.IntValue].GetComponent<PartSpecification>().CheckExclusivity(CurrentCharacterClass));
         currentArray[newIndex.IntValue].SetActive(true);
         return currentArray[newIndex.IntValue];
     }
 
-    void IniTializeAllParts()
+    void InitializeAllParts()
     {
         for (int i = 0; i < Enum.GetNames(typeof(PartToSwap)).Length; i++)
         {
@@ -240,6 +272,7 @@ public class CustomCharacterSettings : MonoBehaviour
 
     public void SetAllIndicesToPlayerPref()
     {
+        PlayerPrefs.SetInt("playerClass", (int)CurrentCharacterClass);
         PlayerPrefs.SetInt("male", male ? 1 : 0);
         PlayerPrefs.SetInt("hairIndex", hairIndex.IntValue);
         PlayerPrefs.SetInt("beardIndex", beardIndex.IntValue);
@@ -253,10 +286,12 @@ public class CustomCharacterSettings : MonoBehaviour
         PlayerPrefs.SetInt("ellbowIndex", ellbowIndex.IntValue);
         PlayerPrefs.SetInt("upperArmIndex", upperArmIndex.IntValue);
         PlayerPrefs.SetInt("legsIndex", legsIndex.IntValue);
+        PlayerPrefs.SetInt("weaponIndex", weaponIndex.IntValue);
     }
 
     public void ReadAllIndicesFromPlayerPref()
     {
+        PlayerPrefs.GetInt("playerClass", 0);
         male = PlayerPrefs.GetInt("male", 1) == 1;
         hairIndex.IntValue = PlayerPrefs.GetInt("hairIndex", 0);
         beardIndex.IntValue =  PlayerPrefs.GetInt("beardIndex", 0);
@@ -270,5 +305,6 @@ public class CustomCharacterSettings : MonoBehaviour
         ellbowIndex.IntValue = PlayerPrefs.GetInt("ellbowIndex", 0);
         upperArmIndex.IntValue = PlayerPrefs.GetInt("upperArmIndex", 0);
         legsIndex.IntValue = PlayerPrefs.GetInt("legsIndex", 0);
+        weaponIndex.IntValue = PlayerPrefs.GetInt("weaponIndex", 0);
     }
 }

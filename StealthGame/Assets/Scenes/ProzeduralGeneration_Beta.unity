@@ -417,6 +417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 7
   rotationMultiplier: 12
+  FollowPlayer: 1
 --- !u!4 &20567835
 Transform:
   m_ObjectHideFlags: 0
@@ -425,14 +426,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20567833}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 6, y: 10, z: 0.0000007152557}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 5.38, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1086779947}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &21920950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5780,6 +5781,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b49bf1c9f0ac3c4097fb489bdc6f84b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curElement: {fileID: 0}
+  previousElement: {fileID: 0}
   allButtons:
   - {fileID: 1542852172}
   - {fileID: 1375036680}
@@ -8492,6 +8495,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b49bf1c9f0ac3c4097fb489bdc6f84b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curElement: {fileID: 0}
+  previousElement: {fileID: 0}
   allButtons:
   - {fileID: 698750042}
   - {fileID: 371616870}
@@ -10745,6 +10750,11 @@ MonoBehaviour:
   - {fileID: 2123059328}
   - {fileID: 736416656}
   selectOnlyOne: 1
+--- !u!1 &439570131 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2803114837024924929, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
+  m_PrefabInstance: {fileID: 1355518343}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &445701233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24105,10 +24115,10 @@ MonoBehaviour:
   optionalLocations: []
   mandatoryLocations: []
   mandatoryCollectibles:
-  - {fileID: 3161421467647567156, guid: d71bbeb1eece4454dba2acc572662ece, type: 3}
-  - {fileID: 3161421467647567156, guid: d71bbeb1eece4454dba2acc572662ece, type: 3}
-  - {fileID: 3161421467647567156, guid: d71bbeb1eece4454dba2acc572662ece, type: 3}
-  - {fileID: 3161421467647567156, guid: d71bbeb1eece4454dba2acc572662ece, type: 3}
+  - {fileID: 3948727008737330534, guid: 88aee83e9803a8e4985f0ca6e68d06a0, type: 3}
+  - {fileID: 3948727008737330534, guid: 88aee83e9803a8e4985f0ca6e68d06a0, type: 3}
+  - {fileID: 3948727008737330534, guid: 88aee83e9803a8e4985f0ca6e68d06a0, type: 3}
+  - {fileID: 3948727008737330534, guid: 88aee83e9803a8e4985f0ca6e68d06a0, type: 3}
   optionalCollectibles: []
   randomizeOptionalCollectibles: 1
   mandatoriesSet: 0
@@ -25860,7 +25870,7 @@ Transform:
   m_GameObject: {fileID: 1086779944}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 10, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25924,6 +25934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wandTip: {fileID: 785976771}
   gameBoard: {fileID: 18515234}
+  camMaster: {fileID: 20567835}
   wandTipTransform: {fileID: 785976772}
   wandGripTransform: {fileID: 929487599}
   torchLight: {fileID: 1799023664}
@@ -32550,6 +32561,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b49bf1c9f0ac3c4097fb489bdc6f84b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curElement: {fileID: 0}
+  previousElement: {fileID: 0}
   allButtons:
   - {fileID: 584446300}
   - {fileID: 526557485}
@@ -33047,10 +33060,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Thief
       objectReference: {fileID: 0}
-    - target: {fileID: 2803114837024924929, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4737468016232438582, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -33091,18 +33100,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6071106694425636774, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-      propertyPath: m_Intensity
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 6345336610817987278, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-      propertyPath: m_Name
-      value: ThiefMesh
-      objectReference: {fileID: 0}
-    - target: {fileID: 6480049408928014398, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8ebd1bda508ad2242a148df319eda481, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -42594,7 +42591,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -4899338168007379858, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
   m_PrefabInstance: {fileID: 1355518343}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 439570131}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47f1249cb47d81c489f2e58c6d59366a, type: 3}
@@ -42970,9 +42967,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 167553808418347238, guid: 507971d2c08e73543accc20aaa035e7c, type: 3}
+      propertyPath: PlayerCharacter
+      value: 
+      objectReference: {fileID: 439570131}
+    - target: {fileID: 167553808418347238, guid: 507971d2c08e73543accc20aaa035e7c, type: 3}
       propertyPath: MaxNumberOfRoomsCreated
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 167553808418347238, guid: 507971d2c08e73543accc20aaa035e7c, type: 3}
+      propertyPath: possibleRooms.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 167553808418347238, guid: 507971d2c08e73543accc20aaa035e7c, type: 3}
+      propertyPath: possibleRooms.Array.data[8]
+      value: 
+      objectReference: {fileID: 1211194642924529474, guid: 8a387950d9c6ded43adbd4f06ae4abf6, type: 3}
     - target: {fileID: 7964062522986453496, guid: 507971d2c08e73543accc20aaa035e7c, type: 3}
       propertyPath: m_Name
       value: Procedural_Level_Generator
@@ -51739,7 +51748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5096850158371414815, guid: 9cdaf98efe7c69adca90cde48da559cc, type: 3}
       propertyPath: editorSettings.activePanel
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5096850158371414815, guid: 9cdaf98efe7c69adca90cde48da559cc, type: 3}
       propertyPath: primaryWandSettings.AimPoint
