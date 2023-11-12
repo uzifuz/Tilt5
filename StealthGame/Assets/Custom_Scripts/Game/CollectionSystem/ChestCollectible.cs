@@ -24,6 +24,7 @@ public class ChestCollectible : MonoBehaviour
 
     public bool progressActive = false;
     private bool playOnce = true;
+
     private void OnEnable()
     {
         curValue = Random.Range(minValue, maxValue);
@@ -31,9 +32,10 @@ public class ChestCollectible : MonoBehaviour
 
     private void FixedUpdate()
     {
-        canvasT?.LookAt(Camera.main.transform.position);
         if (progressActive)
         {
+            canvasT.gameObject.SetActive(true);
+            canvasT?.LookAt(Camera.main.transform.position);
             progressTime += Time.deltaTime;
             slider.value = progressTime / timeToOpen;
 
@@ -69,6 +71,7 @@ public class ChestCollectible : MonoBehaviour
         if (other.CompareTag("Thief"))
         {
             progressActive = false;
+            canvasT.gameObject.SetActive(false);
         }
     }
 }
