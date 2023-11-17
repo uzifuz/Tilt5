@@ -4,6 +4,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum CharacterClass
+{
+    Knight = 0,
+    Thief = 1,
+    Mage = 2,
+}
+
 public class Thief : ControllableEntity
 {
     public static Thief Instance { get; private set; }
@@ -14,12 +21,15 @@ public class Thief : ControllableEntity
     }
 
     [SerializeField]
-    private Inventory _inventory;
+    public CharacterClass CharacterClass;
 
     [SerializeField]
-    public GameObject multiplierText;
+    public AbilitySlot AbilitySlot;
 
-    private Gadget _selectedGadget;
+    private Animator animator;
+
+    private AbilityController abilityController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,24 +42,15 @@ public class Thief : ControllableEntity
             gameObject.SetActive(false);
         }
         IsHidden = false;
+        animator = GetComponent<Animator>();
+        abilityController = GetComponent<AbilityController>();
 
+        abilityController.SetAbilitySlotUI(CharacterClass);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!GameHandler.Instance.GameIsOver)
-        {
-            if (Input.GetKeyDown(KeyCode.G))
-            {
-                _inventory.SelectNextGadget();
-            }
-
-            if (Input.GetKeyDown(KeyCode.H))
-            {
-                _inventory.UseSelectedGadget();
-            }
-        }
         
     }
 
