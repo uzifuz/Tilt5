@@ -6,34 +6,20 @@ using UnityEngine.Rendering;
 
 public class Room : MonoBehaviour
 {
-    public bool connectingSegment;
-    public Transform[] DoorAlignedPoints;
-    public GameObject LevelExitObj;
     public Vector2 size;
     [SerializeField] Color lineColor;
     public ModifiableDoorway[] PossibleDoors;
     public Vector3 bottomLeftPoint, bottomRightPoint, upperLeftPoint, upperRightPoint;
     public Vector3 checkPointLeft, checkPointBottom, checkPointRight, checkPointUp, checkCenter;
-    Bounds boundsA, boundsB;
-
 
     private void Start()
     {
         SetEdgePoints();
-        ReassignDoorDirections();
     }
 
     void OnValidate()
     {
         SetEdgePoints();
-    }
-
-    public void ReassignDoorDirections()
-    {
-        foreach (ModifiableDoorway door in PossibleDoors)
-        {
-            door.AssignDoorDirection();
-        }
     }
 
     void SetEdgePoints()
@@ -56,14 +42,12 @@ public class Room : MonoBehaviour
 
     public bool CheckIfRoomOverlapsRoom(Room otherRoom)
     {
-        boundsA = new Bounds(this.transform.position, new Vector3(size.x, 2f, size.y));
-        boundsB = new Bounds(otherRoom.transform.position, new Vector3(otherRoom.size.x, 2f, otherRoom.size.y));
+        Rect roomA = new Rect(this.transform.position, this.size);
+        Rect roomB = new Rect(otherRoom.transform.position, otherRoom.size);
 
-        bool xOverlap = boundsA.min.x < boundsB.max.x && boundsA.max.x > boundsB.min.x;
-        bool zOverlap = boundsA.min.z < boundsB.max.z && boundsA.max.z > boundsB.min.z;
-
-        if (xOverlap && zOverlap)
+        if (roomA.Overlaps(roomB))
         {
+            Debug.Log("Rooms overlap: Room " + this.name + " and Room " + otherRoom.name);
             return true;
         }
         return false;
@@ -125,51 +109,12 @@ public class Room : MonoBehaviour
         return null;
     }
 
-    public ModifiableDoorway GetRandomUnconnectedDoor()
-    {
-        List<ModifiableDoorway> unconnectedDoors = new List<ModifiableDoorway>();
-        for (int i = 0; i < PossibleDoors.Length; i++)
-        {
-            if (PossibleDoors[i].ConnectedDoor == null)
-                unconnectedDoors.Add(PossibleDoors[i]);
-        }
-
-        if (unconnectedDoors.Count == 0)
-            return null;
-        else
-            return unconnectedDoors[Random.Range(0, unconnectedDoors.Count)];
-    }
-
-    public bool HasUnconnectedDoors()
-    {
-        for (int i = 0; i < PossibleDoors.Length; i++)
-        {
-            if (PossibleDoors[i].ConnectedDoor == null)
-                return true;
-        }
-        return false;
-    }
-
-    public ModifiableDoorway GetDoorConnectedTo(ModifiableDoorway otherDoor)
-    {
-        for (int i = 0; i < PossibleDoors.Length; i++)
-        {
-            if (PossibleDoors[i].ConnectedDoor == otherDoor)
-                return PossibleDoors[i];
-        }
-        return null;
-    }
-
     void OnDrawGizmos()
     {
         Debug.DrawLine(bottomLeftPoint, bottomRightPoint, lineColor);
         Debug.DrawLine(bottomLeftPoint, upperLeftPoint, lineColor);
         Debug.DrawLine(bottomRightPoint, upperRightPoint, lineColor);
         Debug.DrawLine(upperLeftPoint, upperRightPoint, lineColor);
-
-        Gizmos.DrawWireCube(boundsA.center, boundsA.size);
-        Gizmos.DrawWireCube(boundsB.center, boundsB.size);
-
         for (int i = 0; i < PossibleDoors.Length; i++)
         {
             Gizmos.DrawWireCube(PossibleDoors[i].transform.position, Vector3.one);

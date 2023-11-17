@@ -1,28 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.EventSystems;
 
 /// <summary>
 /// Singleton, use GameHandler.Instance
 /// </summary>
 public class GameHandler : MonoBehaviour
 {
-    public static GameHandler Instance;
     public enum GameOutcome { ThiefWin, ThiefLose }
+    private static GameHandler? _instance;
+    public static GameHandler Instance
+    {
+        get
+        {
+            _instance ??= new GameHandler();
+            return _instance;
+        }
+    }
     public bool GameIsOver { get; private set; }
-
 
     [SerializeField]
     private GameObject tilt5Prototype;
 
     void Start()
     {
-        if (Instance == null)
-            Instance = this;
-
-        FindObjectOfType<ProceduralLevelGenerator>().StartCoroutine("RoomGenCo");
         if(PlayerPrefs.GetInt("Tilt5Mode") == 1)
         {
             Debug.Log("Tilt5 mode activated");
@@ -34,11 +35,10 @@ public class GameHandler : MonoBehaviour
             tilt5Prototype.SetActive(false);
         }
     }
-
+    
     public void GameOver(GameOutcome outcome)
     {
         GameIsOver = true;
-        Debug.Log("Game is Over");
         Thief.Instance.CanMove = false;
         switch (outcome)
         {

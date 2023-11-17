@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 3c56bb14bccd36845846a5d6cdb2fe97
   - enabled: 1
-    path: Assets/Scenes/ProzeduralGeneration_Beta.unity
-    guid: ab2978d9f3a168741bfb65b8e8c09ce0
-  - enabled: 1
     path: Assets/Scenes/PlayableLevel.unity
     guid: cd33bf8054ec2044db9ec16728de45dc
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 36720a62fec19dd4e864ff860b9afa47, type: 2}

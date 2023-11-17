@@ -6,9 +6,6 @@ using UnityEngine.InputSystem;
 public class TiltFiveInputs : MonoBehaviour
 {
     public static TiltFiveInputs Instance;
-    public bool one = false, two = false, a = false, b = false, x = false, y = false, trigger = false;
-    public float stickX, stickY;
-    public float triggerThreshold = 0.5f;
 
     private void Start()
     {
@@ -18,46 +15,12 @@ public class TiltFiveInputs : MonoBehaviour
         }
     }
 
+    public bool one = false, two = false, a = false, b = false, x = false, y = false, trigger = false;
+    public float stickX, stickY;
 
     private void Update()
     {
         CheckInputs();
-    }
-
-    public static bool GetButton(TiltFiveButtonCode buttonCode)
-    {
-        if (TiltFive.Wand.TryGetWandDevice(TiltFive.PlayerIndex.One, TiltFive.ControllerIndex.Right, out TiltFive.WandDevice wandDevice))
-        {
-            //TODO
-        }
-        return false;
-    }
-
-    public static bool GetButtonDown(TiltFiveButtonCode buttonCode)
-    {
-        if (TiltFive.Wand.TryGetWandDevice(TiltFive.PlayerIndex.One, TiltFive.ControllerIndex.Right, out TiltFive.WandDevice wandDevice))
-        {
-            //TODO
-        }
-        return false;
-    }
-
-    public static bool GetButtonUp(TiltFiveButtonCode buttonCode)
-    {
-        if (TiltFive.Wand.TryGetWandDevice(TiltFive.PlayerIndex.One, TiltFive.ControllerIndex.Right, out TiltFive.WandDevice wandDevice))
-        {
-            //TODO
-        }
-        return false;
-    }
-
-    public static Vector2 GetStickVector()
-    {
-        if (TiltFive.Wand.TryGetWandDevice(TiltFive.PlayerIndex.One, TiltFive.ControllerIndex.Right, out TiltFive.WandDevice wandDevice))
-        {
-            return wandDevice.Stick.ReadValue();
-        }
-        return Vector2.zero;
     }
 
     public void CheckInputs()
@@ -118,11 +81,11 @@ public class TiltFiveInputs : MonoBehaviour
                 y = false;
             }
 
-            if(wandDevice.Trigger.IsPressed(triggerThreshold))
+            if(wandDevice.Trigger.IsPressed(0.5f))
             {
                 trigger = true;
             }
-            else if (!wandDevice.Trigger.IsPressed(triggerThreshold))
+            else if (!wandDevice.Trigger.IsPressed(0.5f))
             {
                 trigger = false;
             }
