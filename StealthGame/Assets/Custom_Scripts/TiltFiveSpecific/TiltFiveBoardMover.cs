@@ -21,7 +21,8 @@ public class TiltFiveBoardMover : MonoBehaviour
         if (!boardLocked)
         {
             gameBoard.transform.position = CameraMovement.Instance.transform.position;
-            gameBoard.transform.rotation = CameraMovement.Instance.transform.rotation;
+            if(PlayerPrefs.GetInt("Tilt5Mode") == 0)
+                gameBoard.transform.rotation = CameraMovement.Instance.transform.rotation;
         }
     }
 }

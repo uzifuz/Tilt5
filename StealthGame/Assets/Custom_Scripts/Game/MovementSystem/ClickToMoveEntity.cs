@@ -35,14 +35,27 @@ public class ClickToMoveEntity : MonoBehaviour
         }
     }
 
+    public Vector3 WandDirection()
+    {
+        Vector3 wandTipNoY = new Vector3(wandTipTransform.position.x, 0, wandTipTransform.position.z);
+        Vector3 wandGripNoY = new Vector3(wandGripTransform.position.x, 0, wandGripTransform.position.z);
+        Vector3 direction = (wandTipNoY - wandGripNoY).normalized;
+        return direction;
+    }
+
     void SendPlayerToLocation()
     {
         if(currentPlayer != null && currentPlayer.CanMove)
         {
-            Vector3 posMod = camMaster.transform.forward * Input.GetAxis("Vertical") + camMaster.transform.right * Input.GetAxis("Horizontal") + Vector3.up * -1f;
+            if(PlayerPrefs.GetInt("Tilt5Mode") == 1)
+            {
+                //Debug.Log("Tilt5 Active");
+                camMaster.rotation = Quaternion.LookRotation(WandDirection(), Vector3.up);
+            }
+            Vector3 posMod = camMaster.transform.forward * (Input.GetAxis("Vertical") + TiltFiveInputs.Instance.stickY)  + camMaster.transform.right * (Input.GetAxis("Horizontal") + +TiltFiveInputs.Instance.stickX) + Vector3.up * -1f;
             Vector3 newPos = currentPlayer.transform.position + posMod;
             //Debug.DrawLine(currentPlayer.transform.position, newPos);
-            currentPlayer.SetAgentDestination(newPos, Input.GetKey(KeyCode.LeftShift));
+            currentPlayer.SetAgentDestination(newPos, Input.GetKey(KeyCode.LeftShift) || TiltFiveInputs.Instance.trigger);
             //Debug.Log($"New Pos: {posMod}");
 
             /*if (Input.GetKeyDown(KeyCode.Mouse0) && currentPlayer.CanMove)
@@ -99,9 +112,6 @@ public class ClickToMoveEntity : MonoBehaviour
                     wandButtonPressed = false;
                 }*/
 
-                Vector3 wandTipNoY = new Vector3(wandTipTransform.position.x, 0, wandTipTransform.position.z);
-                Vector3 wandGripNoY = new Vector3(wandGripTransform.position.x, 0, wandGripTransform.position.z);
-                Vector3 direction = (wandTipNoY - wandGripNoY).normalized;
                 TiltFiveBoardMover.Instance.MoveBoard();
                 
             

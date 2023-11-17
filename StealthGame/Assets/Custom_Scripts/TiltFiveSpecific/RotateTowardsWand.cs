@@ -18,7 +18,7 @@ public class RotateTowardsWand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ShouldRotate)
+        if (ShouldRotate && wandPosition != null)
         {
             // Determine which direction to rotate towards
             Vector3 targetPosition = new Vector3(wandPosition.position.x, transform.position.y, wandPosition.position.z);

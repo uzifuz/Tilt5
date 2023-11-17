@@ -33,8 +33,23 @@ public class Thief : ControllableEntity
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            anim.SetFloat("animSpeed", 1);
-            anim.Play("Ability");
+            AbilityController.Instance.UseAbility();
         }
+    }
+
+    public void KnightAbility()
+    {
+        anim.SetFloat("animSpeed", 1);
+        anim.Play("Ability");
+    }
+
+    public void ThiefAbility()
+    {
+
+    }
+
+    public void WizardAbility()
+    {
+
     }
 }

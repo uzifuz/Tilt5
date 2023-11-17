@@ -42658,9 +42658,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 167553808418347238, guid: 507971d2c08e73543accc20aaa035e7c, type: 3}
+      propertyPath: GameDifficulty
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 167553808418347238, guid: 507971d2c08e73543accc20aaa035e7c, type: 3}
       propertyPath: PlayerCharacter
       value: 
       objectReference: {fileID: 439570131}
+    - target: {fileID: 167553808418347238, guid: 507971d2c08e73543accc20aaa035e7c, type: 3}
+      propertyPath: MaxNumberOfRoomsCreated
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7964062522986453496, guid: 507971d2c08e73543accc20aaa035e7c, type: 3}
       propertyPath: m_Name
       value: Procedural_Level_Generator
@@ -45392,11 +45400,11 @@ Light:
   m_GameObject: {fileID: 1799023661}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 0
+  m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0, g: 0.638464, b: 1, a: 1}
-  m_Intensity: 250
-  m_Range: 50
+  m_Color: {r: 1, g: 0.5952402, b: 0, a: 1}
+  m_Intensity: 10
+  m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
