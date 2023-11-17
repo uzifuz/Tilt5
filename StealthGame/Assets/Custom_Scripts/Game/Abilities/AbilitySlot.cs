@@ -5,30 +5,28 @@ using UnityEngine.UI;
 
 public class AbilitySlot : MonoBehaviour
 {
-    public List<Ability> Abilities = new List<Ability>();
 
-    private Ability _ability;
-    [SerializeField]
-    public Ability Ability
+    private Sprite _abilityIcon;
+    
+    public Sprite AbilityIcon
     {
-        get { return _ability; }
+        get { return _abilityIcon; }
         set
         {
-            _ability = value;
-            if(_ability == null)
+            _abilityIcon = value;
+            if(_abilityIcon == null)
             {
                 image.enabled = false;
             }
             else
             {
-                image.sprite = _ability.Icon;
+                image.sprite = _abilityIcon;
                 image.enabled = true;
             }
         }
     }
-    [SerializeField]
-    public Image image;
-    
+
+    private Image image;
 
     private void OnValidate()
     {

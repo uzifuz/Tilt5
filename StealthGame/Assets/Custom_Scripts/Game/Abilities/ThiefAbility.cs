@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
 public class ThiefAbility : Ability
 {
-    public override void UseAbility()
+    public void UseAbility()
     {
-        base.UseAbility();
+        Debug.Log("Thief Ability");
     }
 }

@@ -26,6 +26,9 @@ public class Thief : ControllableEntity
     [SerializeField]
     public AbilitySlot AbilitySlot;
 
+    private Animator animator;
+
+    private AbilityController abilityController;
 
     // Start is called before the first frame update
     void Start()
@@ -39,38 +42,16 @@ public class Thief : ControllableEntity
             gameObject.SetActive(false);
         }
         IsHidden = false;
+        animator = GetComponent<Animator>();
+        abilityController = GetComponent<AbilityController>();
 
-        switch(CharacterClass)
-        {
-            case CharacterClass.Knight:
-                AbilitySlot.Ability = AbilitySlot.Abilities[0];
-                break;
-            case CharacterClass.Thief:
-                AbilitySlot.Ability = AbilitySlot.Abilities[1];
-                break;
-            case CharacterClass.Mage:
-                AbilitySlot.Ability = AbilitySlot.Abilities[2];
-                break;
-        }
+        abilityController.SetAbilitySlotUI(CharacterClass);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!GameHandler.Instance.GameIsOver)
-        {
-            if(Input.GetKeyDown(KeyCode.G))
-            {
-                if (AbilitySlot.Ability != null)
-                {
-                    AbilitySlot.Ability.UseAbility();
-                }
-                else
-                {
-                    Debug.Log("No ability instantiated");
-                }
-            }
-        }
+        
     }
 
 }
