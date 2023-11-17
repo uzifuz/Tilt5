@@ -7,6 +7,7 @@ public class InteractableObject : MonoBehaviour
     Renderer thisRenderer;
     [SerializeField]
     float maxFresnelIntensity = 1f;
+    public bool InteractionReady = true;
 
     private void Start()
     {
@@ -39,11 +40,11 @@ public class InteractableObject : MonoBehaviour
         thisRenderer = GetComponent<Renderer>();
         if(newState)
         {
-            thisRenderer.material.SetFloat("_FresnelIntensity", maxFresnelIntensity);
+            //thisRenderer?.material.SetFloat("_FresnelIntensity", maxFresnelIntensity);
         }
         else
         {
-            thisRenderer.material.SetFloat("_FresnelIntensity", 0);
+            //thisRenderer?.material.SetFloat("_FresnelIntensity", 0);
         }
     }
 }

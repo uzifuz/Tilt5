@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 public class ProceduralLevelGenerator : MonoBehaviour
 {
+    public float GameDifficulty = 1;
     [SerializeField] GameObject PlayerCharacter;
     public float MaxNumberOfRoomsCreated;
     int curNumberOfCreatedRooms = 0;
@@ -45,6 +46,7 @@ public class ProceduralLevelGenerator : MonoBehaviour
             else
             {
                 SwapDoorStates();
+                CreateExitPoints(GameDifficulty);
                 curSurface.BuildNavMesh();
                 CollectibleMaster.Instance.SetupCollectionSystem();
                 allGeneratedRooms.Clear();
@@ -78,6 +80,38 @@ public class ProceduralLevelGenerator : MonoBehaviour
         }
         
         return false;
+    }
+
+    void CreateExitPoints(float difficulty = 1)
+    {
+        int exitsCreated = 0;
+        int whileTerminator = 0;
+        List<GameObject> allExits = new List<GameObject>();
+        //-->Assign possible exits to list
+        foreach(Room rom in allGeneratedRooms)
+        {
+            if(rom.LevelExitObj != null)
+            {
+                allExits.Add(rom.LevelExitObj);
+                rom.LevelExitObj.SetActive(false);
+            }
+        }
+        int exitCount = allExits.Count;
+        //-->TODO: Cleanup Method
+        while(exitsCreated < (exitCount / (difficulty + 1) + 1) && whileTerminator < 150)
+        {
+            whileTerminator++;
+            int ran = Random.Range(0, exitCount);
+            if (allExits[ran].activeSelf)
+            {
+                //Is already active
+            }
+            else
+            {
+                allExits[ran].SetActive(true);
+                exitsCreated++;
+            }
+        }
     }
 
     Room ChooseExistingRoomForConnection()

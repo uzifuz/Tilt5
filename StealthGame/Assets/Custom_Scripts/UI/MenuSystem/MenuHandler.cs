@@ -60,7 +60,7 @@ public class MenuHandler : MonoBehaviour
     public void OpenMenu(MenuType menuType = MenuType.Pause)
     {
         //Nothing moving logic needs to be here!!!
-        moveController.boardLocked = true;
+        TiltFiveBoardMover.Instance.boardLocked = true;
         DeactivateAllMenus();
         switch(menuType)
         {
@@ -95,7 +95,7 @@ public class MenuHandler : MonoBehaviour
     {
         Time.timeScale = 1f;
         DeactivateAllMenus();
-        moveController.boardLocked = false;
+        TiltFiveBoardMover.Instance.boardLocked = false;
     }
 
     public void ResumeGame()

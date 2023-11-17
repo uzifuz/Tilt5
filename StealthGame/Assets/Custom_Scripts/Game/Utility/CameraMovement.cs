@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
+    public static CameraMovement Instance;
     public float moveSpeed = 3f, rotationMultiplier = 5f;
     public bool FollowPlayer = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(Instance == null)
+            Instance = this;
     }
 
     // Update is called once per frame

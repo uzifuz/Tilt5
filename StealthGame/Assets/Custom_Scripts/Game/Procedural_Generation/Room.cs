@@ -8,6 +8,7 @@ public class Room : MonoBehaviour
 {
     public bool connectingSegment;
     public Transform[] DoorAlignedPoints;
+    public GameObject LevelExitObj;
     public Vector2 size;
     [SerializeField] Color lineColor;
     public ModifiableDoorway[] PossibleDoors;

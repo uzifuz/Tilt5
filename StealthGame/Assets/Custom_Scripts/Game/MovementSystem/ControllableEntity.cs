@@ -44,7 +44,19 @@ public class ControllableEntity : Entity
             agent.speed = agentWalkSpeed;
             anim.SetFloat("animSpeed", 1);
         }
-        Vector3 proxyTarget = NavMeshInfo.RandomNavSphere(target, 0f, radiusMod, walkableSurfaces);
-        agent.SetDestination(proxyTarget);
+
+
+        if(NavMeshInfo.IsDestinationOnNavMesh(target))
+        {
+            //Debug.Log($"Destination IS on Navmesh");
+            agent.SetDestination(target);
+        }
+        else
+        {
+            //Debug.Log($"Destination NOT on Navmesh");
+            //Vector3 proxyTarget = NavMeshInfo.RandomNavSphere(target, 0f, radiusMod, walkableSurfaces);
+            //agent.SetDestination(proxyTarget);
+        }
+
     }
 }

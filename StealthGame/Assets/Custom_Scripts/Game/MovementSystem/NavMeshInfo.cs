@@ -24,4 +24,10 @@ public class NavMeshInfo : MonoBehaviour
 
         return navHit.position;
     }
+
+    public static bool IsDestinationOnNavMesh(Vector3 destination)
+    {
+        NavMeshHit hit;
+        return NavMesh.SamplePosition(destination, out hit, 1f, NavMesh.AllAreas);
+    }
 }
