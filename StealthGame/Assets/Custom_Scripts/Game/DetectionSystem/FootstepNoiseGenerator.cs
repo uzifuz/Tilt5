@@ -14,9 +14,9 @@ public class FootstepNoiseGenerator : MonoBehaviour
 
     public void GenerateFootstepSound()
     {
-        if (stepNoiseObject != null && !Thief.Instance.IsHidden)
+        footstepSource.Play();
+        if (stepNoiseObject != null)
         {
-            footstepSource.Play();
             Instantiate(stepNoiseObject, transform.position, transform.rotation);
         }
     }

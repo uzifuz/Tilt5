@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor;
-using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class ClickToMoveEntity : MonoBehaviour
 {
     public GameObject wandTip;
-    public Transform camMaster, wandTipTransform, wandGripTransform;
+    public Transform gameBoard, wandTipTransform, wandGripTransform;
+    public Light torchLight;
+    public float boardMoveSpeed = 1f;
     bool wandButtonPressed = false;
     [SerializeField]
     ControllableEntity currentPlayer;
@@ -18,6 +18,9 @@ public class ClickToMoveEntity : MonoBehaviour
     [SerializeField]
     float runTime = 0.5f;
     float runTimer = 0f;
+    public bool boardLocked = false;
+    public Color enabledLightColor, disabledLightColor;
+    public float minLightIntensity, maxLightIntensity, lightIntensityMod;
 
     // Start is called before the first frame update
     void Start()
@@ -29,23 +32,35 @@ public class ClickToMoveEntity : MonoBehaviour
     void Update()
     {
         SendPlayerToLocation();
+        CheckIfClickable();
         if(runTimer >= 0)
         {
             runTimer -= Time.deltaTime;
         }
     }
 
+    void CheckIfClickable()
+    {
+        Ray ray = new Ray(wandTip.transform.position, wandTip.transform.forward);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, clickableObjects))
+        {
+            torchLight.color = enabledLightColor;
+        }
+        else
+        {
+            torchLight.color = disabledLightColor;
+        }
+        torchLight.intensity = torchLight.transform.position.y * lightIntensityMod;
+        torchLight.intensity = Mathf.Clamp(torchLight.intensity, minLightIntensity, maxLightIntensity);
+    }
+
     void SendPlayerToLocation()
     {
-        if(currentPlayer != null && currentPlayer.CanMove)
+        bool runProxy = false;
+        if(currentPlayer != null)
         {
-            Vector3 posMod = camMaster.transform.forward * Input.GetAxis("Vertical") + camMaster.transform.right * Input.GetAxis("Horizontal") + Vector3.up * -1f;
-            Vector3 newPos = currentPlayer.transform.position + posMod;
-            //Debug.DrawLine(currentPlayer.transform.position, newPos);
-            currentPlayer.SetAgentDestination(newPos, Input.GetKey(KeyCode.LeftShift));
-            //Debug.Log($"New Pos: {posMod}");
-
-            /*if (Input.GetKeyDown(KeyCode.Mouse0) && currentPlayer.CanMove)
+            if (Input.GetKeyDown(KeyCode.Mouse0) && currentPlayer.CanMove)
             {
                 Vector3 targetLocation = Vector3.up * 100f;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -92,19 +107,21 @@ public class ClickToMoveEntity : MonoBehaviour
                     {
                         Debug.Log("Nothing was hit");
                     }
+                    Debug.Log($"RunProxy{runProxy}");
                     currentPlayer.SetAgentDestination(hit.point, runProxy);
                 }
                 if(!wandDevice.Trigger.IsPressed(0.5f) && wandButtonPressed)
                 {
                     wandButtonPressed = false;
-                }*/
+                }
 
                 Vector3 wandTipNoY = new Vector3(wandTipTransform.position.x, 0, wandTipTransform.position.z);
                 Vector3 wandGripNoY = new Vector3(wandGripTransform.position.x, 0, wandGripTransform.position.z);
                 Vector3 direction = (wandTipNoY - wandGripNoY).normalized;
-                TiltFiveBoardMover.Instance.MoveBoard();
+                if(!boardLocked)
+                    gameBoard.Translate(Vector3.Cross(direction, gameBoard.up) * wandDevice.Stick.ReadValue().x * Time.deltaTime * boardMoveSpeed + direction * wandDevice.Stick.ReadValue().y * Time.deltaTime * -boardMoveSpeed);
                 
-            
+            }
         }
     }
 }

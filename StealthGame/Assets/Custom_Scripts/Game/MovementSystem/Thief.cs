@@ -4,16 +4,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum CharacterClass
+{
+    Knight = 0,
+    Thief = 1,
+    Mage = 2,
+}
+
 public class Thief : ControllableEntity
 {
     public static Thief Instance { get; private set; }
-
-    public GameObject CharacterRenderer;
     public bool IsHidden
     {
         get;
         set;
     }
+
+    [SerializeField]
+    public CharacterClass CharacterClass;
+
+    [SerializeField]
+    public AbilitySlot AbilitySlot;
+
+    private Animator animator;
+
+    private AbilityController abilityController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,19 +38,20 @@ public class Thief : ControllableEntity
             Instance = this;
         } else
         {
-            Debug.LogWarning("more than two tieves detected!");
+            Debug.LogWarning("more than one thief detected!");
             gameObject.SetActive(false);
         }
         IsHidden = false;
+        animator = GetComponent<Animator>();
+        abilityController = GetComponent<AbilityController>();
+
+        abilityController.SetAbilitySlotUI(CharacterClass);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            anim.SetFloat("animSpeed", 1);
-            anim.Play("Ability");
-        }
+        
     }
+
 }

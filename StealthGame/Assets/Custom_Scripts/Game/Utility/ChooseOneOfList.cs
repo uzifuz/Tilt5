@@ -21,18 +21,12 @@ public class ChooseOneOfList : MonoBehaviour
 
     void SelectObjects()
     {
-        if (selectOnlyOne)
+        for (int i = 0; i < possibleObj.Length; i++)
         {
-            possibleObj[Random.Range(0, possibleObj.Length)].SetActive(true);
-        }
-        else
-        {
-            for (int i = 0; i < possibleObj.Length; i++)
+            if(selectOnlyOne)
             {
-                if(Random.Range(0f, 1f) < 0.25f)
-                {
-                    possibleObj[i].SetActive(true);
-                }
+                possibleObj[Random.Range(0, possibleObj.Length)].SetActive(true);
+                break;
             }
         }
     }

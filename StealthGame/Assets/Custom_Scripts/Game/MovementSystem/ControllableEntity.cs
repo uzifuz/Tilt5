@@ -6,17 +6,14 @@ using UnityEngine.AI;
 public class ControllableEntity : Entity
 {
     public NavMeshAgent agent;
-    public float agentWalkSpeed = 1f, agentRunSpeed = 4f;
     [SerializeField]
     LayerMask walkableSurfaces;
     public bool CanMove;
-    public Animator anim;
 
     protected override void InheritStart()
     {
         base.InheritStart();
         agent = GetComponent<NavMeshAgent>();
-        anim = GetComponent<Animator>();
     }
 
     protected override void InheritUpdate()
@@ -36,27 +33,16 @@ public class ControllableEntity : Entity
     {
         if(run)
         {
-            agent.speed = agentRunSpeed;
-            anim.SetFloat("animSpeed", 4);
+            agent.speed = 6f;
+            GetComponent<Animator>().SetFloat("animSpeed", 20);
         }
         else
         {
-            agent.speed = agentWalkSpeed;
-            anim.SetFloat("animSpeed", 1);
+            agent.speed = 1.5f;
+            GetComponent<Animator>().SetFloat("animSpeed", 5);
         }
-
-
-        if(NavMeshInfo.IsDestinationOnNavMesh(target))
-        {
-            //Debug.Log($"Destination IS on Navmesh");
-            agent.SetDestination(target);
-        }
-        else
-        {
-            //Debug.Log($"Destination NOT on Navmesh");
-            //Vector3 proxyTarget = NavMeshInfo.RandomNavSphere(target, 0f, radiusMod, walkableSurfaces);
-            //agent.SetDestination(proxyTarget);
-        }
-
+        Vector3 proxyTarget = NavMeshInfo.RandomNavSphere(target, 0f, radiusMod, walkableSurfaces);
+        //Debug.Log($"{name} was set to {proxyTarget}");
+        agent.SetDestination(proxyTarget);
     }
 }
