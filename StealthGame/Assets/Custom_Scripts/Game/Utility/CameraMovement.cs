@@ -30,14 +30,14 @@ public class CameraMovement : MonoBehaviour
             transform.position += Input.GetAxis("Horizontal") * transform.right * Time.deltaTime * moveSpeed + Input.GetAxis("Vertical") * transform.forward * Time.deltaTime * moveSpeed;
         }
 
-        if (Input.GetKey(KeyCode.Q))//TODO: Rotate with Tilt5 wand!!!
+        /*if (Input.GetKey(KeyCode.Q))//TODO: Rotate with Tilt5 wand!!!
         {
             transform.localEulerAngles += new Vector3(0, -Time.deltaTime * moveSpeed * rotationMultiplier, 0);
         }
         else if (Input.GetKey(KeyCode.E))
         {
             transform.localEulerAngles += new Vector3(0, Time.deltaTime * moveSpeed * rotationMultiplier, 0);
-        }
+        }*/
 
         if (Input.GetKeyDown(KeyCode.Escape))//Remove this on future releases!!!
         {

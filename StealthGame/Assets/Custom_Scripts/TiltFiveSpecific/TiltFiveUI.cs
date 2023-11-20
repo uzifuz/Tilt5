@@ -6,11 +6,9 @@ using UnityEngine.UI;
 public class TiltFiveUI : MonoBehaviour
 {
     [SerializeField] UIElementConnector curElement, previousElement;
-    [SerializeField] Selectable[] allButtons;
     bool selectionPossible = true;
-    public int curIndex = 0;
-    public float swapTime = 0.33f;
-    float swapTimer = 0;
+    public float swapTime = 0.25f;
+    bool confirmAvailable = true;
 
     public void SelectNewElementAsCurrent(UIElementConnector newElem)
     {
@@ -20,26 +18,45 @@ public class TiltFiveUI : MonoBehaviour
 
     public void SelectToSide(UISelectionDirection newDir)
     {
-        Debug.Log($"Selected {newDir.ToString()}");
         UIElementConnector newCurElement = curElement.GetSelectableFromDirection(newDir, curElement);
-        Debug.Log($"NewCurElement {newCurElement.name}");
         UIElementConnector newPreviousElement = curElement;
         ClickOrSwap();
         if (newCurElement != null && newCurElement != curElement)
         {
-            Debug.Log($"New element set {newCurElement != null} && {newCurElement != curElement}");
             curElement = newCurElement;
             previousElement = newPreviousElement;
         }
         HighlightCurButton(curElement.GetSelectable());
     }
 
+    bool Confirm()
+    {
+        if(TiltFiveInputs.Instance.one || Input.GetKey(KeyCode.Return))
+        {
+            if (confirmAvailable)
+            {
+                confirmAvailable = false;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            confirmAvailable = true;
+            return false;
+        }
+    }
+
     private void Update()
     {
         if(selectionPossible)
         {
-            if (TiltFiveInputs.Instance.one || Input.GetKeyDown(KeyCode.Return))
+            if (Confirm())
             {
+                Debug.LogWarning("Confirmed Input");
                 ClickOrSwap();
                 CallMethodOf(curElement.GetSelectable());
             }
@@ -65,7 +82,7 @@ public class TiltFiveUI : MonoBehaviour
 
     void ClickOrSwap()
     {
-        StartCoroutine("AvailabilityDelayCo");
+        StartCoroutine(AvailabilityDelayCo());
     }
 
     IEnumerator AvailabilityDelayCo()
@@ -75,54 +92,6 @@ public class TiltFiveUI : MonoBehaviour
         selectionPossible = true;
     }
 
-    /*private void Update()
-    {
-        if(TiltFiveInputs.Instance.one)
-        {
-            CallMethodOf(curIndex);
-        }
-
-        if(TiltFiveInputs.Instance.stickY < -0.25f && swapTimer <= 0)
-        {
-            swapTimer = swapTime;
-            curIndex++;
-            if(curIndex >= allButtons.Length)
-            {
-                curIndex = 0;
-            }
-        }
-        else if(TiltFiveInputs.Instance.stickY > 0.25f && swapTimer <= 0)
-        {
-            swapTimer = swapTime;
-            curIndex--;
-            if(curIndex < 0)
-            {
-                curIndex = allButtons.Length - 1;
-            }
-        }
-        else if(TiltFiveInputs.Instance.stickX > 0.25f && swapTimer <= 0 && allButtons.Length > 3)
-        {
-            swapTimer = swapTime;
-            curIndex = 3;
-
-        }
-        else if (TiltFiveInputs.Instance.stickX < -0.25f && swapTimer <= 0 && allButtons.Length > 3)
-        {
-            swapTimer = swapTime;
-            if (curIndex == 3)
-            {
-                curIndex = 0;
-            }
-        }
-        HighlightCurButton(curIndex);
-        swapTimer -= Time.deltaTime;
-    }*/
-
-    public void HighlightCurButton(int index)
-    {
-        allButtons[index].Select();
-    }
-
     public void HighlightCurButton(Selectable newSel)
     {
         newSel.Select();
@@ -130,19 +99,14 @@ public class TiltFiveUI : MonoBehaviour
 
     public void CallMethodOf(Selectable newSel) 
     {
-        Debug.Log("CallMethodOf called");
-        if (swapTimer <= 0)
+        Debug.LogWarning($"CallMethodOf {newSel.name} called");
+        if (newSel is Button)
         {
-            Debug.Log("CallMethodOf in if");
-            swapTimer = swapTime*10;
-            if (newSel is Button)
-            {
-                newSel.GetComponent<Button>().onClick.Invoke();
-            }
-            else if (newSel is Toggle)
-            {
-                newSel.GetComponent<Toggle>().isOn = !newSel.GetComponent<Toggle>().isOn;
-            }
+            newSel.GetComponent<Button>().onClick.Invoke();
+        }
+        else if (newSel is Toggle)
+        {
+            newSel.GetComponent<Toggle>().isOn = !newSel.GetComponent<Toggle>().isOn;
         }
     }
 }

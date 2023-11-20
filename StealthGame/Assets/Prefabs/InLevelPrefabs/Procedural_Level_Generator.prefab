@@ -45,14 +45,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4213ce95d3d20e14bbdc1e56074c4ba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameDifficulty: 2
+  GameDifficulty: 3
   PlayerCharacter: {fileID: 0}
   MaxNumberOfRoomsCreated: 10
   possibleRooms:
   - {fileID: 7920541963080843972, guid: f96b9ef1d7ec8144badcb501ed644e61, type: 3}
+  - {fileID: 8497046408796911298, guid: d02b7c203f0d3e2479c61f4fa3990e4a, type: 3}
+  - {fileID: 7580969557585037674, guid: af5517a5c06f30c47bd7793b394daea5, type: 3}
   - {fileID: 3628948758749083952, guid: 75d066f5e9d38b641bf5065d1da01bcd, type: 3}
   - {fileID: 3637530710623809432, guid: 39f3ae561c55d114aa08b924810ebe8c, type: 3}
   - {fileID: 1540021862810991961, guid: cb0aa09853a3f3948a76aaecdd22adff, type: 3}
+  - {fileID: 1141683606117338938, guid: f9c3c48c0ba804b4da7852bdda1bc8a7, type: 3}
+  - {fileID: 2758981934405882168, guid: 51fdc25209321ed4387f88f04c2cc3fa, type: 3}
   - {fileID: 4919829470998136944, guid: fefcdab8be10f2349b51685c407b2ced, type: 3}
   - {fileID: 4919829470998136944, guid: fefcdab8be10f2349b51685c407b2ced, type: 3}
   - {fileID: 1917070228073449707, guid: d192fef8dee121344812ac3886e73a46, type: 3}

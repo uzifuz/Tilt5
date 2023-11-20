@@ -2779,37 +2779,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 194313719446976743, guid: ca8d84c6a3cce834d947a24976db5dcd, type: 3}
   m_PrefabInstance: {fileID: 489667217}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &508851397
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 508851398}
-  m_Layer: 0
-  m_Name: Attack Point
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &508851398
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508851397}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.829}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1410132096}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &546866581
 GameObject:
   m_ObjectHideFlags: 0
@@ -6578,10 +6547,6 @@ PrefabInstance:
       propertyPath: walkableSurfaces.m_Bits
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 2501677522821634102, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2749607851269396644, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
       propertyPath: m_Radius
       value: 0.15
@@ -6646,66 +6611,26 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: -0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 7692405093397602714, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
+      propertyPath: AbilitySlot
+      value: 
+      objectReference: {fileID: 1093161682}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4737468016232438582, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 508851398}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2803114837024924929, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1410132097}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
---- !u!1 &1410132085 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2803114837024924929, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-  m_PrefabInstance: {fileID: 1410132084}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1410132088 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -4899338168007379858, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
   m_PrefabInstance: {fileID: 1410132084}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410132085}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47f1249cb47d81c489f2e58c6d59366a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1410132096 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4737468016232438582, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-  m_PrefabInstance: {fileID: 1410132084}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1410132097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410132085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffd44f50ee497cf4fbb2e0d4adf9cc58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilitySlot: {fileID: 1093161682}
-  knight_attackPoint: {fileID: 508851398}
-  knight_attackRange: 1.2
-  knight_enemyLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  abilityIcons:
-  - {fileID: 21300000, guid: 8357138bd67e53a4994227935ae284df, type: 3}
-  - {fileID: 21300000, guid: ed3edf53acefe164482001decbda3b5b, type: 3}
-  - {fileID: 21300000, guid: 7e161882d33a1bd4491a012a168d81f6, type: 3}
-  animator: {fileID: 1410132100}
---- !u!95 &1410132100 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 900340303, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
-  m_PrefabInstance: {fileID: 1410132084}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1412714551
 PrefabInstance:
   m_ObjectHideFlags: 0

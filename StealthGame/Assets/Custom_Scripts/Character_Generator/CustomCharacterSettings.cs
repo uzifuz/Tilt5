@@ -40,11 +40,13 @@ public class CustomCharacterSettings : MonoBehaviour
     [SerializeField] GameObject[] leftLegMale, rightLegMale, leftLegFemale, rightLegFemale;
     [SerializeField] GameObject[] weapons;
     IndexWrapper hairIndex = new IndexWrapper(), beardIndex = new IndexWrapper(), headIndex = new IndexWrapper(), eyebrowsIndex = new IndexWrapper(), torsoIndex = new IndexWrapper(), shoulderIndex = new IndexWrapper(), hipsIndex = new IndexWrapper(), handsIndex = new IndexWrapper(), lowerArmIndex = new IndexWrapper(), ellbowIndex = new IndexWrapper(), upperArmIndex = new IndexWrapper(), legsIndex = new IndexWrapper(), weaponIndex = new IndexWrapper();
+    public Renderer[] AllRenderer;
 
     private void Start()
     {
         ReadAllIndicesFromPlayerPref();
         SetAllPartsActive();
+        AllRenderer = GetAllRenderers();
         InitializeCoupling();
         InitializeAllParts();
         SwapMaleFemale(male);
@@ -95,18 +97,30 @@ public class CustomCharacterSettings : MonoBehaviour
         SetAllOfArrayActive(beardFemale);
         SetAllOfArrayActive(headMale);
         SetAllOfArrayActive(headFemale);
+        SetAllOfArrayActive(eyeBrowsMale);
+        SetAllOfArrayActive(eyeBrowsFemale);
         SetAllOfArrayActive(torsoMale);
         SetAllOfArrayActive(torsoFemale);
         SetAllOfArrayActive(hipsMale);
         SetAllOfArrayActive(hipsFemale);
         SetAllOfArrayActive(leftUpperArmMale);
+        SetAllOfArrayActive(rightUpperArmMale);
         SetAllOfArrayActive(leftLowerArmMale);
+        SetAllOfArrayActive(rightLowerArmMale);
         SetAllOfArrayActive(leftHandsMale);
+        SetAllOfArrayActive(rightHandsMale);
         SetAllOfArrayActive(leftUpperArmFemale);
+        SetAllOfArrayActive(rightUpperArmFemale);
         SetAllOfArrayActive(leftLowerArmFemale);
+        SetAllOfArrayActive(rightLowerArmFemale);
         SetAllOfArrayActive(leftHandsFemale);
+        SetAllOfArrayActive(rightHandsFemale);
         SetAllOfArrayActive(leftShoulder);
         SetAllOfArrayActive(leftEllbow);
+        SetAllOfArrayActive(leftLegMale);
+        SetAllOfArrayActive(rightLegMale);
+        SetAllOfArrayActive(leftLegFemale);
+        SetAllOfArrayActive(leftLegMale);
         SetAllOfArrayActive(weapons);
     }
 
@@ -306,5 +320,10 @@ public class CustomCharacterSettings : MonoBehaviour
         upperArmIndex.IntValue = PlayerPrefs.GetInt("upperArmIndex", 0);
         legsIndex.IntValue = PlayerPrefs.GetInt("legsIndex", 0);
         weaponIndex.IntValue = PlayerPrefs.GetInt("weaponIndex", 0);
+    }
+
+    public Renderer[] GetAllRenderers()
+    {
+        return GetComponentsInChildren<Renderer>();
     }
 }

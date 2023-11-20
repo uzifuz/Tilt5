@@ -6,6 +6,6 @@ public class ThiefAbility : Ability
 {
     public void UseAbility()
     {
-        Debug.Log("Thief Ability");
+        Thief.Instance.ThiefAbility();
     }
 }

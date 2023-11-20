@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class InteractableObject : MonoBehaviour
 {
@@ -8,6 +12,9 @@ public class InteractableObject : MonoBehaviour
     [SerializeField]
     float maxFresnelIntensity = 1f;
     public bool InteractionReady = true;
+    public Slider ContextualSlider;
+    public TextMeshProUGUI InteractionText;
+    public UnityEvent onEvents, offEvents;
 
     private void Start()
     {
@@ -37,14 +44,23 @@ public class InteractableObject : MonoBehaviour
 
     public void ToggleObjectHighlight(bool newState)
     {
-        thisRenderer = GetComponent<Renderer>();
-        if(newState)
+        if(newState)//Is about to be interacted with
         {
-            //thisRenderer?.material.SetFloat("_FresnelIntensity", maxFresnelIntensity);
+            SwitchHighlightOn();
         }
         else
         {
-            //thisRenderer?.material.SetFloat("_FresnelIntensity", 0);
+            SwitchHighlightOff();
         }
+    }
+
+    protected virtual void SwitchHighlightOn()
+    {
+
+    }
+
+    protected virtual void SwitchHighlightOff()
+    {
+
     }
 }

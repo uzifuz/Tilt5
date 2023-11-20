@@ -6,17 +6,13 @@ using UnityEngine.Rendering;
 public class CollectibleMaster : MonoBehaviour
 {
     public static CollectibleMaster Instance;
-    [SerializeField]
-    GameObject[] optionalLocations, mandatoryLocations;
+    [SerializeField] GameObject[] optionalLocations, mandatoryLocations;
     public GameObject[] mandatoryCollectibles;
     public GameObject[] optionalCollectibles;
-    [SerializeField]
-    bool randomizeOptionalCollectibles = true;
+    [SerializeField] bool randomizeOptionalCollectibles = true;
     public int mandatoriesSet = 0, mandatoriesClaimed = 0, collectedValue = 0, currentPrefValue;
-    [HideInInspector]
-    public CollectionUI uiCounter;
-    [HideInInspector]
-    public bool allCollectiblesFound = false;
+    [HideInInspector] public CollectionUI uiCounter;
+    [HideInInspector] public bool allCollectiblesFound = false;
 
     [HideInInspector]
     public ExitPointer exitPointer;
@@ -41,8 +37,8 @@ public class CollectibleMaster : MonoBehaviour
 
     private void Update()
     {
-        currentPrefValue = PlayerPrefs.GetInt("TotalPlayerMoney");
-        if(Input.GetKeyDown(KeyCode.Space))
+        currentPrefValue = PlayerPrefs.GetInt("TotalPlayerMoney");//TODO: Don't check each frame!!!
+        if(Input.GetKeyDown(KeyCode.Space))//TODO: This should not be here. At all!!!
         {
             PlayerPrefs.SetInt("TotalPlayerMoney", 0);
         }
@@ -56,6 +52,8 @@ public class CollectibleMaster : MonoBehaviour
     public void SetMandatoryCollectibles()
     {
         //TODO: Randomization of array!!!
+        //TODO: This is really strange, the number of collectibles created is equal to the array length
+        //If this remains, the possibly spawned stuff is severly limited, which would not be ideal
         for (int i = 0; i < mandatoryLocations.Length; i++)
         {
             if (i >= mandatoryCollectibles.Length)

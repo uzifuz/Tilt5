@@ -64,7 +64,7 @@ public class TiltFiveInputs : MonoBehaviour
     {
         if (TiltFive.Wand.TryGetWandDevice(TiltFive.PlayerIndex.One, TiltFive.ControllerIndex.Right, out TiltFive.WandDevice wandDevice))
         {
-            if (wandDevice.One.wasPressedThisFrame)
+            if (wandDevice.One.isPressed)
             {
                 one = true;
             }

@@ -8,7 +8,6 @@ using UnityEngine.InputSystem;
 
 public class ClickToMoveEntity : MonoBehaviour
 {
-    public GameObject wandTip;
     public Transform camMaster, wandTipTransform, wandGripTransform;
     bool wandButtonPressed = false;
     [SerializeField]
@@ -49,70 +48,20 @@ public class ClickToMoveEntity : MonoBehaviour
         {
             if(PlayerPrefs.GetInt("Tilt5Mode") == 1)
             {
-                //Debug.Log("Tilt5 Active");
+                Debug.Log("Rotating Tilt5 Active");
                 camMaster.rotation = Quaternion.LookRotation(WandDirection(), Vector3.up);
             }
-            Vector3 posMod = camMaster.transform.forward * (Input.GetAxis("Vertical") + TiltFiveInputs.Instance.stickY)  + camMaster.transform.right * (Input.GetAxis("Horizontal") + +TiltFiveInputs.Instance.stickX) + Vector3.up * -1f;
+            else
+            {
+                Debug.Log($"Rotating in Standalone mode");
+                camMaster.eulerAngles += new Vector3(0f, (Input.GetKey(KeyCode.Q) ? -1f : 0f) + (Input.GetKey(KeyCode.E) ? 1f : 0f) ,0f);
+            }
+            Vector3 posMod = camMaster.transform.forward * (Input.GetAxis("Vertical") + TiltFiveInputs.Instance.stickY)  + camMaster.transform.right * (Input.GetAxis("Horizontal") + TiltFiveInputs.Instance.stickX) + Vector3.up * -1f;
             Vector3 newPos = currentPlayer.transform.position + posMod;
             //Debug.DrawLine(currentPlayer.transform.position, newPos);
             currentPlayer.SetAgentDestination(newPos, Input.GetKey(KeyCode.LeftShift) || TiltFiveInputs.Instance.trigger);
-            //Debug.Log($"New Pos: {posMod}");
-
-            /*if (Input.GetKeyDown(KeyCode.Mouse0) && currentPlayer.CanMove)
-            {
-                Vector3 targetLocation = Vector3.up * 100f;
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hit;
-                if (Physics.Raycast(ray, out hit, Mathf.Infinity, clickableObjects))
-                {
-                    targetLocation = hit.point;
-                    if (runTimer > 0)
-                    {
-                        runProxy = true;
-                    }
-                    else
-                    {
-                        runTimer = runTime;
-                    }
-                }
-                else
-                {
-                    Debug.Log($"Nothing hit");
-                }
-                currentPlayer.SetAgentDestination(targetLocation, runProxy);
-            }
-            if(TiltFive.Wand.TryGetWandDevice(TiltFive.PlayerIndex.One, TiltFive.ControllerIndex.Right, out TiltFive.WandDevice wandDevice))
-            {
-                if(wandDevice.Trigger.IsPressed(0.5f) && !wandButtonPressed)
-                {
-                    wandButtonPressed = true;
-                    //Debug.Log("This shit was pressed!!!" + Random.Range(0f, 1f));
-                    Ray ray = new Ray(wandTip.transform.position, wandTip.transform.forward);
-                    RaycastHit hit;
-                    if(Physics.Raycast(ray, out hit, Mathf.Infinity, clickableObjects))
-                    {
-                        //Debug.Log(hit.collider.gameObject.name);
-                        if (runTimer > 0)
-                        {
-                            runProxy = true;
-                        }
-                        else
-                        {
-                            runTimer = runTime;
-                        }
-                    }
-                    else
-                    {
-                        Debug.Log("Nothing was hit");
-                    }
-                    currentPlayer.SetAgentDestination(hit.point, runProxy);
-                }
-                if(!wandDevice.Trigger.IsPressed(0.5f) && wandButtonPressed)
-                {
-                    wandButtonPressed = false;
-                }*/
-
-                TiltFiveBoardMover.Instance.MoveBoard();
+            
+            TiltFiveBoardMover.Instance.MoveBoard();
                 
             
         }

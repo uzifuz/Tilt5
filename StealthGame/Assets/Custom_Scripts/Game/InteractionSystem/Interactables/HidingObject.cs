@@ -7,9 +7,15 @@ public class HidingObject : InteractableObject
 {
     public AudioClip appearSound;
     public AudioClip disappearSound;
-
+    public float ReappearanceDelay = 1f;
     private float coolDown = 1;
     float lastInputTimeStamp;
+
+    protected override void InheritStart()
+    {
+        base.InheritStart();
+        InteractionText.text = "";
+    }
 
     public override void Interact()
     {
@@ -20,24 +26,45 @@ public class HidingObject : InteractableObject
             return;
         }
         lastInputTimeStamp = Time.time;
-        //ToggleObjectHighlight(true);
 
         Thief.Instance.IsHidden = !Thief.Instance.IsHidden;
         Thief.Instance.CanMove = !Thief.Instance.IsHidden;
-        //Thief.Instance.agent.isStopped = Thief.Instance.IsHidden;
         Thief.Instance.agent.SetDestination(Thief.Instance.transform.position);
 
         GetComponentInChildren<ParticleSystem>().Play();
         if (Thief.Instance.IsHidden)
         {
             Camera.main.GetComponent<AudioSource>().PlayOneShot(disappearSound);
-
-        } else
+            InteractionText.text = "<b>F</b>\nStop Hiding";
+            onEvents.Invoke();
+            Thief.Instance.CharacterRenderer.SetActive(!Thief.Instance.CharacterRenderer.activeSelf);
+        } 
+        else
         {
-            Camera.main.GetComponent<AudioSource>().PlayOneShot(appearSound);
+            StartCoroutine(ReappearCo());
         }
+    }
 
+    IEnumerator ReappearCo()
+    {
+        offEvents.Invoke();
+        yield return new WaitForSeconds(ReappearanceDelay);
+        Camera.main.GetComponent<AudioSource>().PlayOneShot(appearSound);
+        InteractionText.text = "<b>F</b>\nHide";
         Thief.Instance.CharacterRenderer.SetActive(!Thief.Instance.CharacterRenderer.activeSelf);
+    }
+
+    protected override void SwitchHighlightOn()
+    {
+        base.SwitchHighlightOn();
+        InteractionText.text = "<b>F</b>\nHide";
+        InteractionText.gameObject.SetActive(true);
+    }
+
+    protected override void SwitchHighlightOff()
+    {
+        base.SwitchHighlightOff();
+        InteractionText.gameObject.SetActive(false);
     }
 
 }

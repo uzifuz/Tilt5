@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] Toggle gameModeToggle;
-
+    bool tilt5;
     [SerializeField] GameObject tilt5Prototype;
 
     [SerializeField] Transform cameraDirectionTransform;
@@ -16,13 +15,12 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        gameModeToggle.isOn = tilt5Prototype.activeSelf;
-        OnGameModeChanged();
+        tilt5 = tilt5Prototype.activeSelf;
     }
 
     private void Update()
     {
-        CameraToMatchViewDirection();
+        //CameraToMatchViewDirection();
     }
 
     public void ChangeCameraView(Transform newViewTarget)
@@ -58,10 +56,10 @@ public class MainMenu : MonoBehaviour
 
     public void OnGameModeChanged()
     {
-        bool tilt5 = gameModeToggle.isOn;
+        tilt5 = !tilt5;
         tilt5Prototype.SetActive(tilt5);
-        GetComponentInParent<RotateTowardsWand>().ShouldRotate = tilt5;
-        
+        //GetComponentInParent<RotateTowardsWand>().ShouldRotate = tilt5;
+        Debug.Log($"Swapped Tilt Five to {tilt5}");
         if (tilt5)
         {
             PlayerPrefs.SetInt("Tilt5Mode", 1);

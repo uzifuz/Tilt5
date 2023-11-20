@@ -9,6 +9,7 @@ TagManager:
   - Collectible
   - CollectibleSpawnLocation
   - Guard
+  - Wand
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - Thief
   - Guard
   - Wall
-  - 
-  - 
+  - TiltFiveUI
+  - Water
   - 
   - 
   - 
