@@ -10,12 +10,14 @@ using System.Threading.Tasks;
 
 public class ProceduralLevelGenerator : MonoBehaviour
 {
-    public float GameDifficulty = 1;
+    public static ProceduralLevelGenerator Instance;
+    public float GameDifficulty = 1, yOffset = -2;
     [SerializeField] GameObject PlayerCharacter;
     public float MaxNumberOfRoomsCreated;
     int curNumberOfCreatedRooms = 0;
     public GameObject[] possibleRooms;
     public string RoomProgress;
+    [HideInInspector] public float RoomProgressValue;
     [SerializeField] Room startingRoom;
     [SerializeField] List<Room> allGeneratedRooms = new List<Room>();
     List<ModifiableDoorway> allAvailableDoors = new List<ModifiableDoorway>();
@@ -23,7 +25,10 @@ public class ProceduralLevelGenerator : MonoBehaviour
 
     private void Start()
     {
-        curSurface = FindObjectOfType<NavMeshSurface>();      
+        curSurface = FindObjectOfType<NavMeshSurface>();
+        if (Instance == null)
+            Instance = this;
+        transform.position += Vector3.up * yOffset;
     }
 
     public IEnumerator RoomGenCo()
@@ -34,6 +39,7 @@ public class ProceduralLevelGenerator : MonoBehaviour
             {
                 curNumberOfCreatedRooms++;
                 RoomProgress = $"Progress: {((curNumberOfCreatedRooms / MaxNumberOfRoomsCreated) * 100f).ToString("00.0")} %";
+                RoomProgressValue = curNumberOfCreatedRooms / MaxNumberOfRoomsCreated;
             }
             else
             {
