@@ -53,9 +53,9 @@ public class ProceduralLevelGenerator : MonoBehaviour
             {
                 SwapDoorStates();
                 CreateExitPoints(GameDifficulty);
-                curSurface.BuildNavMesh();
                 CollectibleMaster.Instance.SetupCollectionSystem();
                 allGeneratedRooms.Clear();
+                curSurface.BuildNavMesh();
                 PlayerCharacter.SetActive(true);
                 Debug.Log("Room Creation Complete");
                 break;

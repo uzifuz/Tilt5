@@ -21,17 +21,20 @@ public class BasicAnimationController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(assocEntity.agent.remainingDistance <= stoppingDistance)
+        if(assocEntity.agent.enabled)
         {
-            currentState = AnimationStates.idle;
-        }
-        else if(assocEntity.agent.speed < 2)
-        {
-            currentState = AnimationStates.walk;
-        }
-        else
-        {
-            currentState = AnimationStates.run;
+            if(assocEntity.agent.remainingDistance <= stoppingDistance)
+            {
+                currentState = AnimationStates.idle;
+            }
+            else if(assocEntity.agent.speed < 2)
+            {
+                currentState = AnimationStates.walk;
+            }
+            else
+            {
+                currentState = AnimationStates.run;
+            }
         }
 
         anim.SetInteger("walkState", (int)currentState);

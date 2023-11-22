@@ -5,15 +5,30 @@ using UnityEngine.UI;
 
 public class TiltFiveUI : MonoBehaviour
 {
+    public static TiltFiveUI Instance;
     [SerializeField] UIElementConnector curElement, previousElement;
     bool selectionPossible = true;
     public float swapTime = 0.25f;
+    public float ConfirmationDelayTime = 1f;
     bool confirmAvailable = true;
+
+    private void Start()
+    {
+        if(Instance == null)
+            Instance = this;
+    }
+
+    private void Awake()
+    {
+        selectionPossible = true;
+        confirmAvailable = true;
+    }
 
     public void SelectNewElementAsCurrent(UIElementConnector newElem)
     {
         previousElement = curElement;
         curElement = newElem;
+        StartCoroutine(ConfirmationDelay());
     }
 
     public void SelectToSide(UISelectionDirection newDir)
@@ -56,7 +71,6 @@ public class TiltFiveUI : MonoBehaviour
         {
             if (Confirm())
             {
-                Debug.LogWarning("Confirmed Input");
                 ClickOrSwap();
                 CallMethodOf(curElement.GetSelectable());
             }
@@ -85,6 +99,13 @@ public class TiltFiveUI : MonoBehaviour
         StartCoroutine(AvailabilityDelayCo());
     }
 
+    IEnumerator ConfirmationDelay()
+    {
+        selectionPossible = false;
+        yield return new WaitForSeconds(ConfirmationDelayTime);
+        selectionPossible = true;
+    }
+
     IEnumerator AvailabilityDelayCo()
     {
         selectionPossible = false;
@@ -99,7 +120,6 @@ public class TiltFiveUI : MonoBehaviour
 
     public void CallMethodOf(Selectable newSel) 
     {
-        Debug.LogWarning($"CallMethodOf {newSel.name} called");
         if (newSel is Button)
         {
             newSel.GetComponent<Button>().onClick.Invoke();

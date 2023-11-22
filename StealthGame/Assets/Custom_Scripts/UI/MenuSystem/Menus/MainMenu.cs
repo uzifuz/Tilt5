@@ -15,31 +15,13 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        tilt5 = tilt5Prototype.activeSelf;
-    }
-
-    private void Update()
-    {
-        //CameraToMatchViewDirection();
+        tilt5 = PlayerPrefs.GetInt("Tilt5Mode") != 1;
+        OnGameModeChanged();
     }
 
     public void ChangeCameraView(Transform newViewTarget)
     {
         cameraDirectionTransform = newViewTarget;
-    }
-
-    void CameraToMatchViewDirection()
-    {
-        if(Camera.main.transform.position != cameraDirectionTransform.position)
-        {
-            Camera.main.transform.position = Vector3.MoveTowards(Camera.main.transform.position, cameraDirectionTransform.position, CamMoveSpeed);
-        }
-
-        if(Camera.main.transform.eulerAngles.y != cameraDirectionTransform.eulerAngles.y)
-        {
-            Camera.main.transform.eulerAngles += Time.deltaTime * CamTurnSpeed * Vector3.up * 
-                (Camera.main.transform.eulerAngles.y > cameraDirectionTransform.eulerAngles.y ? Camera.main.transform.eulerAngles.y - cameraDirectionTransform.eulerAngles.y : cameraDirectionTransform.eulerAngles.y - Camera.main.transform.eulerAngles.y);
-        }
     }
 
     public void PlayGame(int sceneIndex)
@@ -58,8 +40,6 @@ public class MainMenu : MonoBehaviour
     {
         tilt5 = !tilt5;
         tilt5Prototype.SetActive(tilt5);
-        //GetComponentInParent<RotateTowardsWand>().ShouldRotate = tilt5;
-        Debug.Log($"Swapped Tilt Five to {tilt5}");
         if (tilt5)
         {
             PlayerPrefs.SetInt("Tilt5Mode", 1);

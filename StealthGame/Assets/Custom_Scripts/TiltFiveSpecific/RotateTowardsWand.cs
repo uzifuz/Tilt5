@@ -12,7 +12,7 @@ public class RotateTowardsWand : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -35,6 +35,10 @@ public class RotateTowardsWand : MonoBehaviour
 
             // Calculate a rotation a step closer to the target and applies rotation to this object
             transform.rotation = Quaternion.LookRotation(newDirection);
+        }
+        else if(wandPosition == null)
+        {
+            wandPosition = Camera.main.transform;
         }
     }
 

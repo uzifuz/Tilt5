@@ -10,53 +10,71 @@ public class ControllableEntity : Entity
     [SerializeField]
     LayerMask walkableSurfaces;
     public bool CanMove;
+    protected bool actionLock = false;
     public Animator anim;
+    public RagdollMaster ragdoll;
 
     protected override void InheritStart()
     {
         base.InheritStart();
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        ragdoll = GetComponentInChildren<RagdollMaster>();
     }
 
     protected override void InheritUpdate()
     {
         base.InheritUpdate();
-        if(Vector3.Distance(transform.position, agent.destination) < 0.15f)
+        if(agent.enabled == true)
         {
-            agent.isStopped = true;
-        }
-        else
-        {
-            agent.isStopped = false;
+            if(Vector3.Distance(transform.position, agent.destination) < 0.15f)
+            {
+                agent.isStopped = true;
+            }
+            else
+            {
+                agent.isStopped = false;
+            }
         }
     }
 
     public void SetAgentDestination(Vector3 target, bool run = false, float radiusMod = 1f)
     {
-        if(run)
+        if(!actionLock)
         {
-            agent.speed = agentRunSpeed;
-            anim.SetFloat("animSpeed", 4);
-        }
-        else
-        {
-            agent.speed = agentWalkSpeed;
-            anim.SetFloat("animSpeed", 1);
-        }
+            if(run)
+            {
+                agent.speed = agentRunSpeed;
+                anim.SetFloat("animSpeed", 4);
+            }
+            else
+            {
+                agent.speed = agentWalkSpeed;
+                anim.SetFloat("animSpeed", 1);
+            }
+            //Check if Stuff is actually on the NavMeshSurface
+            if(NavMeshInfo.IsDestinationOnNavMesh(target))
+            {
+                //Debug.Log($"Destination IS on Navmesh");
+                agent.SetDestination(target);
+            }
+            else
+            {
+                //Debug.Log($"Destination NOT on Navmesh");
+                //Vector3 proxyTarget = NavMeshInfo.RandomNavSphere(target, 0f, radiusMod, walkableSurfaces);
+                //agent.SetDestination(proxyTarget);
+            }
 
-
-        if(NavMeshInfo.IsDestinationOnNavMesh(target))
-        {
-            //Debug.Log($"Destination IS on Navmesh");
-            agent.SetDestination(target);
         }
-        else
-        {
-            //Debug.Log($"Destination NOT on Navmesh");
-            //Vector3 proxyTarget = NavMeshInfo.RandomNavSphere(target, 0f, radiusMod, walkableSurfaces);
-            //agent.SetDestination(proxyTarget);
-        }
+    }
 
+    public override void Death(Vector3 deathDirection)
+    {
+        agent.enabled = false;
+        anim.enabled = false;
+        GetComponent<Collider>().enabled = false;
+        GetComponent<Rigidbody>().useGravity = false;
+        GetComponent<Rigidbody>().isKinematic = true;
+        ragdoll.StartRagdolling(deathDirection.normalized, deathDirection.magnitude);
     }
 }

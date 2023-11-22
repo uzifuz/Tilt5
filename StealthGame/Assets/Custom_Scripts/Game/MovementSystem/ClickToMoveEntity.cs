@@ -48,12 +48,12 @@ public class ClickToMoveEntity : MonoBehaviour
         {
             if(PlayerPrefs.GetInt("Tilt5Mode") == 1)
             {
-                Debug.Log("Rotating Tilt5 Active");
+                //Debug.Log("Rotating Tilt5 Active");
                 camMaster.rotation = Quaternion.LookRotation(WandDirection(), Vector3.up);
             }
             else
             {
-                Debug.Log($"Rotating in Standalone mode");
+                //Debug.Log($"Rotating in Standalone mode");
                 camMaster.eulerAngles += new Vector3(0f, (Input.GetKey(KeyCode.Q) ? -1f : 0f) + (Input.GetKey(KeyCode.E) ? 1f : 0f) ,0f);
             }
             Vector3 posMod = camMaster.transform.forward * (Input.GetAxis("Vertical") + TiltFiveInputs.Instance.stickY)  + camMaster.transform.right * (Input.GetAxis("Horizontal") + TiltFiveInputs.Instance.stickX) + Vector3.up * -1f;

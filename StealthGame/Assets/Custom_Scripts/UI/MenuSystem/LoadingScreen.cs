@@ -18,7 +18,7 @@ public class LoadingScreen : MonoBehaviour
     public void Update()
     {
         LoadingBarFill.value = ProceduralLevelGenerator.Instance.RoomProgressValue;
-        LoadingText.text = "Generating Level " + ProceduralLevelGenerator.Instance.RoomProgressValue * 100 + "%";
+        LoadingText.text = "Generating Level " + (ProceduralLevelGenerator.Instance.RoomProgressValue * 100).ToString("0.0") + "%";
         if (LoadingBarFill.value == 1)
         {
             LoadingScreenObject.SetActive(false);

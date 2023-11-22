@@ -7,9 +7,15 @@ public class Guard : ControllableEntity
 {
     public float GuardDifficulty = 1f;
     public enum GuardStates { Detected, Idle, Investigate }
-    public enum GuardIdleStates { Guard, Patrolling}
+    public enum GuardIdleStates { Guard, Patrolling }
+    public enum GuardType { Melee, Ranged }
     public GuardStates CurGuardState = GuardStates.Idle;
     public GuardIdleStates CurIdleState;
+    public GuardType BehaviorType = GuardType.Ranged;
+    public float AttackRange = 2f, AttackSpeed = 2f, ProjectileSpeed = 14f;
+    bool ReadyToAttack = true;
+    public GameObject AttackProjectile;
+    [SerializeField] Transform firePoint;
     public Transform GuardingPosition;
     public bool PlayerHasBeenDetected = false;
     public float randomSpread = 1f;
@@ -24,7 +30,6 @@ public class Guard : ControllableEntity
     [SerializeField] LayerMask visionBlockingLayers;
     [SerializeField] Image detectionImage;
     [SerializeField] LineRenderer sightLine, suspicionLine;
-
     #region InheritedMethods
 
     protected override void InheritStart()
@@ -42,23 +47,47 @@ public class Guard : ControllableEntity
 
     protected override void InheritUpdate()
     {
+        if (Input.GetKey(KeyCode.P))
+        {
+            ModifyHealth(-1000f);
+            Death(Vector3.up + Vector3.back * Random.Range(1f, 2f));
+        }
         base.InheritUpdate();
-        detectionImage.fillAmount = suspicionLevel / 100f;
-        if(patrolTimer <= 0 && Vector3.Distance(transform.position, agent.destination) <= 1f || patrolTimer < -patrolTime)
+        if(CurHealth > 0f)
         {
-            patrolTimer = Random.Range(patrolTime / 2f, patrolTime);
-            GuardRandomizedMovement();
-        }
+            detectionImage.fillAmount = suspicionLevel / 100f;
+            if(patrolTimer <= 0 && Vector3.Distance(transform.position, agent.destination) <= 1f || patrolTimer < -patrolTime)
+            {
+                patrolTimer = Random.Range(patrolTime / 2f, patrolTime);
+                GuardRandomizedMovement();
+            }
 
-        if(CanSeePlayer())
-        {
-            VisionOnPlayerBehavior();
+            if(CanSeePlayer())
+            {
+                VisionOnPlayerBehavior();
+                if(PlayerHasBeenDetected)//TODO: Attack the player
+                {
+                    if(Vector3.Distance(transform.position, Thief.Instance.transform.position) <= AttackRange)
+                    {
+                        //Attack
+                        if(ReadyToAttack)
+                        {
+                            StartCoroutine(AttackSpeedCo());
+                            anim.Play("Attack", 1);
+                        }
+                    }
+                    else
+                    {
+                        //Move
+                    }
+                }
+            }
+            else
+            {
+                NoVisionBehavior();
+            }
+            visionTimer = Mathf.Clamp(visionTimer, 0f, visionTime);
         }
-        else
-        {
-            NoVisionBehavior();
-        }
-        visionTimer = Mathf.Clamp(visionTimer, 0f, visionTime);
     }
     #endregion
 
@@ -155,4 +184,31 @@ public class Guard : ControllableEntity
     }
     #endregion
 
+    IEnumerator AttackSpeedCo()
+    {
+        agent.SetDestination(transform.position);
+        agent.isStopped = true;
+        ReadyToAttack = false;
+        yield return new WaitForSeconds(1f / AttackSpeed);
+        ReadyToAttack = true;
+        agent.isStopped = false;
+    }
+
+    public void Attack()
+    {
+        var obj = Instantiate(AttackProjectile, firePoint.transform.position, firePoint.transform.rotation);
+        obj.GetComponent<ProjectileBase>().SetupProjectile(false, false, Thief.Instance.transform, this, ProjectileSpeed);
+    }
+
+    public override void Death(Vector3 deathDirection)
+    {
+        base.Death(deathDirection);
+        StartCoroutine(DespawnCo());
+    }
+
+    IEnumerator DespawnCo()
+    {
+        yield return new WaitForSeconds(5f);
+        Destroy(gameObject);
+    }
 }

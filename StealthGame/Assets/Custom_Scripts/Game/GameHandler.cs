@@ -13,9 +13,10 @@ public class GameHandler : MonoBehaviour
     public enum GameOutcome { ThiefWin, ThiefLose }
     public bool GameIsOver { get; private set; }
 
+    public UIElementConnector WinConnector, LooseConnector;
 
-    [SerializeField]
-    private GameObject tilt5Prototype;
+
+    [SerializeField] private GameObject tilt5Prototype;
 
     void Start()
     {
@@ -46,10 +47,12 @@ public class GameHandler : MonoBehaviour
                 DetectionHandler.Instance.ThiefDetected = false;
 
                 MenuHandler.Instance.OpenMenu(MenuHandler.MenuType.Win);
+                TiltFiveUI.Instance.SelectNewElementAsCurrent(WinConnector);
                 break;
             case GameOutcome.ThiefLose:
             default:
                 MenuHandler.Instance.OpenMenu(MenuHandler.MenuType.Lose);
+                TiltFiveUI.Instance.SelectNewElementAsCurrent(LooseConnector);
                 break;
 
         }
