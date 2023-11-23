@@ -39,6 +39,10 @@ public class CustomCharacterSettings : MonoBehaviour
     [SerializeField] GameObject[] leftUpperArmMale, rightUpperArmMale, leftUpperArmFemale, rightUpperArmFemale;
     [SerializeField] GameObject[] leftLegMale, rightLegMale, leftLegFemale, rightLegFemale;
     [SerializeField] GameObject[] weapons;
+    float speedModTotal = 0f;
+    float damageModTotal = 0f;
+    float cooldownModTotal = 0f;
+    float noiseModTotal = 0f;
     IndexWrapper hairIndex = new IndexWrapper(), beardIndex = new IndexWrapper(), headIndex = new IndexWrapper(), eyebrowsIndex = new IndexWrapper(), torsoIndex = new IndexWrapper(), shoulderIndex = new IndexWrapper(), hipsIndex = new IndexWrapper(), handsIndex = new IndexWrapper(), lowerArmIndex = new IndexWrapper(), ellbowIndex = new IndexWrapper(), upperArmIndex = new IndexWrapper(), legsIndex = new IndexWrapper(), weaponIndex = new IndexWrapper();
     public Renderer[] AllRenderer;
 
@@ -320,6 +324,47 @@ public class CustomCharacterSettings : MonoBehaviour
         upperArmIndex.IntValue = PlayerPrefs.GetInt("upperArmIndex", 0);
         legsIndex.IntValue = PlayerPrefs.GetInt("legsIndex", 0);
         weaponIndex.IntValue = PlayerPrefs.GetInt("weaponIndex", 0);
+    }
+
+    public Vector4 GetModificationsOfParts()
+    {
+        speedModTotal = 0f;
+        damageModTotal = 0f;
+        cooldownModTotal = 0f;
+        noiseModTotal = 0f;
+        List<PartSpecification> allCurrentParts = new List<PartSpecification>();
+        allCurrentParts.Add(hair[hairIndex.IntValue].GetComponentInParent<PartSpecification>());
+        allCurrentParts.Add(leftShoulder[shoulderIndex.IntValue].GetComponentInParent<PartSpecification>());
+        allCurrentParts.Add(leftEllbow[ellbowIndex.IntValue].GetComponentInParent<PartSpecification>());
+
+        allCurrentParts.Add(torsoMale[torsoIndex.IntValue].GetComponentInParent<PartSpecification>());
+        allCurrentParts.Add(hipsMale[hipsIndex.IntValue].GetComponentInParent<PartSpecification>());
+        allCurrentParts.Add(leftUpperArmMale[upperArmIndex.IntValue].GetComponentInParent<PartSpecification>());
+        allCurrentParts.Add(leftLowerArmMale[lowerArmIndex.IntValue].GetComponentInParent<PartSpecification>());
+        allCurrentParts.Add(leftHandsMale[handsIndex.IntValue].GetComponentInParent<PartSpecification>());
+        allCurrentParts.Add(leftLegMale[legsIndex.IntValue].GetComponentInParent<PartSpecification>());
+        
+        allCurrentParts.Add(torsoFemale[torsoIndex.IntValue].GetComponentInParent<PartSpecification>());
+        allCurrentParts.Add(hipsFemale[hipsIndex.IntValue].GetComponentInParent<PartSpecification>());
+        allCurrentParts.Add(leftUpperArmFemale[upperArmIndex.IntValue].GetComponentInParent<PartSpecification>());
+        allCurrentParts.Add(leftLowerArmFemale[lowerArmIndex.IntValue].GetComponentInParent<PartSpecification>());
+        allCurrentParts.Add(leftHandsFemale[handsIndex.IntValue].GetComponentInParent<PartSpecification>());
+        allCurrentParts.Add(leftLegFemale[legsIndex.IntValue].GetComponentInParent<PartSpecification>());
+
+        Debug.Log(allCurrentParts.Count);
+
+        foreach(PartSpecification part in allCurrentParts)
+        {
+            if(part != null && part.gameObject.activeSelf)
+            {
+                speedModTotal += part.SpeedModPercent;
+                damageModTotal += part.DamageTakenPercent;
+                cooldownModTotal += part.CooldownPercent;
+                noiseModTotal += part.NoiseModifierPercent;
+            }
+        }
+        allCurrentParts.Clear();
+        return new Vector4(speedModTotal, damageModTotal, cooldownModTotal, noiseModTotal);
     }
 
     public Renderer[] GetAllRenderers()

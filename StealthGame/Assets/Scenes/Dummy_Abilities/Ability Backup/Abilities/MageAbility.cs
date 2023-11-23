@@ -6,6 +6,6 @@ public class MageAbility : Ability
 {
     public void UseAbility()
     {
-        Debug.Log("Mage Ability");
+        Thief.Instance.WizardAbility();
     }
 }

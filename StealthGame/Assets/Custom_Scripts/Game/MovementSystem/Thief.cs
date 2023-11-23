@@ -41,7 +41,7 @@ public class Thief : ControllableEntity
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) || TiltFiveInputs.Instance.trigger)
         {
             AbilityController.Instance.UseAbility();
         }
@@ -62,7 +62,7 @@ public class Thief : ControllableEntity
     public void KnightAbility()
     {
         anim.SetFloat("animSpeed", 1);
-        anim.Play("Ability");
+        anim.Play("Ability_Knight", 1);
     }
 
     public void ThiefAbility()
@@ -72,7 +72,8 @@ public class Thief : ControllableEntity
 
     public void WizardAbility()
     {
-
+        anim.SetFloat("animSpeed", 1);
+        anim.Play("Ability_Wizard", 1);
     }
 
     void SetInvisibility()

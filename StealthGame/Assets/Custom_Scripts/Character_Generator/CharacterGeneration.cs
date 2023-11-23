@@ -35,6 +35,10 @@ public class CharacterGeneration : MonoBehaviour
     [SerializeField] CharacterCreationPanel handsPanel;
     [SerializeField] CharacterCreationPanel legsPanel;
     [SerializeField] CharacterCreationPanel weaponsPanel;
+    [SerializeField] CharacterCreationPanel speedModPanel;
+    [SerializeField] CharacterCreationPanel damageModPanel;
+    [SerializeField] CharacterCreationPanel cooldownModPanel;
+    [SerializeField] CharacterCreationPanel noiseModPanel;
     Animator anim;
 
     private void Start()
@@ -135,6 +139,23 @@ public class CharacterGeneration : MonoBehaviour
         else
             partName = newPart.PartName;
         newPanel.UpdateTexts(partString, partName);
+        SetModUI();
+    }
+
+    public void SetModUI()
+    {
+        Vector4 mods = charCreator.GetModificationsOfParts();
+        string compositeString = (100f + mods.x) + "% (" + (mods.x >= 0 ? "<color=green>" : "<color=red>") + mods.x.ToString("0.0") + "%</color>)";
+        speedModPanel.UpdateTexts("Movement Speed", compositeString);
+
+        compositeString = (100f + mods.y) + "% (" + (mods.y <= 0 ? "<color=green>" : "<color=red>") + mods.y.ToString("0.0") + "%</color>)";
+        damageModPanel.UpdateTexts("Damage Taken", compositeString);
+
+        compositeString = (100f + mods.z) + "% (" + (mods.z <= 0 ? "<color=green>" : "<color=red>") + mods.z.ToString("0.0") + "%</color>)";
+        cooldownModPanel.UpdateTexts("Cooldown", compositeString);
+
+        compositeString = (100f + mods.w) + "% (" + (mods.w <= 0 ? "<color=green>" : "<color=red>") + mods.w.ToString("0.0") + "%</color>)";
+        noiseModPanel.UpdateTexts("Step Noise Volume", compositeString);
     }
 
     public void SwitchGender()

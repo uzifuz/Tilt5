@@ -12,10 +12,6 @@ public class Guard : ControllableEntity
     public GuardStates CurGuardState = GuardStates.Idle;
     public GuardIdleStates CurIdleState;
     public GuardType BehaviorType = GuardType.Ranged;
-    public float AttackRange = 2f, AttackSpeed = 2f, ProjectileSpeed = 14f;
-    bool ReadyToAttack = true;
-    public GameObject AttackProjectile;
-    [SerializeField] Transform firePoint;
     public Transform GuardingPosition;
     public bool PlayerHasBeenDetected = false;
     public float randomSpread = 1f;
@@ -184,25 +180,11 @@ public class Guard : ControllableEntity
     }
     #endregion
 
-    IEnumerator AttackSpeedCo()
-    {
-        agent.SetDestination(transform.position);
-        agent.isStopped = true;
-        ReadyToAttack = false;
-        yield return new WaitForSeconds(1f / AttackSpeed);
-        ReadyToAttack = true;
-        agent.isStopped = false;
-    }
-
-    public void Attack()
-    {
-        var obj = Instantiate(AttackProjectile, firePoint.transform.position, firePoint.transform.rotation);
-        obj.GetComponent<ProjectileBase>().SetupProjectile(false, false, Thief.Instance.transform, this, ProjectileSpeed);
-    }
-
     public override void Death(Vector3 deathDirection)
     {
         base.Death(deathDirection);
+        suspicionLine.enabled = false;
+        sightLine.enabled = false;
         StartCoroutine(DespawnCo());
     }
 

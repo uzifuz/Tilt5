@@ -21,7 +21,7 @@ public class ProjectileBase : MonoBehaviour
         body = GetComponent<Rigidbody>();
     }
 
-    public void SetupProjectile(bool writeInstant, bool writeHoming, Transform writeTarget, Entity originEntity, float newSpeed)
+    public void SetupProjectile(bool writeInstant, bool writeHoming, Entity originEntity, float newSpeed, Transform writeTarget = null)
     {
         MoveSpeed = newSpeed;
         Instant = writeInstant;
@@ -30,8 +30,11 @@ public class ProjectileBase : MonoBehaviour
             Target = writeTarget;
         else if (Instant)
             NonHomingTarget = writeTarget.position;
+        if(writeTarget != null)
+        {
+            transform.LookAt(writeTarget);
+        }
         origin = originEntity;
-        transform.LookAt(writeTarget);
         ready = true;
     }
 
@@ -65,7 +68,10 @@ public class ProjectileBase : MonoBehaviour
         Entity newEntity = other.GetComponent<Entity>();
         if(newEntity != null && newEntity != origin)
         {
-            newEntity.ModifyHealth(-DamageDealt);
+            if(!newEntity.ModifyHealth(-DamageDealt))
+            {
+                newEntity.Death(transform.forward * MoveSpeed);
+            }
         }
         if(CollisionInst != null)
             Instantiate(CollisionInst, transform.position, transform.rotation);

@@ -54,9 +54,13 @@ public class ProceduralLevelGenerator : MonoBehaviour
                 SwapDoorStates();
                 CreateExitPoints(GameDifficulty);
                 CollectibleMaster.Instance.SetupCollectionSystem();
-                allGeneratedRooms.Clear();
+                yield return new WaitForSeconds(0.25f);
                 curSurface.BuildNavMesh();
+                yield return new WaitForSeconds(2f);
+                GuardSpawner.Instance.SpawnGuards(allGeneratedRooms.Count / 2, Mathf.RoundToInt(GameDifficulty));
+                allGeneratedRooms.Clear();
                 PlayerCharacter.SetActive(true);
+                PlayerCharacter.transform.position = startingRoom.DoorAlignedPoints[0].position;
                 Debug.Log("Room Creation Complete");
                 break;
             }

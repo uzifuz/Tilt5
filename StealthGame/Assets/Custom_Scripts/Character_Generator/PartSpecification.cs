@@ -5,7 +5,7 @@ using UnityEngine;
 public class PartSpecification : MonoBehaviour
 {
     public string PartName = "";
-    public float SpeedMod = 0f, HealthMod = 0f, CooldownReduction = 0f, NoiseMod = 0f;
+    public float SpeedModPercent = 0f, DamageTakenPercent = 0f, CooldownPercent = 0f, NoiseModifierPercent = 0f;
     public CustomCharacterSettings.CharacterClass[] ExclusiveTo;
     
     public bool CheckExclusivity(CustomCharacterSettings.CharacterClass thisClass)

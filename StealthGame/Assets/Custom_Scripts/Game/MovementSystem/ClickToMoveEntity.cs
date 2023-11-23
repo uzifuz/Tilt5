@@ -56,10 +56,12 @@ public class ClickToMoveEntity : MonoBehaviour
                 //Debug.Log($"Rotating in Standalone mode");
                 camMaster.eulerAngles += new Vector3(0f, (Input.GetKey(KeyCode.Q) ? -1f : 0f) + (Input.GetKey(KeyCode.E) ? 1f : 0f) ,0f);
             }
-            Vector3 posMod = camMaster.transform.forward * (Input.GetAxis("Vertical") + TiltFiveInputs.Instance.stickY)  + camMaster.transform.right * (Input.GetAxis("Horizontal") + TiltFiveInputs.Instance.stickX) + Vector3.up * -1f;
+            float moveDirX = (Input.GetAxis("Horizontal") + TiltFiveInputs.Instance.stickX);
+            float moveDirY = (Input.GetAxis("Vertical") + TiltFiveInputs.Instance.stickY);
+            Vector3 posMod = camMaster.transform.forward * moveDirY + camMaster.transform.right * moveDirX + Vector3.up * -1f;
             Vector3 newPos = currentPlayer.transform.position + posMod;
             //Debug.DrawLine(currentPlayer.transform.position, newPos);
-            currentPlayer.SetAgentDestination(newPos, Input.GetKey(KeyCode.LeftShift) || TiltFiveInputs.Instance.trigger);
+            currentPlayer.SetAgentDestination(newPos, Mathf.Sqrt(Mathf.Pow(moveDirX, 2) + Mathf.Pow(moveDirY, 2)) >= 0.9f);
             
             TiltFiveBoardMover.Instance.MoveBoard();
                 

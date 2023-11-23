@@ -10,6 +10,7 @@ TagManager:
   - CollectibleSpawnLocation
   - Guard
   - Wand
+  - GuardSpawnLocation
   layers:
   - Default
   - TransparentFX

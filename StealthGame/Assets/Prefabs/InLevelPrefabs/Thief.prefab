@@ -4467,7 +4467,7 @@ NavMeshAgent:
   m_Speed: 1.5
   m_Acceleration: 1000
   avoidancePriority: 50
-  m_AngularSpeed: 720
+  m_AngularSpeed: 3600
   m_StoppingDistance: 0.15
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -4489,6 +4489,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityName: Thief
+  MaxHealth: 100
+  CurHealth: 100
   agent: {fileID: 2749607851269396644}
   agentWalkSpeed: 1.5
   agentRunSpeed: 4
@@ -4497,6 +4499,12 @@ MonoBehaviour:
     m_Bits: 4294967295
   CanMove: 1
   anim: {fileID: 900340303}
+  ragdoll: {fileID: 0}
+  AttackRange: 2
+  AttackSpeed: 2
+  ProjectileSpeed: 14
+  AttackProjectile: {fileID: 7915323283581007910, guid: 87226ef75b6644f49871c8b81ae59ec9, type: 3}
+  firePoint: {fileID: 6348432733760142728}
   CharacterRenderer: {fileID: 975549748361082928}
 --- !u!95 &900340303
 Animator:
@@ -4932,6 +4940,11 @@ PrefabInstance:
 --- !u!4 &6342350118980584346 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4139452749197756, guid: a96b63f27d072234bbc3d7818166e4eb, type: 3}
+  m_PrefabInstance: {fileID: 6343945813371171366}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6348432733760142728 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4522242208468910, guid: a96b63f27d072234bbc3d7818166e4eb, type: 3}
   m_PrefabInstance: {fileID: 6343945813371171366}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &6348434992156996516 stripped

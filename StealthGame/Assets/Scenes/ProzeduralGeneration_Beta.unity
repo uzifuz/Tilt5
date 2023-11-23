@@ -13732,7 +13732,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &668448449
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30021,13 +30021,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 862463258}
     m_Modifications:
+    - target: {fileID: -4899338168007379858, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
+      propertyPath: AttackProjectile
+      value: 
+      objectReference: {fileID: 7915323283581007910, guid: 87226ef75b6644f49871c8b81ae59ec9, type: 3}
     - target: {fileID: 2803114837024924929, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
       propertyPath: m_Name
       value: Thief
       objectReference: {fileID: 0}
     - target: {fileID: 4737468016232438582, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4737468016232438582, guid: 6c0c89882bdd7d948baa6bb0dbded28e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -39149,16 +39153,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 167553808418347238, guid: 507971d2c08e73543accc20aaa035e7c, type: 3}
+      propertyPath: GameDifficulty
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 167553808418347238, guid: 507971d2c08e73543accc20aaa035e7c, type: 3}
       propertyPath: PlayerCharacter
       value: 
       objectReference: {fileID: 439570131}
     - target: {fileID: 167553808418347238, guid: 507971d2c08e73543accc20aaa035e7c, type: 3}
       propertyPath: MaxNumberOfRoomsCreated
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2546412124857117222, guid: 507971d2c08e73543accc20aaa035e7c, type: 3}
-      propertyPath: m_NavMeshData
-      value: 
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7964062522986453496, guid: 507971d2c08e73543accc20aaa035e7c, type: 3}
       propertyPath: m_Name
