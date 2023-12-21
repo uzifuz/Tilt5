@@ -35,7 +35,7 @@ public class HidingObject : InteractableObject
         if (Thief.Instance.IsHidden)
         {
             Camera.main.GetComponent<AudioSource>().PlayOneShot(disappearSound);
-            InteractionText.text = "<b>F</b>\nStop Hiding";
+            InteractionText.text = "<b>1</b>\nStop Hiding";
             onEvents.Invoke();
             Thief.Instance.CharacterRenderer.SetActive(!Thief.Instance.CharacterRenderer.activeSelf);
         } 
@@ -50,14 +50,14 @@ public class HidingObject : InteractableObject
         offEvents.Invoke();
         yield return new WaitForSeconds(ReappearanceDelay);
         Camera.main.GetComponent<AudioSource>().PlayOneShot(appearSound);
-        InteractionText.text = "<b>F</b>\nHide";
+        InteractionText.text = "<b>1</b>\nHide";
         Thief.Instance.CharacterRenderer.SetActive(!Thief.Instance.CharacterRenderer.activeSelf);
     }
 
     protected override void SwitchHighlightOn()
     {
         base.SwitchHighlightOn();
-        InteractionText.text = "<b>F</b>\nHide";
+        InteractionText.text = "<b>1</b>\nHide";
         InteractionText.gameObject.SetActive(true);
     }
 

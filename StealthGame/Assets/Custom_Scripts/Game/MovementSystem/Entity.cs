@@ -36,7 +36,7 @@ public class Entity : MonoBehaviour
     /// <returns>True if target is still alive, false if dead!</returns>
     public virtual bool ModifyHealth(float amount)
     {
-        CurHealth += amount;
+        CurHealth += amount * (this is Thief ? (100f + PlayerPrefs.GetFloat("DamageMod")) / 100f : 1f);
         //Only do this when script is attached to Thief
         //TODO: Menu should not be switched on more than once
         if(CurHealth <= 0f)

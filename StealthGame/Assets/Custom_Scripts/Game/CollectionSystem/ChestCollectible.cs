@@ -4,17 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class ChestCollectible : MonoBehaviour
+public class ChestCollectible : InteractableObject
 {
     public int curValue = 0;
-    private int minValue = 1, maxValue = 10;
+    public int minValue = 5, maxValue = 8;
     public bool mandatory = false;
 
     [SerializeField] Transform canvasT;
     [SerializeField] Slider slider;
     [SerializeField] BoxCollider boxCol;
     [SerializeField] Animator anim;
-
 
     public AudioClip clip;
     public float volume = 1;
@@ -27,14 +26,35 @@ public class ChestCollectible : MonoBehaviour
 
     private void OnEnable()
     {
-        curValue = Random.Range(minValue, maxValue);
+        curValue = Random.Range(minValue, maxValue + PlayerPrefs.GetInt("DifficultyLevel")) * PlayerPrefs.GetInt("DifficultyLevel");
+        InteractionText.text = "";
+    }
+
+    public override void ButtonHeldDown()
+    {
+        base.ButtonHeldDown();
+        progressActive = true;
+    }
+
+    public override void ButtonUp()
+    {
+        base.ButtonUp();
+        progressActive = false;
     }
 
     private void FixedUpdate()
     {
         if (progressActive)
         {
-            canvasT.gameObject.SetActive(true);
+            if(progressTime < timeToOpen)
+            {
+                canvasT.gameObject.SetActive(true);
+            }
+            else
+            {
+                InteractionText.text = "";
+                canvasT.gameObject.SetActive(false);
+            }
             canvasT?.LookAt(Camera.main.transform.position);
             progressTime += Time.deltaTime;
             slider.value = progressTime / timeToOpen;
@@ -46,7 +66,9 @@ public class ChestCollectible : MonoBehaviour
                 if (mandatory)
                 {
                     CollectibleMaster.Instance.mandatoriesClaimed++;
-                    CollectibleMaster.Instance.collectedValue += curValue;
+                    var obj = Instantiate(CollectibleMaster.Instance.messagePrefab, transform.position + Vector3.up, transform.rotation);
+                    obj.GetComponent<CollectionMessage>().SetMessage("+" + curValue, Color.green);
+                    PlayerPrefs.SetInt("CurrentScore", PlayerPrefs.GetInt("CurrentScore") + curValue);
                 }
                 CollectibleMaster.Instance.CheckCollection();
 
@@ -62,15 +84,17 @@ public class ChestCollectible : MonoBehaviour
     {
         if (other.CompareTag("Thief"))
         {
-            progressActive = true;
-         }
+            //progressActive = true;
+            InteractionText.text = "Hold <b>1</b> To Open";
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Thief"))
         {
-            progressActive = false;
+            //progressActive = false;
+            InteractionText.text = "";
             canvasT.gameObject.SetActive(false);
         }
     }

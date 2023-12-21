@@ -1108,7 +1108,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleObj:
-  - {fileID: 8317271258301858501}
   - {fileID: 4413046060653715857}
   - {fileID: 190107728328655304}
   selectOnlyOne: 1
@@ -5079,7 +5078,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &696182582575107854
 Transform:
   m_ObjectHideFlags: 0

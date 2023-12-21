@@ -7,7 +7,7 @@ public class TiltFiveBoardMover : MonoBehaviour
     public static TiltFiveBoardMover Instance;
     public Transform gameBoard;
     public bool boardLocked = false;
-    public float boardMoveSpeed = 1f;
+    public float boardMoveSpeed = 1f, yAxisOffset = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class TiltFiveBoardMover : MonoBehaviour
     {
         if (!boardLocked)
         {
-            gameBoard.transform.position = CameraMovement.Instance.transform.position;
+            gameBoard.transform.position = CameraMovement.Instance.transform.position + Vector3.up * yAxisOffset;
             if(PlayerPrefs.GetInt("Tilt5Mode") == 0)
                 gameBoard.transform.rotation = CameraMovement.Instance.transform.rotation;
         }

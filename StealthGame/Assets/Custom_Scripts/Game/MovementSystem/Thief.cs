@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Thief : ControllableEntity
 {
@@ -11,6 +12,7 @@ public class Thief : ControllableEntity
     CustomCharacterSettings characterSettings;
     float invisibilityDirection = -1f;
     float invisibility = 0f;
+    [SerializeField] Slider healthSlider;
 
     public bool IsHidden
     {
@@ -36,6 +38,8 @@ public class Thief : ControllableEntity
         {
             light.intensity = 5f;
         }
+        agentWalkSpeed = 1.5f * (100f + PlayerPrefs.GetFloat("SpeedMod", 1f)) / 100f;
+        agentRunSpeed = 4f * (100f + PlayerPrefs.GetFloat("SpeedMod", 1f)) / 100f;
     }
 
     // Update is called once per frame
@@ -56,7 +60,15 @@ public class Thief : ControllableEntity
             invisibility += Time.deltaTime;
             SetInvisibility();
         }
-
+        if(IsHidden)
+        {
+            healthSlider.gameObject.SetActive(false);
+        }
+        else
+        {
+            healthSlider.gameObject.SetActive(true);
+            healthSlider.value = CurHealth;
+        }
     }
 
     public void KnightAbility()
@@ -81,6 +93,14 @@ public class Thief : ControllableEntity
         foreach (Renderer ren in characterSettings.AllRenderer)
         {
             ren.material.SetFloat("_Invisibility", invisibility);
+        }
+        if (invisibility >= 0.7f)
+        {
+            IsHidden = true;
+        }
+        else
+        {
+            IsHidden = false;
         }
     }
 }

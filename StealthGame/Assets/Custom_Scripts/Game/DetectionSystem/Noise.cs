@@ -19,7 +19,7 @@ public class Noise : MonoBehaviour
         if(coll.radius < soundRange)
         {
             coll.radius += Time.deltaTime * 15f;
-            modIntensity = soundIntensity / coll.radius;
+            modIntensity = soundIntensity / Mathf.Log10(coll.radius);
         }
         else
         {
@@ -36,7 +36,7 @@ public class Noise : MonoBehaviour
             {
                 //Guard heard the noise
                 thisGuard.suspicionLevel += modIntensity;
-                if(Random.Range(0f, 100f) < thisGuard.suspicionLevel)
+                if(Random.Range(25f, 100f) < thisGuard.suspicionLevel)
                 {
                     thisGuard.SetAgentDestination(transform.position, false, 1f);
                 }

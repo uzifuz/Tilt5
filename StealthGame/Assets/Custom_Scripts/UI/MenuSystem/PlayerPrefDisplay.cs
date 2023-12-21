@@ -10,7 +10,7 @@ public class PlayerPrefDisplay : MonoBehaviour
 
     private void Update()
     {
-        textDisp.text = "" + PlayerPrefs.GetInt(displayThisPlayerPref).ToString() + " $";
+        textDisp.text = "Highscore: " + PlayerPrefs.GetInt(displayThisPlayerPref).ToString();
     }
 
 }

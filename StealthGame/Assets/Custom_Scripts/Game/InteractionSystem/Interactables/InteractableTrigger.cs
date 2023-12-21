@@ -17,9 +17,22 @@ public class InteractableTrigger : MonoBehaviour
                 tiltFiveInteractPressed = true;
             }
         }
-        if ((Input.GetKeyDown(interactionKey) || tiltFiveInteractPressed) && currentObject != null)
+        if(currentObject != null)
         {
-            currentObject.Interact();
+            if (Input.GetKeyDown(interactionKey) || tiltFiveInteractPressed)
+            {
+                currentObject.Interact();
+            }
+            if(Input.GetKey(interactionKey) || tiltFiveInteractPressed)
+            {
+                //Debug.Log("Key is held");
+                currentObject.ButtonHeldDown();
+            }
+            else if(Input.GetKeyUp(interactionKey) || !tiltFiveInteractPressed)
+            {
+                //Debug.Log("Key is put up");
+                currentObject.ButtonUp();
+            }
         }
     }
 

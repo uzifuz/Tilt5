@@ -33,7 +33,7 @@ public class AbilityController : MonoBehaviour
         knightAbility = new KnightAbility();
         thiefAbility = new ThiefAbility();
         mageAbility = new MageAbility();
-        SetAbilitySlotUI((CustomCharacterSettings.CharacterClass)PlayerPrefs.GetInt("playerClass"));
+        //SetAbilitySlotUI((CustomCharacterSettings.CharacterClass)PlayerPrefs.GetInt("playerClass"));
     }
 
     public void UseAbility()

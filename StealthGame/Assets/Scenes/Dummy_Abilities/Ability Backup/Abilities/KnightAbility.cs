@@ -11,7 +11,7 @@ public class KnightAbility : Ability
 
     public void UseAbility(Transform attackPoint, float attackRange, LayerMask enemyLayer)
     {
-        Cooldown = 5f;
+        Cooldown = .66f;
         if(AbilityReady)
         {
             StartCoolDown();
@@ -19,7 +19,12 @@ public class KnightAbility : Ability
             Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayer);
             foreach (Collider enemy in hitEnemies)
             {
-                Debug.Log("Hit " + enemy.name);
+                ControllableEntity guard = enemy.GetComponent<ControllableEntity>();
+                if(!guard.ModifyHealth(-100f))
+                {
+                    guard.Death(attackPoint.forward * Random.Range(5f, 10f));
+                }
+                Debug.LogWarning("Did a damage on " + enemy.name);
             }
         }
     }

@@ -1256,7 +1256,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -352.5}
+  m_AnchoredPosition: {x: 125, y: -335}
   m_SizeDelta: {x: 125, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &115791866
@@ -1719,172 +1719,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138970659}
   m_CullTransparentMesh: 1
---- !u!1 &169040465
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 169040466}
-  - component: {fileID: 169040469}
-  - component: {fileID: 169040468}
-  - component: {fileID: 169040467}
-  - component: {fileID: 169040470}
-  m_Layer: 5
-  m_Name: SettingsButton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &169040466
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169040465}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 761025616}
-  m_Father: {fileID: 883688779}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &169040467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169040465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.90588236, g: 0.5080955, b: 0.19999996, a: 0.6392157}
-    m_PressedColor: {r: 0.15045391, g: 0.26649114, b: 0.6509434, a: 0.70980394}
-    m_SelectedColor: {r: 0.8862745, g: 0.7441385, b: 0.18039213, a: 0.7529412}
-    m_DisabledColor: {r: 1, g: 0, b: 0, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 169040468}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 301388758}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 883688777}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &169040468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169040465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3be8ba456d4a20947882dbddde6848a9, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &169040469
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169040465}
-  m_CullTransparentMesh: 1
---- !u!114 &169040470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169040465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91e24ac4d916f974286d2f64566ac660, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  executeOnSelect: 0
-  revertToPreviousOnExecute: 0
-  associatedSelectable: {fileID: 0}
-  current: {fileID: 0}
-  left: {fileID: 0}
-  right: {fileID: 0}
-  up: {fileID: 1231318691}
-  down: {fileID: 1554075132}
 --- !u!1 &169638883
 GameObject:
   m_ObjectHideFlags: 0
@@ -12256,7 +12090,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -527.5}
+  m_AnchoredPosition: {x: 125, y: -440}
   m_SizeDelta: {x: 125, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &242489490
@@ -13977,7 +13811,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -562.5}
+  m_AnchoredPosition: {x: 125, y: -475}
   m_SizeDelta: {x: 125, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &367736984
@@ -14227,7 +14061,7 @@ MonoBehaviour:
   left: {fileID: 309361521}
   right: {fileID: 1347876728}
   up: {fileID: 964217122}
-  down: {fileID: 1942414652}
+  down: {fileID: 506911116}
 --- !u!114 &372091654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14534,7 +14368,7 @@ GameObject:
   - component: {fileID: 410304682}
   - component: {fileID: 410304681}
   m_Layer: 5
-  m_Name: Money
+  m_Name: Highscore_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14556,8 +14390,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -254.2, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: 90}
+  m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &410304681
 MonoBehaviour:
@@ -14571,7 +14405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3770654658e491644b831d25999d79d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayThisPlayerPref: TotalPlayerMoney
+  displayThisPlayerPref: Highscore
   textDisp: {fileID: 410304682}
 --- !u!114 &410304682
 MonoBehaviour:
@@ -14593,17 +14427,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'Highscore: 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7df79c842e4f9034e8863beaa4b49988, type: 2}
+  m_sharedMaterial: {fileID: -34945868905115474, guid: 7df79c842e4f9034e8863beaa4b49988, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280068863
-  m_fontColor: {r: 1, g: 0.6661581, b: 0.10849059, a: 1}
+    rgba: 4293328841
+  m_fontColor: {r: 0.7877358, g: 1, b: 0.90366304, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14620,15 +14454,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -16663,7 +16497,7 @@ MonoBehaviour:
   current: {fileID: 0}
   left: {fileID: 596151065}
   right: {fileID: 1713094994}
-  up: {fileID: 46721119}
+  up: {fileID: 372091653}
   down: {fileID: 735513010}
 --- !u!114 &506911117
 MonoBehaviour:
@@ -16806,8 +16640,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Swap Port Mode
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7df79c842e4f9034e8863beaa4b49988, type: 2}
+  m_sharedMaterial: {fileID: -34945868905115474, guid: 7df79c842e4f9034e8863beaa4b49988, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -17018,7 +16852,7 @@ MonoBehaviour:
   left: {fileID: 485556217}
   right: {fileID: 1635754562}
   up: {fileID: 621146019}
-  down: {fileID: 2073946395}
+  down: {fileID: 1449396014}
 --- !u!114 &538599799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17292,10 +17126,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Customize Player
+  m_text: Customize Hero
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7df79c842e4f9034e8863beaa4b49988, type: 2}
+  m_sharedMaterial: {fileID: -34945868905115474, guid: 7df79c842e4f9034e8863beaa4b49988, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -17406,7 +17240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -317.5}
+  m_AnchoredPosition: {x: 125, y: -300}
   m_SizeDelta: {x: 125, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &551801787
@@ -20751,7 +20585,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -72.5}
+  m_AnchoredPosition: {x: 125, y: -160}
   m_SizeDelta: {x: 125, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &755169309
@@ -20791,140 +20625,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755169307}
-  m_CullTransparentMesh: 1
---- !u!1 &761025615
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 761025616}
-  - component: {fileID: 761025618}
-  - component: {fileID: 761025617}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &761025616
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761025615}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 169040466}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &761025617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761025615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Settings
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 97690656
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 27
-  m_fontSizeBase: 27
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &761025618
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761025615}
   m_CullTransparentMesh: 1
 --- !u!1 &773224919
 GameObject:
@@ -22086,14 +21786,13 @@ RectTransform:
   - {fileID: 966616168}
   - {fileID: 1339260188}
   - {fileID: 1231318690}
-  - {fileID: 169040466}
   - {fileID: 1554075128}
   m_Father: {fileID: 50522051}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 200}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 200}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &883688780
 MonoBehaviour:
@@ -22116,7 +21815,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 300, y: 60}
-  m_Spacing: {x: 0, y: 0}
+  m_Spacing: {x: 0, y: 10}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &888844879
@@ -23907,7 +23606,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -37.5}
+  m_AnchoredPosition: {x: 125, y: -125}
   m_SizeDelta: {x: 125, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1068615439
@@ -24227,7 +23926,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -492.5}
+  m_AnchoredPosition: {x: 125, y: -405}
   m_SizeDelta: {x: 125, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1084534567
@@ -24956,10 +24655,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: Abandon Quest
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7df79c842e4f9034e8863beaa4b49988, type: 2}
+  m_sharedMaterial: {fileID: -34945868905115474, guid: 7df79c842e4f9034e8863beaa4b49988, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -25279,1033 +24978,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1753523041}
     m_Modifications:
-    - target: {fileID: 134505969790617143, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: PartName
-      value: Steel Scales
-      objectReference: {fileID: 0}
-    - target: {fileID: 134505969790617143, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 134505969790617143, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 134505969790617143, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 134505969790617143, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 157949325837042552, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 188087360619463668, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 217108552535436158, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 246037123245760479, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 246037123245760479, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 246037123245760479, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 246037123245760479, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 246037123245760479, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 405678951078049858, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 542519293507781272, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 776292410248595199, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: PartName
-      value: Large Steel Cap
-      objectReference: {fileID: 0}
-    - target: {fileID: 776292410248595199, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 776292410248595199, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 776292410248595199, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 776292410248595199, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 776292410248595199, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 871531691311096556, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 925153088597478389, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 988706602104495970, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 988706602104495970, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 988706602104495970, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 988706602104495970, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageResistancePercent
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 988706602104495970, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownReductionPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1066424335577113703, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1136817789374565921, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1137449131249589373, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1242834876999513042, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1242834876999513042, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1242834876999513042, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1242834876999513042, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.data[0]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1254657652839725960, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: PartName
-      value: Nothing
-      objectReference: {fileID: 0}
-    - target: {fileID: 1288451590634630799, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1288451590634630799, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1288451590634630799, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1288451590634630799, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302124759657493169, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302124759657493169, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302124759657493169, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302124759657493169, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1303880594712441080, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1303880594712441080, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1303880594712441080, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1303880594712441080, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1303880594712441080, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1309848097326580604, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339141874800817113, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1396075631257665253, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1400386970410091380, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1400386970410091380, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1400386970410091380, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1400386970410091380, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1500961546236548352, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1500961546236548352, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1500961546236548352, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1500961546236548352, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1500961546236548352, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1522051564184443837, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1522051564184443837, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1522051564184443837, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1522051564184443837, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1662462331467654569, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1667571557346288848, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1739742055093860199, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1756287729547119609, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1931766567067083445, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1931766567067083445, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1931766567067083445, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1931766567067083445, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1949779810922141906, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1949779810922141906, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1949779810922141906, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1949779810922141906, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957664999828597354, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1995347781431538232, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1995347781431538232, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1995347781431538232, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1995347781431538232, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1995347781431538232, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1995347781431538232, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1995347781431538232, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.data[1]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2002932080841060598, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2060514786462074799, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2172405529512635560, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2172405529512635560, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2198034993219314561, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2198034993219314561, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2198034993219314561, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2198034993219314561, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2363362923176732510, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2418724079420893812, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2418724079420893812, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2418724079420893812, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2418724079420893812, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2446888682437222817, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2656151984348257378, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2656151984348257378, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2656151984348257378, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2656151984348257378, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2790195791340583652, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: PartName
-      value: Studded Vest
-      objectReference: {fileID: 0}
-    - target: {fileID: 2790195791340583652, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2790195791340583652, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2790195791340583652, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2790195791340583652, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2806215688509103462, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 2806215688509103462, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2806215688509103462, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2806215688509103462, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2926179508478225792, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2926179508478225792, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2926179508478225792, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2926179508478225792, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3035680444202918722, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3035680444202918722, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3035680444202918722, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3035680444202918722, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064851664559407107, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064851664559407107, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064851664559407107, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064851664559407107, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3262581080737925838, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3262581080737925838, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3262581080737925838, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3262581080737925838, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3308303924489344407, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3308303924489344407, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3308303924489344407, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3308303924489344407, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3409859458590410794, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: PartName
-      value: Almost Nothing
-      objectReference: {fileID: 0}
-    - target: {fileID: 3409859458590410794, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3409859458590410794, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3409859458590410794, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3417927490751656461, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: PartName
-      value: Steel Cap
-      objectReference: {fileID: 0}
-    - target: {fileID: 3417927490751656461, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3417927490751656461, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3417927490751656461, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3417927490751656461, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3442132219912584631, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476192485460806554, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476192485460806554, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476192485460806554, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476192485460806554, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3664035738018663705, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3664035738018663705, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3664035738018663705, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3664035738018663705, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3704937387091287401, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3710827703867869947, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3710827703867869947, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3710827703867869947, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3710827703867869947, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3775326562614343898, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3775326562614343898, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3775326562614343898, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3775326562614343898, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3775326562614343898, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3775326562614343898, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.data[1]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3981759630301567259, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3985193653633504607, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3985193653633504607, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3985193653633504607, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3985193653633504607, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3985193653633504607, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3985193653633504607, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.data[0]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4019921996969819493, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4019921996969819493, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4019921996969819493, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4019921996969819493, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4019921996969819493, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4123695554772900210, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: PartName
-      value: Iron Patch
-      objectReference: {fileID: 0}
-    - target: {fileID: 4123695554772900210, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4123695554772900210, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4123695554772900210, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4176553667946407415, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
       propertyPath: m_Name
       value: ModularCharacters_Custom
       objectReference: {fileID: 0}
-    - target: {fileID: 4251777218778139074, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251777218778139074, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251777218778139074, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251777218778139074, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251777218778139074, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4256085679433145493, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4364873699378246866, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378657220844024557, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378657220844024557, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378657220844024557, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378657220844024557, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
+    - target: {fileID: 6160805145181510776, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
+      propertyPath: m_LocalScale.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4430050795483775576, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4460211598398338049, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4460211598398338049, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4460211598398338049, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4460211598398338049, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageResistancePercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4460211598398338049, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownReductionPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4584434764053632678, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4610172713232556630, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: PartName
-      value: Square Guard
-      objectReference: {fileID: 0}
-    - target: {fileID: 4610172713232556630, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4610172713232556630, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4610172713232556630, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4792998690031806541, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4792998690031806541, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4792998690031806541, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4792998690031806541, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4792998690031806541, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4820498706663995296, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4934384708702633114, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4934384708702633114, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4934384708702633114, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4934384708702633114, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4951766960121911823, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957359797544506089, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5058177251338945972, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5058177251338945972, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5058177251338945972, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5058177251338945972, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5293206692587782378, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5381702373622754181, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5397815817279050831, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5397815817279050831, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5397815817279050831, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5397815817279050831, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5440953842095651617, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5681504262789896339, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5687416446716912745, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5720953556867437458, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5720953556867437458, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5720953556867437458, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5720953556867437458, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5749637443225825567, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5749637443225825567, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5749637443225825567, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5749637443225825567, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5767206399349016395, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5957435714497057628, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5957435714497057628, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5957435714497057628, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5960139425295141443, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5960139425295141443, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5960139425295141443, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5960139425295141443, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5969273165099321836, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5969273165099321836, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5969273165099321836, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5969273165099321836, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5969273165099321836, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6046794188848411305, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6046794188848411305, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6046794188848411305, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6046794188848411305, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6112735028506441045, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: PartName
-      value: Nothing
-      objectReference: {fileID: 0}
-    - target: {fileID: 6155701322695490530, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6155701322695490530, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6155701322695490530, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6155701322695490530, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
+    - target: {fileID: 6160805145181510776, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
+      propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 6155701322695490530, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.size
+    - target: {fileID: 6160805145181510776, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
+      propertyPath: m_LocalScale.z
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6155701322695490530, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.data[1]
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6160805145181510776, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26346,462 +25033,6 @@ PrefabInstance:
     - target: {fileID: 6160805145181510776, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6240060080999092148, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 6240060080999092148, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6240060080999092148, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6240060080999092148, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 6285092295005433011, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6285092295005433011, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6285092295005433011, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6285092295005433011, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6285092295005433011, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6340051658899620968, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: PartName
-      value: Almost Nothing
-      objectReference: {fileID: 0}
-    - target: {fileID: 6340051658899620968, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6340051658899620968, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6520032755526068027, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6593890249744173181, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6593890249744173181, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6593890249744173181, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6593890249744173181, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6593890249744173181, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6603926490448417132, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6620964619640421950, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6656265430128054356, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6667417177609092702, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6758952007833124559, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7052162918565275802, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7203682106805843915, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7206655179651790316, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257846692649652614, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257846692649652614, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257846692649652614, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257846692649652614, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257846692649652614, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7276747156467503556, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7374950771476643638, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7391019002282758487, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7400639672665107467, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7400639672665107467, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7400639672665107467, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageResistancePercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7400639672665107467, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownReductionPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7534658823808951600, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7632155352008897836, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7632155352008897836, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7632155352008897836, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7632155352008897836, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7729600926334755967, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7737965871184798393, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7737965871184798393, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7737965871184798393, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7737965871184798393, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7739267802594805293, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7770762866139679966, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7840563407974507451, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7878714929268652068, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7991197562697566018, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7993395874623471136, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8055500695281305294, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8055500695281305294, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8055500695281305294, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8074029990344545255, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8074029990344545255, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8074029990344545255, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8074029990344545255, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageResistancePercent
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8074029990344545255, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownReductionPercent
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8146757089785190145, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8146757089785190145, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8146757089785190145, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8146757089785190145, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8146757089785190145, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8146757089785190145, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.data[0]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8146757089785190145, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.data[1]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8180237135516245310, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8180237135516245310, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8180237135516245310, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8180237135516245310, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8278793644256809202, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8278793644256809202, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8278793644256809202, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8278793644256809202, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8278793644256809202, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8278793644256809202, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.data[1]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8328944337230871807, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8408521454727996169, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8408521454727996169, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8408521454727996169, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8408521454727996169, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8466111642645692399, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8519464605245408098, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8664155905660830383, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8675430351003038744, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8675430351003038744, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8675430351003038744, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageResistancePercent
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8686731753435494717, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8686731753435494717, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8686731753435494717, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8686731753435494717, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8714045028134327113, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8714045028134327113, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8723938250424127565, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8723938250424127565, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8723938250424127565, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8723938250424127565, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8723938250424127565, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8723938250424127565, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.data[1]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8726721364023939186, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: PartName
-      value: Steel Plate
-      objectReference: {fileID: 0}
-    - target: {fileID: 8726721364023939186, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: CooldownPercent
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8726721364023939186, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8726721364023939186, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageTakenPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8726721364023939186, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8726721364023939186, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: ExclusiveTo.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8758301462040788298, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8859889964657462697, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918584382668857746, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9186004944646619345, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: SpeedModPercent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9186004944646619345, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: NoiseModifierPercent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9186004944646619345, guid: 9c54587e2d7907b4495de75ffd86198a, type: 3}
-      propertyPath: DamageResistancePercent
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27017,7 +25248,7 @@ MonoBehaviour:
   left: {fileID: 0}
   right: {fileID: 0}
   up: {fileID: 1339260189}
-  down: {fileID: 169040470}
+  down: {fileID: 1554075132}
 --- !u!114 &1231318692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27833,7 +26064,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1304469634
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27853,7 +26084,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -422.5}
+  m_AnchoredPosition: {x: 125, y: -370}
   m_SizeDelta: {x: 125, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1304469635
@@ -28190,7 +26421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1338423716
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28210,7 +26441,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -212.5}
+  m_AnchoredPosition: {x: 125, y: -177.5}
   m_SizeDelta: {x: 125, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1338423717
@@ -28900,7 +27131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1369372603
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28920,7 +27151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -457.5}
+  m_AnchoredPosition: {x: 125, y: -405}
   m_SizeDelta: {x: 125, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1369372604
@@ -29575,7 +27806,7 @@ MonoBehaviour:
   current: {fileID: 0}
   left: {fileID: 2120457116}
   right: {fileID: 2025658362}
-  up: {fileID: 657368329}
+  up: {fileID: 538599798}
   down: {fileID: 1255588442}
 --- !u!114 &1449396015
 MonoBehaviour:
@@ -31673,7 +29904,7 @@ MonoBehaviour:
   current: {fileID: 0}
   left: {fileID: 0}
   right: {fileID: 0}
-  up: {fileID: 169040470}
+  up: {fileID: 1231318691}
   down: {fileID: 0}
 --- !u!1001 &1560306291
 PrefabInstance:
@@ -33073,7 +31304,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -387.5}
+  m_AnchoredPosition: {x: 125, y: -370}
   m_SizeDelta: {x: 125, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1667137843
@@ -33265,7 +31496,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1679864735
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33517,7 +31748,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -107.5}
+  m_AnchoredPosition: {x: 125, y: -195}
   m_SizeDelta: {x: 125, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1682597253
@@ -34067,7 +32298,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738752017}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000005960466}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34075,7 +32306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -75}
+  m_AnchoredPosition: {x: 0, y: -125.000015}
   m_SizeDelta: {x: 0, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1738752019
@@ -34098,10 +32329,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Untitled Dungeon Crawler
+  m_text: Augmented Depths
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7df79c842e4f9034e8863beaa4b49988, type: 2}
+  m_sharedMaterial: {fileID: -34945868905115474, guid: 7df79c842e4f9034e8863beaa4b49988, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -34125,8 +32356,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 77
+  m_fontSizeBase: 77
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -34212,7 +32443,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -282.5}
+  m_AnchoredPosition: {x: 125, y: -265}
   m_SizeDelta: {x: 125, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1752152974
@@ -40504,10 +38735,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play
+  m_text: Start Quest
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7df79c842e4f9034e8863beaa4b49988, type: 2}
+  m_sharedMaterial: {fileID: -34945868905115474, guid: 7df79c842e4f9034e8863beaa4b49988, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -40858,7 +39089,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1904657914
 RectTransform:
   m_ObjectHideFlags: 0
@@ -44448,7 +42679,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -247.5}
+  m_AnchoredPosition: {x: 125, y: -230}
   m_SizeDelta: {x: 125, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2142234811

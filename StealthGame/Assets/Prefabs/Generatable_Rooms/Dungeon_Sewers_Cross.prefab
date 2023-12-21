@@ -24,13 +24,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131545263124679005}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5, y: 0.395, z: -5.5}
+  m_LocalRotation: {x: 0, y: -0.41374007, z: 0, w: 0.9103951}
+  m_LocalPosition: {x: 6.22, y: 0.08, z: -5.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6818132639513310401}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -48.88, z: 0}
 --- !u!1 &218467153736090596
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +646,37 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43538148231670168, guid: 7fd22cc073aa90546b410f7c45ee1b12, type: 2}
+--- !u!1 &2029840179141635160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4032348088180377841}
+  m_Layer: 0
+  m_Name: CollectibleSpawnLocation (1)
+  m_TagString: CollectibleSpawnLocation
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4032348088180377841
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029840179141635160}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.002443469, z: 0, w: 0.999997}
+  m_LocalPosition: {x: 2.5, y: 0.08, z: -6.64}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6818132639513310401}
+  m_LocalEulerAnglesHint: {x: 0, y: 0.28, z: 0}
 --- !u!1 &2048203742626808217
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,6 +2430,7 @@ Transform:
   - {fileID: 8665723278846553804}
   - {fileID: 249667715951649824}
   - {fileID: 1629730236100255948}
+  - {fileID: 4032348088180377841}
   - {fileID: 344889306079065322}
   - {fileID: 1841778026541724731}
   - {fileID: 2244406877786123706}

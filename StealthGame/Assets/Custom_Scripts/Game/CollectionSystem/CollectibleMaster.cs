@@ -6,7 +6,7 @@ using UnityEngine.Rendering;
 public class CollectibleMaster : MonoBehaviour
 {
     public static CollectibleMaster Instance;
-    [SerializeField] GameObject[] optionalLocations, mandatoryLocations;
+    public GameObject[] optionalLocations, mandatoryLocations;
     public GameObject[] mandatoryCollectibles;
     public GameObject[] optionalCollectibles;
     [SerializeField] bool randomizeOptionalCollectibles = true;
@@ -16,6 +16,7 @@ public class CollectibleMaster : MonoBehaviour
 
     [HideInInspector]
     public ExitPointer exitPointer;
+    public GameObject messagePrefab;
 
     private void Start()
     {
@@ -38,10 +39,6 @@ public class CollectibleMaster : MonoBehaviour
     private void Update()
     {
         currentPrefValue = PlayerPrefs.GetInt("TotalPlayerMoney");//TODO: Don't check each frame!!!
-        if(Input.GetKeyDown(KeyCode.Space))//TODO: This should not be here. At all!!!
-        {
-            PlayerPrefs.SetInt("TotalPlayerMoney", 0);
-        }
     }
 
     void SetMandatoryLocations()
@@ -56,13 +53,12 @@ public class CollectibleMaster : MonoBehaviour
         //If this remains, the possibly spawned stuff is severly limited, which would not be ideal
         for (int i = 0; i < mandatoryLocations.Length; i++)
         {
-            if (i >= mandatoryCollectibles.Length)
+            if(Random.Range(0f, 1f) >= 0.4f)
             {
-                break;
+                var obj = Instantiate(mandatoryCollectibles[Random.Range(0, mandatoryCollectibles.Length)], mandatoryLocations[i].transform.position, mandatoryLocations[i].transform.rotation);
+                obj.GetComponent<ChestCollectible>().mandatory = true;
+                mandatoriesSet++;
             }
-            var obj = Instantiate(mandatoryCollectibles[i], mandatoryLocations[i].transform.position, mandatoryLocations[i].transform.rotation);
-            obj.GetComponent<ChestCollectible>().mandatory = true;
-            mandatoriesSet++;
         }
     }
 
@@ -72,11 +68,11 @@ public class CollectibleMaster : MonoBehaviour
         {
             if(randomizeOptionalCollectibles)
             {
-                Instantiate(optionalCollectibles[Random.Range(0, optionalCollectibles.Length)], optionalLocations[i].transform.position, optionalLocations[i].transform.rotation);
+                //Instantiate(optionalCollectibles[Random.Range(0, optionalCollectibles.Length)], optionalLocations[i].transform.position, optionalLocations[i].transform.rotation);
             }
             else
             {
-                Instantiate(optionalCollectibles[i], optionalLocations[i].transform.position, optionalLocations[i].transform.rotation);
+                //Instantiate(optionalCollectibles[i], optionalLocations[i].transform.position, optionalLocations[i].transform.rotation);
             }
         }
     }

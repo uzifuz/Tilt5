@@ -54,6 +54,16 @@ public class InteractableObject : MonoBehaviour
         }
     }
 
+    public virtual void ButtonHeldDown()
+    {
+
+    }
+
+    public virtual void ButtonUp()
+    {
+
+    }
+
     protected virtual void SwitchHighlightOn()
     {
 

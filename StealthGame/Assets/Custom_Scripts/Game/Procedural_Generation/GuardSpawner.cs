@@ -18,9 +18,19 @@ public class GuardSpawner : MonoBehaviour
     public void SpawnGuards(int count = 1, int difficulty = 1)
     {
         GameObject[] allSpawnPoints = GameObject.FindGameObjectsWithTag("GuardSpawnLocation");
-        for (int i = 0; i < count; i++)
+        int spawned = 0;
+        for (int i = allSpawnPoints.Length - 1; i >= 0; i--)
         {
-            Instantiate(PrefabsOrderedByDifficulty[Random.Range(0, Mathf.Clamp(difficulty, 0, PrefabsOrderedByDifficulty.Length))], allSpawnPoints[Random.Range(0, allSpawnPoints.Length)].transform.position, transform.rotation);
+            spawned++;
+            var obj = Instantiate(PrefabsOrderedByDifficulty[Random.Range(0, Mathf.Clamp(difficulty, 0, PrefabsOrderedByDifficulty.Length))], allSpawnPoints[i].transform.position, allSpawnPoints[i].transform.rotation);
+            if(Random.Range(0f, 1f) <= 0.4f)
+            {
+                obj.GetComponent<Guard>().GuardingPosition = CollectibleMaster.Instance.mandatoryLocations[Random.Range(0, CollectibleMaster.Instance.mandatoryLocations.Length)].transform;
+
+            }
+
+            if (spawned >= count)
+                break;
         }
     }
 }

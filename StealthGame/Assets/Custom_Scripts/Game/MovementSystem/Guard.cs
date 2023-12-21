@@ -31,7 +31,8 @@ public class Guard : ControllableEntity
     protected override void InheritStart()
     {
         base.InheritStart();
-        if(GuardingPosition == null)
+        ProjectileSpeed += PlayerPrefs.GetFloat("DifficultyLevel") / 3f;
+        if (GuardingPosition == null)
         {
             CurIdleState = GuardIdleStates.Patrolling;
         }
@@ -39,15 +40,11 @@ public class Guard : ControllableEntity
         {
             CurIdleState = GuardIdleStates.Guard;
         }
+        GuardDifficulty = Mathf.Clamp(GuardDifficulty, 1, PlayerPrefs.GetInt("DifficultyLevel", 1));
     }
 
     protected override void InheritUpdate()
     {
-        if (Input.GetKey(KeyCode.P))
-        {
-            ModifyHealth(-1000f);
-            Death(Vector3.up + Vector3.back * Random.Range(1f, 2f));
-        }
         base.InheritUpdate();
         if(CurHealth > 0f)
         {
@@ -101,16 +98,18 @@ public class Guard : ControllableEntity
         suspicionLine.enabled = true;
         suspicionLine.SetPosition(0, suspicionLine.transform.position);
         suspicionLine.SetPosition(1, suspicionLine.transform.position + (Thief.Instance.transform.position - suspicionLine.transform.position) * visionTimer / visionTime);
-        visionTimer += GuardDifficulty * (visionTime / 2f) * Time.deltaTime / Vector3.Distance(transform.position, Thief.Instance.transform.position);
+        visionTimer += 5f * GuardDifficulty * visionTime * Time.deltaTime / (Mathf.Pow(Vector3.Distance(transform.position, Thief.Instance.transform.position), 2));
         if(visionTimer >= visionTime - 2f)
         {
             suspicionLevel += Time.deltaTime * GuardDifficulty;
-            if (suspicionLevel < 50)
+            if (suspicionLevel >= 50f)
+            {
+                PlayerHasBeenDetected = true;
+            }
+            else if (suspicionLevel < 50)
+            {
                 suspicionLevel = 50f;
-        }
-        if(suspicionLevel >= 50f)
-        {
-            PlayerHasBeenDetected = true;
+            }
         }
         patrolTimer = patrolTime;
     }
@@ -185,6 +184,7 @@ public class Guard : ControllableEntity
         base.Death(deathDirection);
         suspicionLine.enabled = false;
         sightLine.enabled = false;
+        detectionImage.transform.parent.gameObject.SetActive(false);
         StartCoroutine(DespawnCo());
     }
 

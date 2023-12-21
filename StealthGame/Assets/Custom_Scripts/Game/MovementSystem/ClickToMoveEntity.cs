@@ -44,7 +44,7 @@ public class ClickToMoveEntity : MonoBehaviour
 
     void SendPlayerToLocation()
     {
-        if(currentPlayer != null && currentPlayer.CanMove)
+        if(currentPlayer != null && currentPlayer.CanMove && currentPlayer.gameObject.activeSelf)
         {
             if(PlayerPrefs.GetInt("Tilt5Mode") == 1)
             {

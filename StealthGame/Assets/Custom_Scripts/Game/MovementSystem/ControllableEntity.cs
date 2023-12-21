@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class ControllableEntity : Entity
 {
     public NavMeshAgent agent;
-    public float agentWalkSpeed = 1f, agentRunSpeed = 4f;
+    public float agentWalkSpeed = 1.5f, agentRunSpeed = 4f;
     [SerializeField]
     LayerMask walkableSurfaces;
     public bool CanMove;

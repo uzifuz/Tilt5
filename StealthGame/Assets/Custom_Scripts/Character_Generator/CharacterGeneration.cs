@@ -44,6 +44,7 @@ public class CharacterGeneration : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
+        SwapClass(0);
         InitializeUI();
     }
 
@@ -54,9 +55,10 @@ public class CharacterGeneration : MonoBehaviour
 
     void InitializeUI()
     {
-        SwapClass(0);
         for (int i = 0; i < 13; i++)
         {
+            SwapPartUp(i);
+            SwapPartDown(i);
             SetUITexts(charCreator.GetCurrentPart(i).GetComponent<PartSpecification>(), i);
         }
     }
@@ -138,6 +140,7 @@ public class CharacterGeneration : MonoBehaviour
             partName = charCreator.CurrentCharacterClass.ToString();
         else
             partName = newPart.PartName;
+        Debug.Log($"{partNr} updated to {partString}:{partName}");
         newPanel.UpdateTexts(partString, partName);
         SetModUI();
     }
@@ -165,6 +168,11 @@ public class CharacterGeneration : MonoBehaviour
 
     public void ConfirmSelection()
     {
+        Vector4 mods = charCreator.GetModificationsOfParts();
+        PlayerPrefs.SetFloat("SpeedMod", mods.x);
+        PlayerPrefs.SetFloat("DamageMod", mods.y);
+        PlayerPrefs.SetFloat("CooldownMod", mods.z);
+        PlayerPrefs.SetFloat("NoiseMod", mods.w);
         charCreator.SetAllIndicesToPlayerPref();
     }
 }

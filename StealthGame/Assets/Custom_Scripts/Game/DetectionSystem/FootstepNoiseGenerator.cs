@@ -17,7 +17,9 @@ public class FootstepNoiseGenerator : MonoBehaviour
         if (stepNoiseObject != null && !Thief.Instance.IsHidden)
         {
             footstepSource.Play();
-            Instantiate(stepNoiseObject, transform.position, transform.rotation);
+            Noise newNoise = Instantiate(stepNoiseObject, transform.position, transform.rotation).GetComponent<Noise>();
+            newNoise.soundIntensity = Mathf.Pow(Thief.Instance.agent.speed, 2) * (100f + PlayerPrefs.GetFloat("NoiseMod")) / 100f;
+            newNoise.soundRange = newNoise.soundIntensity + 2f;
         }
     }
 }

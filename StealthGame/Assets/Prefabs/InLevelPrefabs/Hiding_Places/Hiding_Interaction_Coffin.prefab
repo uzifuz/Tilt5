@@ -223,7 +223,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -665,7 +665,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 63.615147
+    angle: 39.06
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -748,7 +748,7 @@ ParticleSystem:
     m_TextureAlphaAffectsParticles: 1
     m_TextureBilinearFiltering: 0
     randomDirectionAmount: 1
-    sphericalDirectionAmount: 0
+    sphericalDirectionAmount: 1
     randomPositionAmount: 0
     radius:
       value: 4.629555
@@ -870,7 +870,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 0
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -980,7 +980,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 60
+        scalar: 3
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -5099,8 +5099,8 @@ MonoBehaviour:
           m_StringArgument: Coffin_Open
           m_BoolArgument: 0
         m_CallState: 2
-  appearSound: {fileID: 8300000, guid: 5692b40af4c01974396d5e0d9661fd2c, type: 3}
-  disappearSound: {fileID: 8300000, guid: edb13c02da296414a90d247eb3f4cfdd, type: 3}
+  appearSound: {fileID: 8300000, guid: 6d773aaa8c81f1843b6376dfccb06e0e, type: 3}
+  disappearSound: {fileID: 8300000, guid: be28b5586ec01be4f97c5e3eb7fa5eec, type: 3}
   ReappearanceDelay: 0.7
 --- !u!95 &7723800687889482109
 Animator:

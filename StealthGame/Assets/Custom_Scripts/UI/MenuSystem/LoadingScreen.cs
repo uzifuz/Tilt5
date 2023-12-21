@@ -6,22 +6,36 @@ using TMPro;
 
 public class LoadingScreen : MonoBehaviour
 {
-   
+    public static LoadingScreen Instance;
     public GameObject LoadingScreenObject;
     public Slider LoadingBarFill;
-    public TextMeshProUGUI LoadingText;
+    [SerializeField] Image background;
+    public TextMeshProUGUI LoadingText, DiffText;
+    public float FadeTime = 3f;
 
-    //void Start()
-    //{
-    //    LoadingScreenObject.transform.LookAt(Camera.main.transform);
-    //}
+    private void Start()
+    {
+        if(Instance == null)
+            Instance = this;
+        SetDifficultyText($"Level {PlayerPrefs.GetInt("DifficultyLevel")}");
+    }
+
     public void Update()
     {
         LoadingBarFill.value = ProceduralLevelGenerator.Instance.RoomProgressValue;
-        LoadingText.text = "Generating Level " + (ProceduralLevelGenerator.Instance.RoomProgressValue * 100).ToString("0.0") + "%";
-        if (LoadingBarFill.value == 1)
-        {
-            LoadingScreenObject.SetActive(false);
-        }
+        LoadingText.text = ProceduralLevelGenerator.Instance.RoomProgress;
+        if (!LoadingScreenObject.activeSelf && background.color.a > 0f)
+            background.CrossFadeAlpha(0f, FadeTime, false);
+            //background.color = new Color(background.color.r, background.color.g, background.color.b, background.color.a - Time.deltaTime);
+    }
+
+    public void SetDifficultyText(string txt)
+    {
+        DiffText.text = txt;
+    }
+
+    public void Deactivate()
+    {
+        LoadingScreenObject.SetActive(false);
     }
 }

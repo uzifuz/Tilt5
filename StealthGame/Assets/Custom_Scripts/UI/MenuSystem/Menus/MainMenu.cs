@@ -26,6 +26,8 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame(int sceneIndex)
     {
+        PlayerPrefs.SetInt("DifficultyLevel", 1);
+        PlayerPrefs.SetInt("CurrentScore", 0);
         Time.timeScale = 1.0f;
         SceneManager.LoadScene(sceneIndex);
     }

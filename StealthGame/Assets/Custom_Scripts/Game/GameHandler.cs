@@ -38,23 +38,26 @@ public class GameHandler : MonoBehaviour
 
     public void GameOver(GameOutcome outcome)
     {
-        GameIsOver = true;
-        Debug.Log("Game is Over");
-        Thief.Instance.CanMove = false;
-        switch (outcome)
+        if(!GameIsOver)
         {
-            case GameOutcome.ThiefWin:
-                DetectionHandler.Instance.ThiefDetected = false;
+            GameIsOver = true;
+            Debug.Log("Game is Over");
+            Thief.Instance.CanMove = false;
+            switch (outcome)
+            {
+                case GameOutcome.ThiefWin:
+                    DetectionHandler.Instance.ThiefDetected = false;
 
-                MenuHandler.Instance.OpenMenu(MenuHandler.MenuType.Win);
-                TiltFiveUI.Instance.SelectNewElementAsCurrent(WinConnector);
-                break;
-            case GameOutcome.ThiefLose:
-            default:
-                MenuHandler.Instance.OpenMenu(MenuHandler.MenuType.Lose);
-                TiltFiveUI.Instance.SelectNewElementAsCurrent(LooseConnector);
-                break;
+                    MenuHandler.Instance.OpenMenu(MenuHandler.MenuType.Win);
+                    TiltFiveUI.Instance.SelectNewElementAsCurrent(WinConnector);
+                    break;
+                case GameOutcome.ThiefLose:
+                default:
+                    MenuHandler.Instance.OpenMenu(MenuHandler.MenuType.Lose);
+                    TiltFiveUI.Instance.SelectNewElementAsCurrent(LooseConnector);
+                    break;
 
+            }
         }
     }
     public void GameOutComeReset()

@@ -18,7 +18,9 @@ public class ProceduralLevelGenerator : MonoBehaviour
     public GameObject[] possibleRooms;
     public string RoomProgress;
     [HideInInspector] public float RoomProgressValue;
+    [SerializeField] GameObject[] startSelection;
     [SerializeField] Room startingRoom;
+    int startRoomNr = 0;
     [SerializeField] List<Room> allGeneratedRooms = new List<Room>();
     List<ModifiableDoorway> allAvailableDoors = new List<ModifiableDoorway>();
     NavMeshSurface curSurface;
@@ -29,16 +31,19 @@ public class ProceduralLevelGenerator : MonoBehaviour
         if (Instance == null)
             Instance = this;
         transform.position += Vector3.up * yOffset;
+        GameDifficulty = PlayerPrefs.GetInt("DifficultyLevel", 1);
+        MaxNumberOfRoomsCreated = 12 + PlayerPrefs.GetInt("DifficultyLevel");
     }
 
     public IEnumerator RoomGenCo()
     {
+        startRoomNr = Random.Range(0, startSelection.Length);
         while(curNumberOfCreatedRooms < MaxNumberOfRoomsCreated)
         {
             if (CreateRoom())
             {
                 curNumberOfCreatedRooms++;
-                RoomProgress = $"Progress: {((curNumberOfCreatedRooms / MaxNumberOfRoomsCreated) * 100f).ToString("00.0")} %";
+                RoomProgress = $"Generating Rooms {((curNumberOfCreatedRooms / MaxNumberOfRoomsCreated) * 100f).ToString("00.0")} %";
                 RoomProgressValue = curNumberOfCreatedRooms / MaxNumberOfRoomsCreated;
             }
             else
@@ -54,14 +59,17 @@ public class ProceduralLevelGenerator : MonoBehaviour
                 SwapDoorStates();
                 CreateExitPoints(GameDifficulty);
                 CollectibleMaster.Instance.SetupCollectionSystem();
+                RoomProgress = "Hiding Treasure";
                 yield return new WaitForSeconds(0.25f);
+                PlayerCharacter.transform.position = startSelection[startRoomNr].GetComponent<Room>().DoorAlignedPoints[0].position;
                 curSurface.BuildNavMesh();
+                RoomProgress = "Instigate Enemies";
                 yield return new WaitForSeconds(2f);
                 GuardSpawner.Instance.SpawnGuards(allGeneratedRooms.Count / 2, Mathf.RoundToInt(GameDifficulty));
                 allGeneratedRooms.Clear();
                 PlayerCharacter.SetActive(true);
-                PlayerCharacter.transform.position = startingRoom.DoorAlignedPoints[0].position;
                 Debug.Log("Room Creation Complete");
+                LoadingScreen.Instance.Deactivate();
                 break;
             }
         }
@@ -154,7 +162,7 @@ public class ProceduralLevelGenerator : MonoBehaviour
         }
         else
         {
-            return startingRoom;
+            return startSelection[startRoomNr].GetComponent<Room>();
         }
     }
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -203,6 +204,10 @@ public class CustomCharacterSettings : MonoBehaviour
     public void SwapCharacterClass(int dir)
     {
         CurrentCharacterClass += dir;
+        if(CurrentCharacterClass == CharacterClass.Thief)//Thief is locked for this demo
+        {
+            CurrentCharacterClass++;
+        }
         if((int)CurrentCharacterClass >= Enum.GetNames(typeof(CharacterClass)).Length)
         {
             CurrentCharacterClass = (CharacterClass)0;
@@ -211,6 +216,24 @@ public class CustomCharacterSettings : MonoBehaviour
         {
             CurrentCharacterClass = (CharacterClass)Enum.GetNames(typeof(CharacterClass)).Length - 1;
         }
+        ResetAllAreas();
+    }
+
+    public void ResetAllAreas(bool randomize = false)
+    {
+        SwapPartTo(new ArrayAndIndex(hairIndex, hair), 0);
+        SwapPartTo(new ArrayAndIndex(beardIndex, male ? beardMale: beardFemale), 0);
+        SwapPartTo(new ArrayAndIndex(headIndex, male ? headMale : headFemale), 0);
+        SwapPartTo(new ArrayAndIndex(eyebrowsIndex, male ? eyeBrowsMale : eyeBrowsFemale), 0);
+        SwapPartTo(new ArrayAndIndex(torsoIndex, male ? torsoMale : torsoFemale), 0);
+        SwapPartTo(new ArrayAndIndex(shoulderIndex, leftShoulder), 0);
+        SwapPartTo(new ArrayAndIndex(hipsIndex, male ? hipsMale : hipsFemale), 0);
+        SwapPartTo(new ArrayAndIndex(handsIndex, male ? leftHandsMale : leftHandsFemale), 0);
+        SwapPartTo(new ArrayAndIndex(lowerArmIndex, male ? leftLowerArmMale : leftLowerArmFemale), 0);
+        SwapPartTo(new ArrayAndIndex(ellbowIndex, leftEllbow), 0);
+        SwapPartTo(new ArrayAndIndex(upperArmIndex, male ? leftUpperArmMale : leftUpperArmFemale), 0);
+        SwapPartTo(new ArrayAndIndex(legsIndex, male ? leftLegMale : leftLegFemale), 0);
+        SwapPartTo(new ArrayAndIndex(weaponIndex, weapons), 0);
     }
 
     public GameObject GetCurrentPart(int part)
@@ -262,6 +285,28 @@ public class CustomCharacterSettings : MonoBehaviour
         while (!currentArray[newIndex.IntValue].GetComponent<PartSpecification>().CheckExclusivity(CurrentCharacterClass));
         currentArray[newIndex.IntValue].SetActive(true);
         return currentArray[newIndex.IntValue];
+    }
+
+    public GameObject SwapPartTo(ArrayAndIndex wrapper, int targetIndex = 0)
+    {
+        //-->Setting!
+        wrapper.assocIndex.IntValue = targetIndex;
+        SetAllOfArrayInactive(wrapper.assocArray);
+        int whilebreaker = 0;
+        while (wrapper.assocArray[wrapper.assocIndex.IntValue].GetComponent<PartSpecification>().ExclusiveTo.Length == 0 
+            || !wrapper.assocArray[wrapper.assocIndex.IntValue].GetComponent<PartSpecification>().ExclusiveTo.Contains<CustomCharacterSettings.CharacterClass>(CurrentCharacterClass))
+        {
+            wrapper.assocIndex.IntValue = wrapper.assocIndex.IntValue + 1;
+            if (wrapper.assocIndex.IntValue >= wrapper.assocArray.Length)
+            {
+                wrapper.assocIndex.IntValue = 0;
+            }
+            whilebreaker++;
+            if (whilebreaker > 30)
+                break;
+        }
+        wrapper.assocArray[wrapper.assocIndex.IntValue].SetActive(true);
+        return wrapper.assocArray[wrapper.assocIndex.IntValue];
     }
 
     void InitializeAllParts()
@@ -325,6 +370,7 @@ public class CustomCharacterSettings : MonoBehaviour
         legsIndex.IntValue = PlayerPrefs.GetInt("legsIndex", 0);
         weaponIndex.IntValue = PlayerPrefs.GetInt("weaponIndex", 0);
     }
+
 
     public Vector4 GetModificationsOfParts()
     {
