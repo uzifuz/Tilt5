@@ -26,6 +26,8 @@ public class AbilityController : MonoBehaviour
     [SerializeField]
     private Animator animator;
 
+    public Collider[] cols;
+
     private void Start()
     {
         if (Instance == null)
@@ -74,5 +76,21 @@ public class AbilityController : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawSphere(knight_attackPoint.position, knight_attackRange);
+    }
+
+    public void ActivateAttackCollider()
+    {
+        foreach(Collider col in cols)
+        {
+            col.enabled = true;
+        }
+    }
+
+    public void DeactivateAttackCollider()
+    {
+        foreach (Collider col in cols)
+        {
+            col.enabled = false;
+        }
     }
 }
