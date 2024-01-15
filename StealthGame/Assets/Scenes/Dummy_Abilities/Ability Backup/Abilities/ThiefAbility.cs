@@ -1,28 +1,34 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Threading.Tasks;
 
 public class ThiefAbility : Ability
 {
-    public void UseAbility(float invisibilityTime = 5f)
+    public void UseAbility()
     {
         Cooldown = 5f;
         if (AbilityReady && !Thief.Instance.IsHidden)
         {
-            StayInvisibleCo();
-            Thief.Instance.ThiefAbility();
+            Debug.Log("Used Invis Potion");
+            Task.Run(() => EndOfInvisibility());
         }
         else if(Thief.Instance.IsHidden)
         {
-            
+            StartCoolDown();
+            Thief.Instance.ThiefAbility();
         }
     }
 
-    IEnumerator StayInvisibleCo()
+    async Task EndOfInvisibility()
     {
-        yield return new WaitForSeconds(5f);
-        //If still invisible, get visible again
         Thief.Instance.ThiefAbility();
-        StartCoolDown();
+        await Task.Delay(TimeSpan.FromSeconds(Cooldown));
+        Debug.Log("Invis active: " + Thief.Instance.IsHidden);
+        if (Thief.Instance.IsHidden)
+        {
+            Thief.Instance.ThiefAbility();
+        }
     }
 }
